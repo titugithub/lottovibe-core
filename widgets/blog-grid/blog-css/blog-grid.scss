@@ -1,0 +1,90 @@
+@import '../../../scss/base';
+
+/** Blog Style CSS --------------
+-----------------------------------*/
+.reactheme-blog-grid {
+    .image-part.yes{
+        &:hover{
+            img{
+                filter: grayscale(100%);
+            }
+        }
+    }
+    .blog-item {        
+       .blog-content{
+            .title {
+                margin-bottom: 0;
+                a {
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    color: $titleColor;
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+       }
+    }
+    &.blog--style1 {
+        .blog-item {
+            .col-top {
+                background: linear-gradient(0deg, #F7F7F7 80%, #00000000 80%);
+                padding: 0 10px;
+                .image-part {
+                    overflow: hidden;
+                    a {
+                        img {
+                            transition: all .5s;
+                            &:hover {
+                                transform: scale(1.15);
+                            }
+                        }
+                    }
+                }
+            }
+            .blog-meta {
+                margin: 0;
+                list-style: none;
+                padding: 0px 15px;
+                border-right: 10px solid var(--color-primary);
+                border-left: 10px solid var(--color-primary);
+                display: flex;
+                align-items: center;
+                li {
+                    margin-right: 30px;
+                    i {
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: var(--color-primary);
+                        margin-right: 2px;
+                    }
+                    a {
+                        font-size: 16px;
+                        color: #6E777D;
+                    }
+                }
+            }
+            .blog-content {
+                padding: 23px 30px 30px 30px;
+                background: #F7F7F7;
+                
+                .blog-btn {
+                    a {
+                        color: $titleColor;
+                        border-radius: 0;
+                        border: 1px solid rgba(31, 31, 37, 0.1);
+                        padding: 15px 43px;
+                        &::before {
+                            border-radius: 0;
+                        }
+                        &:hover {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ 
+}

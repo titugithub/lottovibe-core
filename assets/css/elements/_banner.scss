@@ -1,0 +1,56 @@
+.marquee {
+    max-width: 1920px;
+    white-space: nowrap;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    margin-left: 40px;
+    .marquee__item{
+        display: inline-block;
+        will-change: transform;
+        animation: marquee 120s linear infinite;
+        .banner-marque-bottom{
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            height: 235px;
+            p{
+                display: block;
+                margin: 0;
+                text-align: center;
+                margin: auto;
+                display: block;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #E6E6E6;
+                font-weight: 700;
+                font-size: 200px;
+                line-height: 100px;
+                font-family: var(--font-primary);
+                font-family: var(--font-primary);
+                @media #{$laptop-device} {
+                    font-size: 150px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 100px;
+                }
+            }
+        } 
+    }
+}
+
+.rts-banner-three-solari{
+    position: relative;
+}
+
+@keyframes marquee{
+    0% {
+        transform: translateX(0);
+    }
+    
+    100% {
+        transform: translateX(-100%);
+    }
+}

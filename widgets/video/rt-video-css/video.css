@@ -1,0 +1,192 @@
+:root {
+  --color-primary: #4AAB3D;
+  --color-secondary: #1F1F25;
+  --color-body: #6E777D;
+  --color-heading-1: #1f1f25;
+  --color-white:#fff;
+  --color-success: #3EB75E;
+  --color-danger: #FF0003;
+  --color-warning: #FF8F3C;
+  --color-info: #1BA2DB;
+  --color-facebook: #3B5997;
+  --color-twitter: #1BA1F2;
+  --color-youtube: #ED4141;
+  --color-linkedin: #0077B5;
+  --color-pinterest: #E60022;
+  --color-instagram: #C231A1;
+  --color-vimeo: #00ADEF;
+  --color-twitch: #6441A3;
+  --color-discord: #7289da;
+  --p-light: 300;
+  --p-regular: 400;
+  --p-medium: 500;
+  --p-semi-bold: 600;
+  --p-bold: 700;
+  --p-extra-bold: 800;
+  --p-black: 900;
+  --s-light: 300;
+  --s-regular: 400;
+  --s-medium: 500;
+  --s-semi-bold: 600;
+  --s-bold: 700;
+  --s-extra-bold: 800;
+  --s-black: 900;
+  --transition: 0.3s;
+  --font-primary: "Exo", sans-serif;
+  --font-secondary: "Albert Sans", sans-serif;
+  --font-size-b1: 16px;
+  --font-size-b2: 16px;
+  --font-size-b3: 22px;
+  --line-height-b1: 26px;
+  --line-height-b2: 26px;
+  --line-height-b3: 1.7;
+  --h1: 60px;
+  --h2: 48px;
+  --h3: 30px;
+  --h4: 26px;
+  --h5: 24px;
+  --h6: 18px;
+}
+
+/** video css --------------------------
+--------------------------------------*/
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+.react-video {
+  position: relative;
+  background-repeat: no-repeat !important;
+  background-size: content !important;
+  padding: 100px 20px;
+}
+.react-video.center .overly-border {
+  margin: 0 auto;
+}
+.react-video.left .overly-border {
+  margin-left: 0;
+  margin-right: auto;
+}
+.react-video.right .overly-border {
+  margin-left: auto;
+  margin-right: 0;
+}
+.react-video.style1 .video-desc {
+  top: 60px;
+}
+.react-video .video-desc {
+  z-index: 1;
+  font-size: 20px;
+  position: relative;
+}
+.react-video .video-desc span {
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+}
+.react-video .overly-border {
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.react-video .video-content {
+  z-index: 10;
+}
+.react-video .video-content h4 {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.react-video:hover .popup-videos {
+  animation-duration: 0.8s;
+}
+.react-video .popup-videos {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  line-height: 90px;
+  padding: 0;
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  z-index: 9;
+  text-align: center;
+  background: #4AAB3D;
+}
+.react-video .popup-videos:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: all 200ms;
+}
+.react-video .popup-videos:before {
+  border: 1px solid #fff;
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+.react-video .popup-videos i {
+  text-indent: 5px;
+  transition: 0.3s ease all;
+  font-size: 28px;
+  color: #4AAB3D;
+  position: relative;
+  top: -4px;
+}
+.react-video .popup-videos i:before {
+  color: #fff;
+  top: -1px;
+}
+.react-video .popup-videos:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.react-video .popup-videos span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 27px solid #fff;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+}
+.react-video:hover .overly-border:before, .react-video:hover .overly-border:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.react-video.style2 .overly-border {
+  width: 60px;
+  height: 60px;
+}/*# sourceMappingURL=video.css.map */
