@@ -397,270 +397,155 @@ class ReacTheme_Elementor_Faq_Widget extends \Elementor\Widget_Base
                                     <ul class="tablinks list-unstyled">
                                         <li class="nav-links active">
                                             <button class="tablink">
-                                                <?php echo esc_html($settings['button1'])?>
+                                                <?php echo esc_html($settings['button1']) ?>
                                             </button>
                                         </li>
                                         <li class="nav-links">
                                             <button class="tablink">
-                                                Draw and Winners
+                                                <?php echo esc_html($settings['button2']) ?>
                                             </button>
                                         </li>
                                         <li class="nav-links">
                                             <button class="tablink">
-                                                Car Prizes
+                                                <?php echo esc_html($settings['button3']) ?>
                                             </button>
                                         </li>
                                         <li class="nav-links">
                                             <button class="tablink">
-                                                Technical Support
+                                                <?php echo esc_html($settings['button4']) ?>
                                             </button>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tabcontents">
-
                                     <div class="tabitem active">
                                         <div class="accordion-section">
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            How and when are the winners selected?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
+
+                                            <?php foreach ($settings['list_repeater1'] as $item) : ?>
+                                                <div class="accordion-single">
+                                                    <h5 class="header-area">
+                                                        <?php if (!empty($item['title1'])) :   ?>
+                                                            <button class="accordion-btn d-flex justify-content-between w-100" type="button">
+                                                                <span class="fs20 fw_700 n4-clr d-block">
+                                                                    <?php echo esc_html($item['title1']) ?>
+                                                                </span>
+                                                                <span class="faq-icon">
+                                                                    <i class="ph-bold ph-caret-down n4-clr"></i>
+                                                                </span>
+                                                            </button>
+                                                        <?php endif ?>
+
+                                                    </h5>
+                                                    <div class="content-area">
+                                                        <?php if (!empty($item['description1'])) :   ?>
+                                                            <div class="content-body ">
+                                                                <p>
+                                                                    <?php echo esc_html($item['description1']) ?>
+                                                                </p>
+                                                            </div>
+                                                        <?php endif ?>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            Can I see the draw live?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            How will I be notified if I win?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
+
+
                                     <div class="tabitem">
                                         <div class="accordion-section">
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            How and when are the winners selected?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
+
+                                            <?php foreach ($settings['list_repeater2'] as $item) : ?>
+                                                <div class="accordion-single">
+                                                    <?php if (!empty($item['title2'])) :   ?>
+                                                        <h5 class="header-area">
+                                                            <button class="accordion-btn d-flex justify-content-between w-100" type="button">
+                                                                <span class="fs20 fw_700 n4-clr d-block">
+                                                                    <?php echo esc_html($item['title2']) ?>
+                                                                </span>
+                                                                <span class="faq-icon">
+                                                                    <i class="ph-bold ph-caret-down n4-clr"></i>
+                                                                </span>
+                                                            </button>
+                                                        </h5>
+                                                    <?php endif ?>
+                                                    <?php if (!empty($item['description2'])) :   ?>
+                                                        <div class="content-area">
+                                                            <div class="content-body ">
+                                                                <p>
+                                                                    <?php echo esc_html($item['description2']) ?>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    <?php endif ?>
+
                                                 </div>
-                                            </div>
-                                            <div class="accordion-single this-single active">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            Can I see the draw live?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            How will I be notified if I win?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <?php endforeach; ?>
+
+
                                         </div>
                                     </div>
+
+
                                     <div class="tabitem">
                                         <div class="accordion-section">
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            How and when are the winners selected?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
+                                            <?php foreach ($settings['list_repeater3'] as $item) : ?>
+                                                <div class="accordion-single">
+                                                    <?php if (!empty($item['title3'])) :   ?>
+                                                        <h5 class="header-area">
+                                                            <button class="accordion-btn d-flex justify-content-between w-100" type="button">
+                                                                <span class="fs20 fw_700 n4-clr d-block">
+                                                                    <?php echo esc_html($item['title3']) ?>
+                                                                </span>
+                                                                <span class="faq-icon">
+                                                                    <i class="ph-bold ph-caret-down n4-clr"></i>
+                                                                </span>
+                                                            </button>
+                                                        </h5>
+                                                    <?php endif ?>
+                                                    <?php if (!empty($item['description3'])) :   ?>
+                                                        <div class="content-area">
+                                                            <div class="content-body ">
+                                                                <p>
+                                                                    <?php echo esc_html($item['description3']) ?>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    <?php endif ?>
                                                 </div>
-                                            </div>
-                                            <div class="accordion-single this-single active">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            Can I see the draw live?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            How will I be notified if I win?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <?php endforeach; ?>
+
                                         </div>
                                     </div>
+
+
                                     <div class="tabitem">
                                         <div class="accordion-section">
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            How and when are the winners selected?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
+                                            <?php foreach ($settings['list_repeater4'] as $item) : ?>
+                                                <div class="accordion-single">
+                                                    <?php if (!empty($item['title4'])) :   ?>
+                                                        <h5 class="header-area">
+                                                            <button class="accordion-btn d-flex justify-content-between w-100" type="button">
+                                                                <span class="fs20 fw_700 n4-clr d-block">
+                                                                    <?php echo esc_html($item['title4']) ?>
+                                                                </span>
+                                                                <span class="faq-icon">
+                                                                    <i class="ph-bold ph-caret-down n4-clr"></i>
+                                                                </span>
+                                                            </button>
+                                                        </h5>
+                                                    <?php endif; ?>
+                                                    <?php if (!empty($item['description4'])) :   ?>
+                                                        <div class="content-area">
+                                                            <div class="content-body ">
+                                                                <p>
+                                                                    <?php echo esc_html($item['description4']) ?>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    <?php endif ?>
                                                 </div>
-                                            </div>
-                                            <div class="accordion-single this-single active">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            Can I see the draw live?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-single">
-                                                <h5 class="header-area">
-                                                    <button class="accordion-btn d-flex justify-content-between w-100" type="button">
-                                                        <span class="fs20 fw_700 n4-clr d-block">
-                                                            How will I be notified if I win?
-                                                        </span>
-                                                        <span class="faq-icon">
-                                                            <i class="ph-bold ph-caret-down n4-clr"></i>
-                                                        </span>
-                                                    </button>
-                                                </h5>
-                                                <div class="content-area">
-                                                    <div class="content-body ">
-                                                        <p>
-                                                            Yes, the course includes collaborative projects to simulate real-world design scenarios. This fosters teamwork and provides valuable experience
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <?php endforeach; ?>
+
                                         </div>
                                     </div>
 
