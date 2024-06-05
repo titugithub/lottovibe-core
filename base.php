@@ -330,6 +330,11 @@ final class RTelements_Elementor_Extension
 		// \Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
 
 		
+		//faq category
+
+		require_once(__DIR__ . '/widgets/faq/faq.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Faq_Widget());
+		
 		//bloig category
 
 		require_once(__DIR__ . '/widgets/blog/blog.php');
