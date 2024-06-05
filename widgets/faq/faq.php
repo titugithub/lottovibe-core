@@ -326,6 +326,102 @@ class ReacTheme_Elementor_Faq_Widget extends \Elementor\Widget_Base
 
 
         $this->end_controls_section();
+
+        // ========================Style===========================//
+
+        $this->start_controls_section(
+             'buttonstyle',
+             [
+                'label' => esc_html__('Button', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        $this->add_control(
+            'spifdfnner_color',
+            [
+                'label' => esc_html__( ' Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .question-tab .tablinks .nav-links .tablink' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'spiffddnnfer_color',
+            [
+                'label' => esc_html__( ' Background', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .question-tab .tablinks .nav-links .tablink' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'spifdnner_color',
+            [
+                'label' => esc_html__( 'Active Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .question-tab .tablinks .nav-links.active .tablink' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'spiffddnner_color',
+            [
+                'label' => esc_html__( 'Active Background', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .question-tab .tablinks .nav-links.active .tablink' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'contentstyle',
+             [
+                'label' => esc_html__('Content', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        $this->add_control(
+            'spinfdner_color',
+            [
+                'label' => esc_html__( 'Background', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .accordion-single .header-area .accordion-btn' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'spinfdnfer_color',
+            [
+                'label' => esc_html__( 'Active Background', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .accordion-single.active' => 'background: {{VALUE}} !important',
+                    '{{WRAPPER}} .accordion-single.active button' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
+
+
+
     }
 
     /**

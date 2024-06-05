@@ -330,6 +330,17 @@ final class RTelements_Elementor_Extension
 		// \Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
 
 		
+		//Sponsor category
+
+		require_once(__DIR__ . '/widgets/sponsor/sponsor.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Sponsor_Widget());
+
+		
+		//barcode category
+
+		require_once(__DIR__ . '/widgets/barcode/barcode.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Barcode_Widget());
+
 		//faq category
 
 		require_once(__DIR__ . '/widgets/faq/faq.php');

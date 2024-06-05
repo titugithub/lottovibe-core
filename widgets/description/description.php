@@ -111,6 +111,40 @@ class Reactheme_Elementor_Description_Widget extends \Elementor\Widget_Base
 			]
 		);
 
+		$this->add_responsive_control(
+			'spinner_conftent_align',
+			[
+				'label' 		=> esc_html__( 'Alignment', 'plugin-name' ),
+				'type' 			=> \Elementor\Controls_Manager::CHOOSE,
+				'options' 		=> [
+					'left' 		=> [
+						'title' => esc_html__( 'Left', 'plugin-name' ),
+						'icon' 	=> 'eicon-text-align-left',
+					],
+					'center' 	=> [
+						'title' => esc_html__( 'Center', 'plugin-name' ),
+						'icon' 	=> 'eicon-text-align-center',
+					],
+					'right' 	=> [
+						'title' => esc_html__( 'Right', 'plugin-name' ),
+						'icon' 	=> 'eicon-text-align-right',
+					],
+					'justify' 	=> [
+						'title' => esc_html__( 'Justified', 'plugin-name' ),
+						'icon' 	=> 'eicon-text-align-justify',
+					],
+				],
+				'default' 		=> 'left',
+				'selectors' 	=> [
+					'{{WRAPPER}} .description ' => 'text-align: {{VALUE}};',
+				
+					
+		
+						
+				],
+			]
+		);
+
 
 		$this->end_controls_section();
 
