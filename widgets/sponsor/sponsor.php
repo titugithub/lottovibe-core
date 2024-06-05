@@ -83,7 +83,33 @@ class ReacTheme_Elementor_Sponsor_Widget extends \Elementor\Widget_Base
      * @access protected
      */
     protected function register_controls()
-    { }
+    {
+
+        $this->start_controls_section(
+            'lottovibe_gallery_slide_content',
+            [
+                'label' => esc_html__('Gallery', 'lottovibe-core')
+            ]
+        );
+
+
+
+        $this->add_control(
+            'lottovibe_gallery_slide_image',
+            [
+                'label' => esc_html__('Choose Image', 'lottovibe-core'),
+                'type' => \Elementor\Controls_Manager::GALLERY,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
+
+
+
+        $this->end_controls_section();
+    }
 
     /**
      * Render rsgallery widget output on the frontend.
@@ -101,7 +127,46 @@ class ReacTheme_Elementor_Sponsor_Widget extends \Elementor\Widget_Base
 
 
 
-
+        <script>
+            var swiper = new Swiper(".sponsor-wrap", {
+                loop: true,
+                slidesPerView: 1,
+                slidesToShow: 1,
+                spaceBetween: 24,
+                speed: 4500,
+                autoplay: true,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 100,
+                },
+                breakpoints: {
+                    1600: {
+                        slidesPerView: 4,
+                        spaceBetween: 24,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 14,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 14,
+                    },
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 14,
+                    },
+                    500: {
+                        slidesPerView: 2,
+                        spaceBetween: 14,
+                    },
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 14,
+                    },
+                },
+            });
+        </script>
 
 
 
@@ -118,28 +183,16 @@ class ReacTheme_Elementor_Sponsor_Widget extends \Elementor\Widget_Base
                     <div class="swiper sponsor-wrap">
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide">
-                                <div class="sponsor-items">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/global/s1.png" alt="sponsors-img">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="sponsor-items">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/global/s2.png" alt="sponsors-img">
+                            <?php foreach ($settings['lottovibe_gallery_slide_image'] as $item) : ?>
+                                <?php if (!empty($item['url'])) :   ?>
+                                    <div class="swiper-slide">
+                                        <div class="sponsor-items">
+                                            <img src="<?php echo esc_url($item['url']) ?>" alt="sponsors-img">
+                                        </div>
+                                    </div>
+                                <?php endif ?>
+                            <?php endforeach; ?>
 
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="sponsor-items">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/global/s3.png" alt="sponsors-img">
-
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="sponsor-items">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/global/s4.png" alt="sponsors-img">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
