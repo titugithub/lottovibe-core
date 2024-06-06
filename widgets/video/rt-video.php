@@ -589,15 +589,12 @@ class Reactheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 
 			<?php if ($settings['react_video_style'] == 'style1') { ?>
 
-
-
-
 				<div class="real-estate-video freature-videobg  d-center position-relative overflow-hidden">
 					<div class="real-vid position-relative">
-						<a href="https://www.youtube.com/watch?v=668nUCeBHyY" class="popup-video real-play d-center">
+						<a href="<?php echo esc_url($settings['video_link']); ?>" class="popup-video real-play d-center">
 							<i class="ti ti-player-play-filled n0-clr fs-three"></i>
 						</a>
-						<img src="assets/images/global/rotarion-circle.png" alt="img" class="real-play-circle">
+						<img src="<?php echo get_template_directory_uri()?>/assets/images/global/rotarion-circle.png" alt="img" class="real-play-circle">
 					</div>
 				</div>
 
