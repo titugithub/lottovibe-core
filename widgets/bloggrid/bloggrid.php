@@ -163,25 +163,49 @@ class ReacTheme_Elementor_Bloggrid_Widget extends \Elementor\Widget_Base
         );
 
 
-        $this->add_control(
-            'spinnfsaaer_color',
+
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
             [
-                'label' => esc_html__('Color', 'plugin-name'),
-                'type' => \Elementor\Controls_Manager::COLOR,
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'date_typ',
+                'selector' => '{{WRAPPER}} .date',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'date_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .blog-items1 .thumb .dats span' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} .date' => 'color: {{VALUE}};',
                 ],
             ]
         );
-
-        $this->add_control(
-            'spifdfnner_color',
+        $this->add_responsive_control(
+            'date_margin',
             [
-                'label' => esc_html__('Background', 'plugin-name'),
-                'type' => \Elementor\Controls_Manager::COLOR,
+                'label' => esc_html__( 'Margin', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors' => [
-                    '{{WRAPPER}} .blog-items1 .thumb .dats' => 'background: {{VALUE}} !important',
+                    '{{WRAPPER}} .date' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
+            ]
+        );
+        
+        $this->add_responsive_control(
+            'date_padding',
+            [
+                'label'      => __('Padding', 'plugin-name'),
+                'type'       => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors'  => [
+                    '{{WRAPPER}} .date' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ]
             ]
         );
 
@@ -224,7 +248,7 @@ class ReacTheme_Elementor_Bloggrid_Widget extends \Elementor\Widget_Base
                 'label'     => esc_html__('Hover Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .blog-v1-hover.active h3 a, .blog-v1-hover:hover h3 a' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .title:hover' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -255,61 +279,7 @@ class ReacTheme_Elementor_Bloggrid_Widget extends \Elementor\Widget_Base
 
         $this->end_controls_section();
 
-        $this->start_controls_section(
-            'desstyle',
-            [
-                'label' => esc_html__('Description', 'plugin-name'),
-                'tab'   => Controls_Manager::TAB_STYLE,
-            ]
-        );
 
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'description_typ',
-                'selector' => '{{WRAPPER}} .description',
-
-            ]
-        );
-
-        $this->add_control(
-            'description_color',
-            [
-                'label'     => esc_html__('Color', 'plugin-name'),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .description' => 'color: {{VALUE}} !important;',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'description_margin',
-            [
-                'label' => esc_html__('Margin', 'plugin-name'),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
-                'selectors' => [
-                    '{{WRAPPER}} .description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'description_padding',
-            [
-                'label'      => __('Padding', 'plugin-name'),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
-                ]
-            ]
-        );
-
-
-
-        $this->end_controls_section();
 
         $this->start_controls_section(
             'buttonstyle',
@@ -321,27 +291,54 @@ class ReacTheme_Elementor_Bloggrid_Widget extends \Elementor\Widget_Base
 
 
 
+        $this->add_control(
+            'mfdore_options',
+            [
+                'label' => esc_html__( 'Button', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
 
         $this->add_control(
-            'spinnfafer_color',
+            'spinner_coflor',
             [
-                'label' => esc_html__('Background', 'plugin-name'),
+                'label' => esc_html__( 'Color', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} span.kew-text.n4-bg.n0-clr' => 'background: {{VALUE}} !important',
-                    '{{WRAPPER}} .kew-arrow.n4-bg' => 'background: {{VALUE}} !important',
+                    '{{WRAPPER}} a.n4-clr.fs20.fw_700.act4-texthover' => 'color: {{VALUE}} !important',
                 ],
             ]
         );
 
         $this->add_control(
-            'spighghnner_color',
+            'spinner_cofflor',
             [
-                'label' => esc_html__('Hover Background', 'plugin-name'),
+                'label' => esc_html__( 'Hover Color', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .blog-v1-hover:hover .kewta-btn .kew-text' => 'background: {{VALUE}} !important',
-                    '{{WRAPPER}} .blog-v1-hover:hover .kewta-btn .kew-arrow ' => 'background: {{VALUE}} !important',
+                    '{{WRAPPER}} .act4-texthover:hover' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'mfdore_optffions',
+            [
+                'label' => esc_html__( 'Icon', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_control(
+            'sdfdfpinner_color',
+            [
+                'label' => esc_html__( 'Hover Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .blog-items15 .read15:hover' => 'background: {{VALUE}} !important',
                 ],
             ]
         );
@@ -398,18 +395,18 @@ class ReacTheme_Elementor_Bloggrid_Widget extends \Elementor\Widget_Base
                                             </div>
                                         <?php endif; ?>
                                         <div class="content">
-                                            <span class="fw_600 n3-clr d-block mb-xxl-4 mb-3">
+                                            <span class="date fw_600 n3-clr d-block mb-xxl-4 mb-3">
                                                 <?php echo get_the_date(); ?>
                                             </span>
 
                                             <h3 class="mb-xxl-5 mb-3">
-                                                <a href="<?php the_permalink() ?>" class="n4-clr act4-texthover">
+                                                <a href="<?php the_permalink() ?>" class="title n4-clr act4-texthover">
                                                     <?php the_title() ?>
                                                 </a>
                                             </h3>
                                             <div class="border-top"></div>
                                             <div class="d-flex align-items-center gap-xxl-6 gap-4 mt-xxl-5 mt-4">
-                                                <a href="blog-details.html" class="n4-clr fs20 fw_700 act4-texthover">
+                                                <a href="<?php the_permalink()?>" class="n4-clr fs20 fw_700 act4-texthover">
                                                     <?php echo esc_html_e('Read More', 'lottovibe-core') ?>
                                                 </a>
                                                 <a href="<?php the_permalink() ?>" class="read15 d-center">
