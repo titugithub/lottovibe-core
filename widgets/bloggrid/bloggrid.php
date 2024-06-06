@@ -11,7 +11,7 @@ use Elementor\Utils;
 
 defined('ABSPATH') || die();
 
-class ReacTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
+class ReacTheme_Elementor_Bloggrid_Widget extends \Elementor\Widget_Base
 {
     /**
      * Get widget name.
@@ -25,7 +25,7 @@ class ReacTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
      */
     public function get_name()
     {
-        return 'rt-blog';
+        return 'rt-bloggrid';
     }
 
     /**
@@ -40,7 +40,7 @@ class ReacTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
      */
     public function get_title()
     {
-        return __('SV Blog', 'rtelements');
+        return __('SV Blog Grid List', 'rtelements');
     }
 
     /**
@@ -73,15 +73,7 @@ class ReacTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
         return ['pielements_category'];
     }
 
-    public function get_style_depends()
-    {
 
-        wp_register_style('rtelements-style-portfolio-slider', plugins_url('portfolio-slider-css/portfolio-slider.css', __FILE__));
-
-        return [
-            'rtelements-style-portfolio-slider'
-        ];
-    }
 
     /**
      * Register rsgallery widget controls.
@@ -385,13 +377,9 @@ class ReacTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
 
 
 
-
-        <section class="blog-section1 ">
-
-
-            <!--blog body Header-->
+        <section class="blog-section">
             <div class="container">
-                <div class="row g-6">
+                <div class="row gx-6 gy-10">
 
                     <?php
                             if ($query->have_posts()) {
@@ -399,57 +387,41 @@ class ReacTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
                                     $query->the_post();
                                     ?>
 
-                            <div class="col-lg-6 col-md-6" data-aos="zoom-in-down" data-aos-duration="1400">
-                                <div class="blog-items1 blog-v1-hover">
-                                    <div class="boxs">
-                                        <div class="thumb mb-xxl-6 mb-4">
-                                            <?php if (has_post_thumbnail()) : ?>
-                                                <?php the_post_thumbnail() ?>
-                                            <?php endif; ?>
-                                            <div class="dats d-center">
-                                                <span class="bos">
-                                                    <span class="d-block nw1-clr fw_700">
-                                                        <?php echo get_the_date('d'); ?>/
-                                                        <!-- Day -->
-                                                    </span>
-                                                    <span class="d-block nw1-clr fw_700">
-                                                        <?php echo get_the_date('M'); ?>
-                                                        <!-- Month -->
-                                                    </span>
 
-                                                </span>
+
+                            <div class="col-lg-4 col-md-6" data-aos="zoom-in-down" data-aos-duration="1400">
+                                <div class="blog-items15">
+                                    <div class="boxs">
+                                        <?php if (has_post_thumbnail()) : ?>
+                                            <div class="thumb mb-xxl-6 mb-4 w-100">
+                                                <?php the_post_thumbnail('lottovite-blog-gridtwo') ?>
                                             </div>
-                                        </div>
+                                        <?php endif; ?>
                                         <div class="content">
-                                            <h3 class="mb-xxl-4 mb-3">
-                                                <a href="<?php the_permalink() ?>" class="n4-clr title">
+                                            <span class="fw_600 n3-clr d-block mb-xxl-4 mb-3">
+                                                <?php echo get_the_date(); ?>
+                                            </span>
+
+                                            <h3 class="mb-xxl-5 mb-3">
+                                                <a href="<?php the_permalink() ?>" class="n4-clr act4-texthover">
                                                     <?php the_title() ?>
                                                 </a>
                                             </h3>
-
-                                            <?php
-                                                            $excerpt = get_the_excerpt();
-                                                            if (!empty($excerpt)) :
-                                                                ?>
-                                                <p class="description fs18 pra bbd pb-xxl-5 pb-xl-4 pb-3 mb-xxl-6 mb-xl-4 mb-3"><?php echo $excerpt; ?></p>
-                                            <?php endif; ?>
-                                            <a href="<?php the_permalink() ?>" class="kewta-btn d-inline-flex align-items-center">
-                                                <span class="kew-text n4-bg n0-clr">
-                                                    <?php echo esc_html__('Read More', 'lottovibe') ?>
-                                                </span>
-                                                <div class="kew-arrow n4-bg">
-                                                    <div class="kt-one">
-                                                        <i class="ti ti-arrow-right n0-clr"></i>
-                                                    </div>
-                                                    <div class="kt-two">
-                                                        <i class="ti ti-arrow-right n0-clr"></i>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                            <div class="border-top"></div>
+                                            <div class="d-flex align-items-center gap-xxl-6 gap-4 mt-xxl-5 mt-4">
+                                                <a href="blog-details.html" class="n4-clr fs20 fw_700 act4-texthover">
+                                                    <?php echo esc_html_e('Read More', 'lottovibe-core') ?>
+                                                </a>
+                                                <a href="<?php the_permalink() ?>" class="read15 d-center">
+                                                    <i class="ph-bold ph-arrow-up-right fs-five"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+
 
 
 
@@ -463,20 +435,22 @@ class ReacTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
                                     echo '<div class="pagination">';
                                     echo paginate_links(array(
                                         'total' => $query->max_num_pages,
-                                        'prev_text' => '<i class="fas fa-chevron-left"></i>',  
+                                        'prev_text' => '<i class="fas fa-chevron-left"></i>',
                                         'next_text' => '<i class="fas fa-chevron-right"></i>'
                                     ));
                                     echo '</div>';
                                 }
-                                
                             }
 
 
                             wp_reset_postdata();
                             ?>
                 </div>
+
+
+
+
             </div>
-            <!--blog body Header-->
         </section>
 
 

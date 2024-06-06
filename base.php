@@ -346,6 +346,11 @@ final class RTelements_Elementor_Extension
 		require_once(__DIR__ . '/widgets/faq/faq.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Faq_Widget());
 		
+		//blogrid category
+
+		require_once(__DIR__ . '/widgets/bloggrid/bloggrid.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bloggrid_Widget());
+
 		//bloig category
 
 		require_once(__DIR__ . '/widgets/blog/blog.php');
