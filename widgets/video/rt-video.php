@@ -584,18 +584,22 @@ class Reactheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 		?>
 		<div class="react-video video-item-<?php echo esc_attr($rand); ?> <?php echo esc_html($settings['align']); ?> <?php echo esc_html($settings['react_video_style']); ?>" <?php if (!empty($settings['image']['url'])) : ?>style="background: url(<?php echo esc_url($settings['image']['url']); ?>);" <?php endif; ?>>
 
-			<?php if ($settings['react_video_style'] == 'style1') { ?>
-				<div class="overly-border">
-					<a class="popup-videos" href="<?php echo esc_url($settings['video_link']); ?>">
-						<i class="fas fa-play"></i>
-					</a>
-				</div>
 
-				<?php if (!empty($settings['description']) || !empty($settings['react_video_subtitle'])) : ?>
-					<div <?php echo wp_kses_post($this->print_render_attribute_string('description')); ?>>
-						<?php echo wp_kses_post($settings['description']); ?>
+
+
+			<?php if ($settings['react_video_style'] == 'style1') { ?>
+
+
+
+
+				<div class="real-estate-video freature-videobg  d-center position-relative overflow-hidden">
+					<div class="real-vid position-relative">
+						<a href="https://www.youtube.com/watch?v=668nUCeBHyY" class="popup-video real-play d-center">
+							<i class="ti ti-player-play-filled n0-clr fs-three"></i>
+						</a>
+						<img src="assets/images/global/rotarion-circle.png" alt="img" class="real-play-circle">
 					</div>
-				<?php endif; ?>
+				</div>
 
 			<?php }; ?>
 
@@ -643,9 +647,7 @@ class Reactheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 
 					fixedContentPos: false
 				});
-			});	
-
-			
+			});
 		</script>
 
 <?php
