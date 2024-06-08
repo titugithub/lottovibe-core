@@ -330,6 +330,11 @@ final class RTelements_Elementor_Extension
 		// \Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
 
 		
+		//bonus category
+
+		require_once(__DIR__ . '/widgets/bonus/bonus.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bonus_Widget());
+		
 		//Sponsor category
 
 		require_once(__DIR__ . '/widgets/sponsor/sponsor.php');

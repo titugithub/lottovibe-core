@@ -460,7 +460,7 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 		<?php if ($settings['content_style'] == 'style_three') : ?>
 
 			<div class="container">
-				<div class="row g-md-6 g-0 align-items-center justify-content-between mb-xxl-15 mb-xl-10 mb-9">
+				<div class="row g-md-6 g-0 align-items-center justify-content-between">
 					<div class="col-lg-6 col-md-7">
 						<div class="section__title  mb-xxl-10 mb-8">
 							<div class="subtitle-head mb-xxl-4 mb-sm-4 mb-3 d-flex flex-wrap align-items-center gap-3" data-aos="zoom-in-down" data-aos-duration="1200">
