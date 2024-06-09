@@ -330,6 +330,11 @@ final class RTelements_Elementor_Extension
 		// \Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
 
 		
+		//footer category
+
+		require_once(__DIR__ . '/widgets/footersection/footersection.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Footersection_Widget());
+		
 		//workstep category
 
 		require_once(__DIR__ . '/widgets/workstep/workstep.php');
