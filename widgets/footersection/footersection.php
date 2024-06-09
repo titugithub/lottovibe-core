@@ -84,7 +84,171 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
      * @access protected
      */
     protected function register_controls()
-    { }
+    {
+
+
+        $this->start_controls_section(
+            'subtitlecontent',
+            [
+                'label' => esc_html__('Subtitle', 'plugin-name')
+            ]
+        );
+
+        $this->add_control(
+            'subtitle_icon',
+            [
+                'label' => esc_html__( 'Icon', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::ICONS,
+                'default' => [
+                    'value' => 'fas fa-star',
+                    'library' => 'solid',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'subtitle',
+            [
+                'label' => esc_html__( 'Subtitle', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default subtitle', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+
+        $this->start_controls_section(
+            'titlecontent',
+            [
+                'label' => esc_html__('Title', 'plugin-name')
+            ]
+        );
+
+        $this->add_control(
+            'title1',
+            [
+                'label' => esc_html__( 'Title One', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'title2',
+            [
+                'label' => esc_html__( 'Title Two', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'title3',
+            [
+                'label' => esc_html__( 'Title Three', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'title4',
+            [
+                'label' => esc_html__( 'Title Four', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+
+        $this->start_controls_section(
+            'mailcontent',
+            [
+                'label' => esc_html__('Mail', 'plugin-name')
+            ]
+        );
+
+        $this->add_control(
+            'form_shortcode',
+            [
+                'label' => esc_html__('Contact Form Shortcode', 'gamestorm-core'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'rows' => 10,
+                'placeholder' => esc_html__('Type your Shortcode here', 'gamestorm-core'),
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+
+        $this->start_controls_section(
+            'buttoncontent',
+            [
+                'label' => esc_html__('Button', 'plugin-name')
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+
+        $this->start_controls_section(
+            'imagecontent',
+            [
+                'label' => esc_html__('Image', 'plugin-name')
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+
+        $this->start_controls_section(
+            'menucontent',
+            [
+                'label' => esc_html__('Menu', 'plugin-name')
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+
+        $this->start_controls_section(
+            'socialcontent',
+            [
+                'label' => esc_html__('Social', 'plugin-name')
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+
+        $this->start_controls_section(
+            'privacycontent',
+            [
+                'label' => esc_html__('Privacy Policy', 'plugin-name')
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+
+        $this->start_controls_section(
+            'copyrightcontent',
+            [
+                'label' => esc_html__('Copyright', 'plugin-name')
+            ]
+        );
+        
+        
+        $this->end_controls_section();  
+     }
 
     /**
      * Render rsgallery widget output on the frontend.
