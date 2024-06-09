@@ -330,6 +330,11 @@ final class RTelements_Elementor_Extension
 		// \Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
 
 		
+		//workstep category
+
+		require_once(__DIR__ . '/widgets/workstep/workstep.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Workstep_Widget());
+		
 		//bonus category
 
 		require_once(__DIR__ . '/widgets/bonus/bonus.php');

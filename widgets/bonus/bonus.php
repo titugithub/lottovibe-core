@@ -114,6 +114,18 @@ class ReacTheme_Elementor_Bonus_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'icon',
+            [
+                'label' => esc_html__('Icon', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::ICONS,
+                'default' => [
+                    'value' => 'fas fa-star',
+                    'library' => 'solid',
+                ],
+            ]
+        );
+
+        $this->add_control(
             'title',
             [
                 'label' => esc_html__('Title', 'plugin-name'),
@@ -130,23 +142,23 @@ class ReacTheme_Elementor_Bonus_Widget extends \Elementor\Widget_Base
 
 
         $this->start_controls_section(
-             'numberstyle',
-             [
+            'numberstyle',
+            [
                 'label' => esc_html__('Number', 'plugin-name'),
                 'tab'   => Controls_Manager::TAB_STYLE,
-             ]
+            ]
         );
-        
+
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
                 'name'     => 'numberstyle_typ',
                 'selector' => '{{WRAPPER}} .number',
-        
+
             ]
         );
-        
+
         $this->add_control(
             'numberstyle_color',
             [
@@ -162,15 +174,15 @@ class ReacTheme_Elementor_Bonus_Widget extends \Elementor\Widget_Base
         $this->add_responsive_control(
             'numberstyle_margin',
             [
-                'label' => esc_html__( 'Margin', 'plugin-name' ),
+                'label' => esc_html__('Margin', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => [ 'px', '%', 'em' ],
+                'size_units' => ['px', '%', 'em'],
                 'selectors' => [
                     '{{WRAPPER}} .number' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
-        
+
         $this->add_responsive_control(
             'numberstyle_padding',
             [
@@ -182,30 +194,30 @@ class ReacTheme_Elementor_Bonus_Widget extends \Elementor\Widget_Base
                 ]
             ]
         );
-        
-        
-        
+
+
+
         $this->end_controls_section();
 
         $this->start_controls_section(
-             'titlestyle',
-             [
+            'titlestyle',
+            [
                 'label' => esc_html__('Title', 'plugin-name'),
                 'tab'   => Controls_Manager::TAB_STYLE,
-             ]
+            ]
         );
-        
-        
+
+
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
                 'name'     => 'title_typ',
                 'selector' => '{{WRAPPER}} .title',
-        
+
             ]
         );
-        
+
         $this->add_control(
             'title_color',
             [
@@ -219,15 +231,15 @@ class ReacTheme_Elementor_Bonus_Widget extends \Elementor\Widget_Base
         $this->add_responsive_control(
             'title_margin',
             [
-                'label' => esc_html__( 'Margin', 'plugin-name' ),
+                'label' => esc_html__('Margin', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => [ 'px', '%', 'em' ],
+                'size_units' => ['px', '%', 'em'],
                 'selectors' => [
                     '{{WRAPPER}} .title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
-        
+
         $this->add_responsive_control(
             'title_padding',
             [
@@ -239,31 +251,31 @@ class ReacTheme_Elementor_Bonus_Widget extends \Elementor\Widget_Base
                 ]
             ]
         );
-        
-        
+
+
         $this->end_controls_section();
 
         $this->start_controls_section(
-             'cardstyle',
-             [
+            'cardstyle',
+            [
                 'label' => esc_html__('Card', 'plugin-name'),
                 'tab'   => Controls_Manager::TAB_STYLE,
-             ]
+            ]
         );
-        
-        
+
+
         $this->add_control(
             'card_color',
             [
-                'label' => esc_html__( 'Background Color', 'plugin-name' ),
+                'label' => esc_html__('Background Color', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .multiple-bitems' => 'background: {{VALUE}}',
                 ],
             ]
         );
-        
-        
+
+
         $this->add_responsive_control(
             'card_padding',
             [
@@ -275,9 +287,9 @@ class ReacTheme_Elementor_Bonus_Widget extends \Elementor\Widget_Base
                 ]
             ]
         );
-        
-        
-        
+
+
+
         $this->end_controls_section();
     }
 
@@ -305,8 +317,9 @@ class ReacTheme_Elementor_Bonus_Widget extends \Elementor\Widget_Base
                         <?php echo esc_html($settings['number']) ?>
                     </span>
                 <?php endif ?>
-
-                <i class="ph ph-handbag-simple fs-three s1-clr"></i>
+                <?php if (!empty($settings['icon'])) :   ?>
+                    <?php \Elementor\Icons_Manager::render_icon($settings['icon'], ['aria-hidden' => 'true']); ?>
+                <?php endif ?>
             </div>
             <?php if (!empty($settings['title'])) :   ?>
                 <h4 class="n4-clr title">
