@@ -195,6 +195,32 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Button', 'plugin-name')
             ]
         );
+
+        $this->add_control(
+            'buttontext',
+            [
+                'label' => esc_html__( 'Button Text', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'buttonlink',
+            [
+                'label' => esc_html__( 'Button Link', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'default' => [
+                    'url' => '#',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    'custom_attributes' => '',
+                ],
+                'label_block' => true,
+            ]
+        );
         
         
         $this->end_controls_section();  
@@ -203,6 +229,28 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
             'imagecontent',
             [
                 'label' => esc_html__('Image', 'plugin-name')
+            ]
+        );
+
+        $this->add_control(
+            'image',
+            [
+                'label' => esc_html__( 'Choose Image', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'imagebg_color',
+            [
+                'label' => esc_html__( 'Image BG Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .title' => 'color: {{VALUE}} !important',
+                ],
             ]
         );
         
@@ -215,6 +263,46 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Menu', 'plugin-name')
             ]
         );
+
+        // Repeater
+        $repeater = new \Elementor\Repeater();
+        
+        $repeater->add_control(
+            'textt',
+            [
+                'label' => esc_html__( 'Text', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $repeater->add_control(
+            'textlink',
+            [
+                'label' => esc_html__( 'Text Link', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'default' => [
+                    'url' => '#',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    'custom_attributes' => '',
+                ],
+                'label_block' => true,
+            ]
+        );
+        
+        $this->add_control(
+            'list_repeater',
+            [
+                'label' => esc_html__( 'Menu List', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'title_field' => '{{{ textt }}}',
+            ]
+        );
+        
         
         
         $this->end_controls_section();  
@@ -225,6 +313,50 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Social', 'plugin-name')
             ]
         );
+
+        // Repeater
+        $repeater = new \Elementor\Repeater();
+        
+        $repeater->add_control(
+            'social_icon',
+            [
+                'label' => esc_html__( 'Social Icon', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::ICONS,
+                'default' => [
+                    'value' => 'fas fa-star',
+                    'library' => 'solid',
+                ],
+            ]
+        );
+
+        $repeater->add_control(
+            'sociallink',
+            [
+                'label' => esc_html__( 'Link', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'default' => [
+                    'url' => '#',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    'custom_attributes' => '',
+                ],
+                'label_block' => true,
+            ]
+        );
+        
+        $this->add_control(
+            'list_repeater2',
+            [
+                'label' => esc_html__( 'Social List', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'title_field' => '{{{ sociallink }}}',
+            ]
+        );
+        
+
+
         
         
         $this->end_controls_section();  
@@ -235,6 +367,58 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Privacy Policy', 'plugin-name')
             ]
         );
+
+        $this->add_control(
+            'privacytext1',
+            [
+                'label' => esc_html__( 'Text One', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'privacylink1',
+            [
+                'label' => esc_html__( 'Link One', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'default' => [
+                    'url' => '#',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    'custom_attributes' => '',
+                ],
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'privacytext2',
+            [
+                'label' => esc_html__( 'Text Two', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'privacylink1',
+            [
+                'label' => esc_html__( 'Link Two', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'default' => [
+                    'url' => '#',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    'custom_attributes' => '',
+                ],
+                'label_block' => true,
+            ]
+        );
         
         
         $this->end_controls_section();  
@@ -243,6 +427,16 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
             'copyrightcontent',
             [
                 'label' => esc_html__('Copyright', 'plugin-name')
+            ]
+        );
+
+        $this->add_control(
+            'copydes',
+            [
+                'label' => esc_html__( 'Copyright Text', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'rows' => 10,
+                'default' => esc_html__( 'Default description', 'plugin-name' ),
             ]
         );
         
