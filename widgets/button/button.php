@@ -117,6 +117,7 @@ class Reactheme_Button_Widget extends \Elementor\Widget_Base
 				'options' => [
 					'style_one' => esc_html__('Style One', 'lottovite-core'),
 					'style_two' => esc_html__('Style Two', 'lottovite-core'),
+					'style_three' => esc_html__('Style Three', 'lottovite-core'),
 				],
 				'default' => 'style_one',
 			]
@@ -189,18 +190,18 @@ class Reactheme_Button_Widget extends \Elementor\Widget_Base
 		// =======================Style==========================//
 
 		$this->start_controls_section(
-			 'style',
-			 [
+			'style',
+			[
 				'label' => esc_html__('Button', 'plugin-name'),
 				'tab'   => Controls_Manager::TAB_STYLE,
-			 ]
+			]
 		);
-		
-		
+
+
 		$this->add_control(
 			'button_color',
 			[
-				'label' => esc_html__( 'Color', 'plugin-name' ),
+				'label' => esc_html__('Color', 'plugin-name'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .kewta-btn .kew-text' => 'color: {{VALUE}} !important',
@@ -210,11 +211,11 @@ class Reactheme_Button_Widget extends \Elementor\Widget_Base
 				],
 			]
 		);
-		
+
 		$this->add_control(
 			'button_bac_color',
 			[
-				'label' => esc_html__( 'Background Color', 'plugin-name' ),
+				'label' => esc_html__('Background Color', 'plugin-name'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .kewta-btn .kew-text' => 'background: {{VALUE}} !important',
@@ -227,22 +228,16 @@ class Reactheme_Button_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'button_hover_bac_color',
 			[
-				'label' => esc_html__( 'Hover Background Color', 'plugin-name' ),
+				'label' => esc_html__('Hover Background Color', 'plugin-name'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .cmn__collection::after' => 'background: {{VALUE}} !important',
 				],
 			]
 		);
-		
-		
+
+
 		$this->end_controls_section();
-
-
-
-
-
-
 	}
 
 	/**
@@ -306,6 +301,25 @@ class Reactheme_Button_Widget extends \Elementor\Widget_Base
 					</a>
 				</div>
 			<?php endif ?>
+		<?php endif; ?>
+
+
+		<?php if ($settings['style_selection'] == 'style_three') : ?>
+			<?php if (!empty($settings['lottovitebutton_content_button_text'])) :   ?>
+				<a href="<?php echo esc_url($settings['lottovitebutton_content_button_url']['url']) ?>" class="kewta-btn d-inline-flex align-items-center">
+					<span class="kew-text p1-border n0-clr">
+						<?php echo esc_html($settings['lottovitebutton_content_button_text']) ?>
+					</span>
+					<div class="kew-arrow p1-bg">
+						<div class="kt-one">
+							<i class="ti ti-arrow-right n4-clr"></i>
+						</div>
+						<div class="kt-two">
+							<i class="ti ti-arrow-right n4-clr"></i>
+						</div>
+					</div>
+				</a>
+			<?php endif; ?>
 		<?php endif; ?>
 
 
