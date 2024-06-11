@@ -94,30 +94,28 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
             ]
         );
 
+
         $this->add_control(
             'subtitle_icon',
             [
-                'label' => esc_html__( 'Icon', 'plugin-name' ),
-                'type' => \Elementor\Controls_Manager::ICONS,
-                'default' => [
-                    'value' => 'fas fa-star',
-                    'library' => 'solid',
-                ],
+                'label' => esc_html__('Choose Image', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+
             ]
         );
 
         $this->add_control(
             'subtitle',
             [
-                'label' => esc_html__( 'Subtitle', 'plugin-name' ),
+                'label' => esc_html__('Subtitle', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default subtitle', 'plugin-name' ),
+                'default' => esc_html__('Default subtitle', 'plugin-name'),
                 'label_block' => true,
             ]
         );
-        
-        
-        $this->end_controls_section();  
+
+
+        $this->end_controls_section();
 
         $this->start_controls_section(
             'titlecontent',
@@ -129,9 +127,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'title1',
             [
-                'label' => esc_html__( 'Title One', 'plugin-name' ),
+                'label' => esc_html__('Title One', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'default' => esc_html__('Default title', 'plugin-name'),
                 'label_block' => true,
             ]
         );
@@ -139,9 +137,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'title2',
             [
-                'label' => esc_html__( 'Title Two', 'plugin-name' ),
+                'label' => esc_html__('Title Two', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'default' => esc_html__('Default title', 'plugin-name'),
                 'label_block' => true,
             ]
         );
@@ -149,9 +147,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'title3',
             [
-                'label' => esc_html__( 'Title Three', 'plugin-name' ),
+                'label' => esc_html__('Title Three', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'default' => esc_html__('Default title', 'plugin-name'),
                 'label_block' => true,
             ]
         );
@@ -159,15 +157,15 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'title4',
             [
-                'label' => esc_html__( 'Title Four', 'plugin-name' ),
+                'label' => esc_html__('Title Four', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'default' => esc_html__('Default title', 'plugin-name'),
                 'label_block' => true,
             ]
         );
-        
-        
-        $this->end_controls_section();  
+
+
+        $this->end_controls_section();
 
         $this->start_controls_section(
             'mailcontent',
@@ -177,17 +175,53 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'form_shortcode',
+            'textonemail',
             [
-                'label' => esc_html__('Contact Form Shortcode', 'gamestorm-core'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-                'rows' => 10,
-                'placeholder' => esc_html__('Type your Shortcode here', 'gamestorm-core'),
+                'label' => esc_html__('Text', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__('Default title', 'plugin-name'),
+                'label_block' => true,
             ]
         );
-        
-        
-        $this->end_controls_section();  
+
+        $this->add_control(
+            'mailtext',
+            [
+                'label' => esc_html__('Mail', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__('Default title', 'plugin-name'),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'buttontextmail',
+            [
+                'label' => esc_html__('Button Text', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__('Default title', 'plugin-name'),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'buttonlmaillink',
+            [
+                'label' => esc_html__('Button Link', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => esc_html__('https://your-link.com', 'plugin-name'),
+                'default' => [
+                    'url' => '#',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    'custom_attributes' => '',
+                ],
+                'label_block' => true,
+            ]
+        );
+
+
+        $this->end_controls_section();
 
         $this->start_controls_section(
             'buttoncontent',
@@ -199,9 +233,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'buttontext',
             [
-                'label' => esc_html__( 'Button Text', 'plugin-name' ),
+                'label' => esc_html__('Button Text', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'default' => esc_html__('Default title', 'plugin-name'),
                 'label_block' => true,
             ]
         );
@@ -209,9 +243,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'buttonlink',
             [
-                'label' => esc_html__( 'Button Link', 'plugin-name' ),
+                'label' => esc_html__('Button Link', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::URL,
-                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'placeholder' => esc_html__('https://your-link.com', 'plugin-name'),
                 'default' => [
                     'url' => '#',
                     'is_external' => true,
@@ -221,9 +255,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 'label_block' => true,
             ]
         );
-        
-        
-        $this->end_controls_section();  
+
+
+        $this->end_controls_section();
 
         $this->start_controls_section(
             'imagecontent',
@@ -235,7 +269,7 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'image',
             [
-                'label' => esc_html__( 'Choose Image', 'plugin-name' ),
+                'label' => esc_html__('Choose Image', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::MEDIA,
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -243,19 +277,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
             ]
         );
 
-        $this->add_control(
-            'imagebg_color',
-            [
-                'label' => esc_html__( 'Image BG Color', 'plugin-name' ),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .title' => 'color: {{VALUE}} !important',
-                ],
-            ]
-        );
-        
-        
-        $this->end_controls_section();  
+
+
+        $this->end_controls_section();
 
         $this->start_controls_section(
             'menucontent',
@@ -266,13 +290,13 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
 
         // Repeater
         $repeater = new \Elementor\Repeater();
-        
+
         $repeater->add_control(
             'textt',
             [
-                'label' => esc_html__( 'Text', 'plugin-name' ),
+                'label' => esc_html__('Text', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'default' => esc_html__('Default title', 'plugin-name'),
                 'label_block' => true,
             ]
         );
@@ -280,9 +304,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $repeater->add_control(
             'textlink',
             [
-                'label' => esc_html__( 'Text Link', 'plugin-name' ),
+                'label' => esc_html__('Text Link', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::URL,
-                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'placeholder' => esc_html__('https://your-link.com', 'plugin-name'),
                 'default' => [
                     'url' => '#',
                     'is_external' => true,
@@ -292,20 +316,20 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 'label_block' => true,
             ]
         );
-        
+
         $this->add_control(
             'list_repeater',
             [
-                'label' => esc_html__( 'Menu List', 'plugin-name' ),
+                'label' => esc_html__('Menu List', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'title_field' => '{{{ textt }}}',
             ]
         );
-        
-        
-        
-        $this->end_controls_section();  
+
+
+
+        $this->end_controls_section();
 
         $this->start_controls_section(
             'socialcontent',
@@ -316,11 +340,11 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
 
         // Repeater
         $repeater = new \Elementor\Repeater();
-        
+
         $repeater->add_control(
             'social_icon',
             [
-                'label' => esc_html__( 'Social Icon', 'plugin-name' ),
+                'label' => esc_html__('Social Icon', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::ICONS,
                 'default' => [
                     'value' => 'fas fa-star',
@@ -332,9 +356,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $repeater->add_control(
             'sociallink',
             [
-                'label' => esc_html__( 'Link', 'plugin-name' ),
+                'label' => esc_html__('Link', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::URL,
-                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'placeholder' => esc_html__('https://your-link.com', 'plugin-name'),
                 'default' => [
                     'url' => '#',
                     'is_external' => true,
@@ -344,22 +368,22 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 'label_block' => true,
             ]
         );
-        
+
         $this->add_control(
             'list_repeater2',
             [
-                'label' => esc_html__( 'Social List', 'plugin-name' ),
+                'label' => esc_html__('Social List', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'title_field' => '{{{ sociallink }}}',
             ]
         );
-        
 
 
-        
-        
-        $this->end_controls_section();  
+
+
+
+        $this->end_controls_section();
 
         $this->start_controls_section(
             'privacycontent',
@@ -371,9 +395,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'privacytext1',
             [
-                'label' => esc_html__( 'Text One', 'plugin-name' ),
+                'label' => esc_html__('Text One', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'default' => esc_html__('Default title', 'plugin-name'),
                 'label_block' => true,
             ]
         );
@@ -381,9 +405,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'privacylink1',
             [
-                'label' => esc_html__( 'Link One', 'plugin-name' ),
+                'label' => esc_html__('Link One', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::URL,
-                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'placeholder' => esc_html__('https://your-link.com', 'plugin-name'),
                 'default' => [
                     'url' => '#',
                     'is_external' => true,
@@ -397,19 +421,19 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'privacytext2',
             [
-                'label' => esc_html__( 'Text Two', 'plugin-name' ),
+                'label' => esc_html__('Text Two', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__( 'Default title', 'plugin-name' ),
+                'default' => esc_html__('Default title', 'plugin-name'),
                 'label_block' => true,
             ]
         );
 
         $this->add_control(
-            'privacylink1',
+            'privacylink2',
             [
-                'label' => esc_html__( 'Link Two', 'plugin-name' ),
+                'label' => esc_html__('Link Two', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::URL,
-                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'placeholder' => esc_html__('https://your-link.com', 'plugin-name'),
                 'default' => [
                     'url' => '#',
                     'is_external' => true,
@@ -419,9 +443,9 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 'label_block' => true,
             ]
         );
-        
-        
-        $this->end_controls_section();  
+
+
+        $this->end_controls_section();
 
         $this->start_controls_section(
             'copyrightcontent',
@@ -433,16 +457,16 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'copydes',
             [
-                'label' => esc_html__( 'Copyright Text', 'plugin-name' ),
+                'label' => esc_html__('Copyright Text', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
                 'rows' => 10,
-                'default' => esc_html__( 'Default description', 'plugin-name' ),
+                'default' => esc_html__('Default description', 'plugin-name'),
             ]
         );
-        
-        
-        $this->end_controls_section();  
-     }
+
+
+        $this->end_controls_section();
+    }
 
     /**
      * Render rsgallery widget output on the frontend.
@@ -468,53 +492,71 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                         <div class="col-lg-6">
                             <div class="footer-content1 position-relative cus-z1">
                                 <div class="d-flex align-items-center gap-xxl-3 gap-2 mb-xxl-24 mb-4">
-                                    <img src="<?php echo get_template_directory_uri()?>/assets/images/global/chnaging-icon.png" alt="img">
-                                    <span class="nw1-clr fw_700 fs20">
-                                        Chasing Fortunes
-                                    </span>
+                                    <?php if (!empty($settings['subtitle_icon']['url'])) :   ?>
+                                        <img src="<?php echo esc_url($settings['subtitle_icon']['url']) ?>" alt="img">
+                                    <?php endif ?>
+                                    <?php if (!empty($settings['subtitle'])) :   ?>
+                                        <span class="nw1-clr fw_700 fs20">
+                                            <?php echo esc_html($settings['subtitle']) ?>
+                                        </span>
+                                    <?php endif ?>
                                 </div>
                                 <div class="section__title mb-xxl-15 mb-xl-10 mb-8">
                                     <span class="display-one d-block n0-clr">
-                                        Explore
+                                        <?php if (!empty($settings['title1'])) :   ?>
+                                            <?php echo esc_html($settings['title1']) ?>
+                                        <?php endif ?>
                                         <span class="d-flex align-items-center gap-2">
-                                            <span class="d-block" data-aos="zoom-in-right" data-aos-duration="1200">
-                                                Our
-                                            </span>
-                                            <span class="act4-clr act4-underline" data-aos="zoom-in-left" data-aos-duration="1000">
-                                                Lottery
-                                            </span>
+                                            <?php if (!empty($settings['title2'])) :   ?>
+                                                <span class="d-block" data-aos="zoom-in-right" data-aos-duration="1200">
+                                                    <?php echo esc_html($settings['title2']) ?>
+                                                </span>
+                                            <?php endif ?>
+                                            <?php if (!empty($settings['title3'])) :   ?>
+                                                <span class="act4-clr act4-underline" data-aos="zoom-in-left" data-aos-duration="1000">
+                                                    <?php echo esc_html($settings['title3']) ?>
+                                                </span>
+                                            <?php endif ?>
                                         </span>
-                                        Hub
+                                        <?php if (!empty($settings['title4'])) :   ?>
+                                            <?php echo esc_html($settings['title4']) ?>
+                                        <?php endif ?>
                                     </span>
                                 </div>
                                 <div class="say-helow pb-xxl-5 pb-5 d-flex flex-wrap gap-3 align-items-center justify-content-between">
                                     <div class="mails">
-                                        <span class="nw4-clr d-block mb-xxl-2 mb-0">
-                                            Say Hello
-                                        </span>
-                                        <a href="#0" class="fs20 fw_600 nw1-clr">
-                                            cruz@example.com
-                                        </a>
+                                        <?php if (!empty($settings['textonemail'])) :   ?>
+                                            <span class="nw4-clr d-block mb-xxl-2 mb-0">
+                                                <?php echo esc_html($settings['textonemail']) ?>
+                                            </span>
+                                        <?php endif ?>
+                                        <?php if (!empty($settings['mailtext'])) :   ?>
+                                            <a href="#0" class="fs20 fw_600 nw1-clr">
+                                                <?php echo esc_html($settings['mailtext']) ?>
+                                            </a>
+                                        <?php endif ?>
                                     </div>
-                                    <a href="contest.html" class="kewta-btn d-inline-flex align-items-center">
-                                        <span class="kew-text p1-bg n4-clr">
-                                            Participant Now
-                                            <i class="ph-bold ph-arrow-up-right n4-clr"></i>
-                                        </span>
-                                    </a>
+                                    <?php if (!empty($settings['buttonlmaillink']['url'])) :   ?>
+                                        <a href="<?php echo esc_url($settings['buttonlmaillink']['url']) ?>" class="kewta-btn d-inline-flex align-items-center">
+                                            <span class="kew-text p1-bg n4-clr">
+                                                <?php echo esc_html($settings['buttontextmail']) ?>
+                                                <i class="ph-bold ph-arrow-up-right n4-clr"></i>
+                                            </span>
+                                        </a>
+                                    <?php endif ?>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <div class="footer-thumbv1-wrap">
                                 <div class="footer-browse-btn">
-                                    <a href="#0" class="cmn__collection radius-circle act4-bg d-center position-relative">
+                                    <a href="<?php echo esc_url($settings['buttonlink']['url']) ?>" class="cmn__collection radius-circle act4-bg d-center position-relative">
                                         <span class="cmn-cont-box text-center position-relative">
                                             <span class="icon mb-1">
                                                 <i class="ph-bold ph-arrow-up-right n0-clr fs-three"></i>
                                             </span>
                                             <span class="d-block n0-clr fw_700">
-                                                Explore Now
+                                                <?php echo esc_html($settings['buttontext']) ?>
                                             </span>
                                         </span>
                                     </a>
@@ -527,9 +569,11 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                                         <span></span>
                                     </div>
                                 </div>
-                                <div class="footer-thumb1" data-aos="fade-down-left" data-aos-duration="1500">
-                                    <img src="<?php echo get_template_directory_uri()?>/assets/images/banner/banner-car3.png" alt="img">
-                                </div>
+                                <?php if (!empty($settings['image']['url'])) :   ?>
+                                    <div class="footer-thumb1" data-aos="fade-down-left" data-aos-duration="1500">
+                                        <img src="<?php echo esc_url($settings['image']['url']) ?>" alt="img">
+                                    </div>
+                                <?php endif ?>
                             </div>
                         </div>
                     </div>
@@ -539,54 +583,24 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                 <div class="container">
                     <div class="d-flex flex-wrap gap-4 align-items-center justify-content-md-between justify-content-center">
                         <ul class="linkfooter flex-wrap justify-content-center list-unstyled">
-                            <li>
-                                <a href="index.html">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="about.html">
-                                    About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog1.html">
-                                    Our Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a href="winners.html">
-                                    Winners List
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.html">
-                                    Contact Us
-                                </a>
-                            </li>
+                            <?php foreach ($settings['list_repeater'] as $item) : ?>
+                                <li>
+                                    <?php if (!empty($item['textt'])) :   ?>
+                                        <a href="<?php echo esc_url($item['textlink']['url']) ?>">
+                                            <?php echo esc_html($item['textt']) ?>
+                                        </a>
+                                    <?php endif ?>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                         <ul class="social d-flex align-items-center gap-3 list-unstyled">
-                            <li>
-                                <a href="#">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 10V14H10V21H14V14H17L18 10H14V8C14 7.73478 14.1054 7.48043 14.2929 7.29289C14.4804 7.10536 14.7348 7 15 7H18V3H15C13.6739 3 12.4021 3.52678 11.4645 4.46447C10.5268 5.40215 10 6.67392 10 8V10H7Z" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.5 4.5V4.51M1 5C1 3.93913 1.42143 2.92172 2.17157 2.17157C2.92172 1.42143 3.93913 1 5 1H13C14.0609 1 15.0783 1.42143 15.8284 2.17157C16.5786 2.92172 17 3.93913 17 5V13C17 14.0609 16.5786 15.0783 15.8284 15.8284C15.0783 16.5786 14.0609 17 13 17H5C3.93913 17 2.92172 16.5786 2.17157 15.8284C1.42143 15.0783 1 14.0609 1 13V5ZM6 9C6 9.79565 6.31607 10.5587 6.87868 11.1213C7.44129 11.6839 8.20435 12 9 12C9.79565 12 10.5587 11.6839 11.1213 11.1213C11.6839 10.5587 12 9.79565 12 9C12 8.20435 11.6839 7.44129 11.1213 6.87868C10.5587 6.31607 9.79565 6 9 6C8.20435 6 7.44129 6.31607 6.87868 6.87868C6.31607 7.44129 6 8.20435 6 9Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.9822 3L15.1052 3.006C17.1192 3.22 18.6322 3.678 20.0712 4.679C20.2429 4.79882 20.3726 4.96951 20.4422 5.167C22.3182 10.482 22.8152 15.154 21.8932 17.447C20.8902 19.452 19.2872 21 17.4992 21C16.5592 21 15.2422 19.404 14.7222 18.031L14.7022 18.036C15.5402 17.905 16.3922 17.713 17.2742 17.462C17.4005 17.4259 17.5185 17.3652 17.6214 17.2835C17.7243 17.2018 17.8101 17.1006 17.8739 16.9858C17.9377 16.8709 17.9782 16.7446 17.9932 16.6141C18.0082 16.4835 17.9973 16.3513 17.9612 16.225C17.9251 16.0987 17.8644 15.9807 17.7827 15.8778C17.701 15.7749 17.5998 15.6891 17.4849 15.6253C17.3701 15.5615 17.2438 15.521 17.1132 15.506C16.9827 15.491 16.8505 15.5019 16.7242 15.538C13.4042 16.488 10.5942 16.488 7.27417 15.538C7.01903 15.4651 6.74537 15.4965 6.51338 15.6253C6.2814 15.7541 6.1101 15.9699 6.03717 16.225C5.96423 16.4801 5.99564 16.7538 6.12448 16.9858C6.25331 17.2178 6.46903 17.3891 6.72417 17.462C7.44917 17.669 8.15517 17.835 8.85017 17.961L9.29417 18.035C8.81717 19.405 7.59917 21 6.66717 21C4.92417 21 3.39117 19.445 2.40017 17.356C1.55917 15.15 2.03117 10.488 3.81417 5.182C3.87986 4.98553 4.00496 4.81431 4.17217 4.692C5.56417 3.676 6.97917 3.217 8.88917 3.007C9.07031 2.98716 9.25343 3.0172 9.41875 3.09386C9.58407 3.17053 9.72529 3.29091 9.82717 3.442L9.89017 3.549L10.5422 4.837L10.7022 4.818C11.5792 4.728 12.4202 4.728 13.2972 4.818L13.4552 4.837L14.1052 3.55C14.1779 3.40579 14.2845 3.28135 14.4158 3.18731C14.5471 3.09327 14.6992 3.03243 14.8592 3.01L14.9822 3ZM8.99917 9C8.52123 8.99998 8.05908 9.17111 7.69642 9.48241C7.33377 9.7937 7.09457 10.2246 7.02217 10.697L7.00417 10.851L6.99917 11L7.00417 11.15C7.03335 11.538 7.17511 11.9092 7.41207 12.2178C7.64902 12.5265 7.97089 12.7594 8.33821 12.8878C8.70553 13.0163 9.10236 13.0349 9.48006 12.9412C9.85775 12.8475 10.1999 12.6456 10.4646 12.3604C10.7293 12.0751 10.905 11.7188 10.9702 11.3352C11.0355 10.9516 10.9873 10.5572 10.8318 10.2005C10.6762 9.84383 10.42 9.54025 10.0945 9.32701C9.76897 9.11377 9.38831 9.00012 8.99917 9ZM14.9992 9C14.5212 8.99998 14.0591 9.17111 13.6964 9.48241C13.3338 9.7937 13.0946 10.2246 13.0222 10.697L13.0042 10.851L12.9992 11L13.0042 11.15C13.0334 11.538 13.1751 11.9092 13.4121 12.2178C13.649 12.5265 13.9709 12.7594 14.3382 12.8878C14.7055 13.0163 15.1024 13.0349 15.4801 12.9412C15.8578 12.8475 16.1999 12.6456 16.4646 12.3604C16.7293 12.0751 16.905 11.7188 16.9702 11.3352C17.0355 10.9516 16.9873 10.5572 16.8318 10.2005C16.6762 9.84383 16.42 9.54025 16.0945 9.32701C15.769 9.11377 15.3883 9.00012 14.9992 9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </li>
+                            <?php foreach ($settings['list_repeater2'] as $item) : ?>
+                                <li>
+                                    <a href="<?php echo esc_url($item['sociallink']['url']) ?>">
+                                        <?php \Elementor\Icons_Manager::render_icon($item['social_icon'], ['aria-hidden' => 'true']); ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
@@ -596,36 +610,23 @@ class ReacTheme_Elementor_Footersection_Widget extends \Elementor\Widget_Base
                     <div class="d-flex flex-wrap gap-3 align-items-center justify-content-md-between justify-content-center">
                         <ul class="pri-link d-flex align-items-center gap-xxl-6 gap-sm-6 gap-3 list-unstyled">
                             <li>
-                                <a href="terms-condition.html">
-                                    Terms & Service
+                                <a href="<?php echo esc_url($settings['privacylink1']['url']) ?>">
+                                    <?php echo esc_html($settings['privacytext1']) ?>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    Privacy Policy
+                                <a href="<?php echo esc_url($settings['privacylink2']['url']) ?>">
+                                    <?php echo esc_html($settings['privacytext2']) ?>
                                 </a>
                             </li>
                         </ul>
                         <p class="footer-copyright flex-wrap justify-content-center">
-                            <span class="copy n0-clr">
-                                Copyright &copy; 2024 <a href="#">Lottovibe</a>
-                            </span>
-                            <span class="midbor">
-
-                            </span>
-                            <span class="designed n0-clr">
-                                Designed By <a href="https://themeforest.net/user/pixelaxis" class="p1-clr"> Pixelaxis</a>
-                            </span>
+                            <?php echo wp_kses($settings['copydes'], wp_kses_allowed_html('post'))  ?>
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
-
-
-
-
-
 
 
 
