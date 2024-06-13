@@ -147,7 +147,7 @@ class RTS_Product_Cart extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'cart_icon_color',
+            'cart_icon_colorr',
             [
                 'label'   => esc_html__('Cart Icon Color', 'rsaddon'),
                 'type'    => Controls_Manager::COLOR,
