@@ -257,11 +257,9 @@ class ReacTheme_Elementor_Product_Widget extends \Elementor\Widget_Base
                                             <div class="range-custom position-relative">
                                                 <span class="curs-range"></span>
                                             </div>
-                                            <span class="n4-clr soldout fw_700 fs-eight">
-                                                <?php
-                                                                $lottery_participants_count = !empty($product->get_lottery_participants_count()) ? $product->get_lottery_participants_count() : '0';
-                                                                echo $lottery_participants_count; ?> Sold
-                                            </span>
+                            
+
+
                                         </div>
 
                                         <div class="d-flex px-xxl-6 px-xl-5 px-lg-4 px-3 nw4-bb py-xxl-5 py-sm-4 py-3 flex-wrap gap-3 align-items-center justify-content-between">
@@ -299,14 +297,9 @@ class ReacTheme_Elementor_Product_Widget extends \Elementor\Widget_Base
                                         <ul class="remaining-info px-xxl-6 px-xl-5 px-lg-4 px-3 py-xxl-5 py-xl-3 py-2 nw4-bb d-flex align-items-center gap-xxl-5 gap-lg-3 gap-2 list-unstyled">
                                             <li class="d-flex align-items-center gap-2">
                                                 <i class="ph ph-clock fs-five n3-clr"></i>
-                                                <span class="n3-clr fw_600">
-                                                    <?php
-                                                                    $counter_time = $product->get_seconds_remaining();
-                                                                    $dt1 = new DateTime('NOW');
-                                                                    $dt2 = new DateTime("@$counter_time");
-                                                                    echo $dt1->diff($dt2)->format('%a') . ' ' . esc_html__('Days', 'lottovibe');
-                                                                    ?>
-                                                </span>
+        
+
+                                                
                                             </li>
                                             <li class="vline-remaing"></li>
                                             <li class="d-flex align-items-center gap-2">

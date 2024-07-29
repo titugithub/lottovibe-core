@@ -326,8 +326,8 @@ final class RTelements_Elementor_Extension
 		
 		// //product
 
-		// require_once(__DIR__ . '/widgets/product/product.php');
-		// \Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
+		require_once(__DIR__ . '/widgets/product/product.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
 
 		
 		//footer category
