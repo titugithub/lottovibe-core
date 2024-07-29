@@ -324,7 +324,9 @@ final class RTelements_Elementor_Extension
 		
 
 		
-		// //product
+	
+
+		//product Car
 
 		require_once(__DIR__ . '/widgets/product/product.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
@@ -520,10 +522,14 @@ final class RTelements_Elementor_Extension
 
 		require_once(__DIR__ . '/widgets/testimonial/testimonial.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Testimonial_Widget());
-		//banner Slider
+		//banner car Slider
 
 		require_once(__DIR__ . '/widgets/banner/banner.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Banner_Widget());
+		//banner bike Slider
+
+		require_once(__DIR__ . '/widgets/banner/bannerbike.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannerbike_Widget());
 		//About
 
 		require_once(__DIR__ . '/widgets/about/about.php');
