@@ -461,6 +461,11 @@ final class RTelements_Elementor_Extension
 			\Elementor\Plugin::instance()->widgets_manager->register(new \RTElements_Elementor_Team_Slider_Widget());
 		}
 
+		//Service Grid 2
+	
+			require_once(__DIR__ . '/widgets/services/service-gridtwo.php');
+			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Sservices_Gridtwo_Widget());
+		
 		//Service Grid
 		if (isset($rtelements_addon_setting['rt_service_grid_setting']) == 'rt_service_grid_setting') {
 			require_once(__DIR__ . '/widgets/services/service-grid.php');

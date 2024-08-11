@@ -227,6 +227,259 @@ class ReacTheme_Elementor_Bikecat_Widget extends \Elementor\Widget_Base
 
 
         $this->end_controls_section();
+
+
+        // ====================================Style===================================//
+
+
+        $this->start_controls_section(
+             'subtitlestyle',
+             [
+                'label' => esc_html__('Subtitle', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'subtitlestyle_typ',
+                'selector' => '{{WRAPPER}} h5.p1-clr.fw_700',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'subtitlestyle_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} h5.p1-clr.fw_700' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'titlestyle',
+             [
+                'label' => esc_html__('Title', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+
+
+        $this->add_control(
+            'titlestylecolor1',
+            [
+                'label' => esc_html__( 'Color One', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.fs-two.fw_800.d-block.n0-clr.mb-xxl-5.mb-3' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} span.d-block.fw_800.n0-clr.fs-two' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'titlestylecolor2',
+            [
+                'label' => esc_html__( 'Color Two', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.act4-clr.fw_800.fs-two.act4-underline' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} .section__title .act4-underline::before' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        
+        
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'descriptionstyle',
+             [
+                'label' => esc_html__('Description', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'description_typ',
+                'selector' => '{{WRAPPER}} .description',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'description_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .description' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'description_margin',
+            [
+                'label' => esc_html__( 'Margin', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} .description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                ],
+            ]
+        );
+        
+        $this->add_responsive_control(
+            'description_padding',
+            [
+                'label'      => __('Padding', 'plugin-name'),
+                'type'       => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors'  => [
+                    '{{WRAPPER}} .description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                ]
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'buttonstyle',
+             [
+                'label' => esc_html__('Button', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        $this->add_control(
+            'button_color',
+            [
+                'label' => esc_html__( 'Background Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} a.cmn__collection.radius-circle.p1-bg.d-center.position-relative' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+
+        $this->add_control(
+            'buttonhover_color',
+            [
+                'label' => esc_html__( 'Hover Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .cmn__collection::after' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'cardstyle',
+             [
+                'label' => esc_html__('Card', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        
+        $this->add_control(
+            'caredd_color',
+            [
+                'label' => esc_html__( 'Background Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .cate-gorgiousbox' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'productstyle',
+             [
+                'label' => esc_html__('Product', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'productstyle_typ',
+                'selector' => '{{WRAPPER}} .titleproduct',
+        
+            ]
+        );
+
+        
+        $this->add_control(
+            'productstyle_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} a.single-cont .cont' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+
+
+        $this->add_control(
+            'productstyler_color',
+            [
+                'label' => esc_html__( 'Background', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .content-wrap' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+
+        $this->add_control(
+            'productstyle_color_hover',
+            [
+                'label' => esc_html__( 'Hover Background', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .content-wrap:hover' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
+
+
+
+
+
     }
 
     /**
@@ -280,7 +533,7 @@ class ReacTheme_Elementor_Bikecat_Widget extends \Elementor\Widget_Base
                                     </span>
                                 </span>
                                 <?php if (!empty($settings['description'])) :   ?>
-                                    <p class="nw1-clr">
+                                    <p class="nw1-clr description">
                                         <?php echo esc_html($settings['description']) ?>
                                     </p>
                                 <?php endif ?>
@@ -316,7 +569,7 @@ class ReacTheme_Elementor_Bikecat_Widget extends \Elementor\Widget_Base
 
                                         <div class="content-wrap">
                                             <a href="<?php echo esc_url($item['list_link']['url']) ?>" class="doble-cont">
-                                                <span class="cont">
+                                                <span class="cont titleproduct">
                                                     <?php echo esc_html($item['list_title']) ?>
                                                 </span>
                                                 <span class="cmn-arrows n0-bg">
@@ -324,7 +577,7 @@ class ReacTheme_Elementor_Bikecat_Widget extends \Elementor\Widget_Base
                                                 </span>
                                             </a>
                                             <a href="<?php echo esc_url($item['list_link']['url']) ?>" class="single-cont">
-                                                <span class="cont">
+                                                <span class="cont titleproduct">
                                                     <?php echo esc_html($item['list_title']) ?>
                                                 </span>
                                             </a>
