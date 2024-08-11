@@ -244,9 +244,7 @@ class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Choose Image', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::MEDIA,
-                'default' => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
+
             ]
         );
 
@@ -474,6 +472,402 @@ class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
 
 
         $this->end_controls_section();
+
+
+        // =========================================Style============================================//
+
+
+        $this->start_controls_section(
+            'titlestyle',
+            [
+                'label' => esc_html__('Title', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'titleoneeheading',
+            [
+                'label' => esc_html__('Title One', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'titleone_typ',
+                'selector' => '{{WRAPPER}} .titleone',
+
+            ]
+        );
+
+        $this->add_control(
+            'titleone_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .titleone' => 'color: {{VALUE}} !important;',
+
+                ],
+            ]
+        );
+
+
+        $this->add_control(
+            'titletwoheading',
+            [
+                'label' => esc_html__('Title Two', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'titletwo_typ',
+                'selector' => '{{WRAPPER}} .titletwo',
+
+            ]
+        );
+
+        $this->add_control(
+            'titletwo_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .titletwo' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .act4-underline::before' => 'background: {{VALUE}} !important;',
+                ],
+            ]
+        );
+
+
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'desstyle',
+            [
+                'label' => esc_html__('Description', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'description_typ',
+                'selector' => '{{WRAPPER}} .description',
+
+            ]
+        );
+
+        $this->add_control(
+            'description_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .description' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'description_margin',
+            [
+                'label' => esc_html__('Margin', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'description_padding',
+            [
+                'label'      => __('Padding', 'plugin-name'),
+                'type'       => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors'  => [
+                    '{{WRAPPER}} .description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                ]
+            ]
+        );
+
+
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'buttonstyle',
+            [
+                'label' => esc_html__('Button', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+
+        $this->add_control(
+            'buttononeheading',
+            [
+                'label' => esc_html__('Button One', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_control(
+            'buttononecolor',
+            [
+                'label' => esc_html__('Color', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.kew-text.n4-clr.act3-bg' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} i.ti.ti-arrow-right.n4-clr' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'buttononebackground',
+            [
+                'label' => esc_html__('Background', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.kew-text.n4-clr.act3-bg' => 'background: {{VALUE}} !important',
+                    '{{WRAPPER}} .kewta-btn.kewta-alt .kew-arrow' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+
+        $this->add_control(
+            'buttontwoheading',
+            [
+                'label' => esc_html__('Button Two', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_control(
+            'buttontwocolor',
+            [
+                'label' => esc_html__('Color', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} a.how-cont.nw1-clr.fw_700' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'buttontwohobercolor',
+            [
+                'label' => esc_html__('Hover Color', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} a.how-cont.nw1-clr.fw_700:hover' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'userstyle',
+            [
+                'label' => esc_html__('User', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+
+        $this->add_control(
+            'usernumber',
+            [
+                'label' => esc_html__('Number', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'usernumberr_typ',
+                'selector' => '{{WRAPPER}} span.display-five.n0-clr',
+
+            ]
+        );
+
+        $this->add_control(
+            'user_colorone',
+            [
+                'label'     => esc_html__('Color One', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.display-five.n0-clr' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'user_colortwo',
+            [
+                'label'     => esc_html__('Color Two', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.act4-clr' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+
+
+        $this->add_control(
+            'usertitle',
+            [
+                'label' => esc_html__('Title', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'usertitle_typ',
+                'selector' => '{{WRAPPER}} span.nw1-clr.fs18.fw_600.mt-1',
+
+            ]
+        );
+
+        $this->add_control(
+            'usertitle_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.nw1-clr.fs18.fw_600.mt-1' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'imagestyle',
+            [
+                'label' => esc_html__('Bike Image', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'imagestyle_color',
+            [
+                'label' => esc_html__('Background', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .banner-bike-onewrap.act3-bg' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+
+
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'rotatestyle',
+            [
+                'label' => esc_html__('Rotate Text', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+
+        $this->add_control(
+            'rotatestyle_color',
+            [
+                'label' => esc_html__('Color', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .banner-textanimation::before' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'reviewstyle',
+            [
+                'label' => esc_html__('Review', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+
+        $this->add_control(
+            'reviewnumber',
+            [
+                'label' => esc_html__('Number', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_control(
+            'reviewnumber_color',
+            [
+                'label' => esc_html__('Color', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.act3-clr.fs-five' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'reviewtitle',
+            [
+                'label' => esc_html__('Title', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_control(
+            'reviewtitle_color',
+            [
+                'label' => esc_html__('Color', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.nw2-clr.fs-eight.fw_700.text-uppercase.mt-xxl-4.mt-3' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+
+
+        $this->end_controls_section();
     }
 
     /**
@@ -490,6 +884,61 @@ class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
         $settings    = $this->get_settings_for_display();
         ?>
 
+        <script>
+            jQuery(document).ready(function() {
+                var swiper = new Swiper(".banner-bikeslide-wrap", {
+                    loop: true,
+                    slidesPerView: 1,
+                    slidesToShow: 1,
+                    spaceBetween: 24,
+                    speed: 1000,
+                    navigation: {
+                        nextEl: ".swiper-button-prevteam",
+                        prevEl: ".swiper-button-nextteam",
+                    },
+                    autoplay: {
+                        delay: 1200,
+                        reverseDirection: true,
+                    },
+                    breakpoints: {
+                        1400: {
+                            slidesPerView: 1,
+                            spaceBetween: 24,
+                        },
+                        992: {
+                            slidesPerView: 1,
+                            spaceBetween: 14,
+                        },
+                        768: {
+                            slidesPerView: 1,
+                            spaceBetween: 14,
+                        },
+                        576: {
+                            slidesPerView: 1,
+                            spaceBetween: 14,
+                        },
+                        500: {
+                            slidesPerView: 1,
+                            spaceBetween: 14,
+                        },
+                    }
+                });
+                const texts = document.querySelectorAll(".text, .text2");
+                texts.forEach(text => {
+                    if (text) {
+                        text.innerHTML = text.innerText
+                            .split("")
+                            .map(
+                                (char, i) => `<span style="display:inline-block; transform:rotate(${i * 14}deg)">${char}</span>`
+                            )
+                            .join("");
+                    } else {
+                        console.log("print");
+                    }
+                });
+            })
+        </script>
+
 
 
 
@@ -504,23 +953,23 @@ class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
                                 <div class="display-two position-relative cus-z1 text-capitalize n0-clr mb-xxl-5 mb-3">
                                     <span class="d-flex text-capitalize align-items-center mb-3 n0-clr gap-3 justify-content-center text-uppercase" data-aos="zoom-in-up" data-aos-duration="2200">
                                         <?php if (!empty($settings['textone'])) :   ?>
-                                            <span class="fw_800 text-capitalize d-block"><?php echo esc_html($settings['textone']) ?></span>
+                                            <span class="titleone fw_800 text-capitalize d-block"><?php echo esc_html($settings['textone']) ?></span>
                                         <?php endif ?>
                                         <?php if (!empty($settings['subtitleimage']['url'])) :   ?>
                                             <img src="<?php echo esc_url($settings['subtitleimage']['url']) ?>" alt="img" class="bn-v2textcar1">
                                         <?php endif ?>
                                         <?php if (!empty($settings['textone'])) :   ?>
-                                            <span class="fw_800 act4-clr d-block act4-underline"><?php echo esc_html($settings['texttwo']) ?></span>
+                                            <span class="titletwo fw_800 act4-clr d-block act4-underline"><?php echo esc_html($settings['texttwo']) ?></span>
                                         <?php endif ?>
                                     </span>
-                                    <span class="d-flex nw1-clr text-capitalize justify-content-center align-items-center gap-3" data-aos="zoom-in-left" data-aos-duration="2400">
+                                    <span class="titleone d-flex nw1-clr text-capitalize justify-content-center align-items-center gap-3" data-aos="zoom-in-left" data-aos-duration="2400">
                                         <?php if (!empty($settings['textthree'])) :   ?>
                                             <?php echo esc_html($settings['textthree']) ?>
                                         <?php endif ?>
                                     </span>
                                 </div>
                                 <?php if (!empty($settings['maintitle'])) :   ?>
-                                    <p class="nw1-clr fs20 max-520 m-auto mb-xxl-10 mb-lg-8 mb-5 text-center" data-aos="fade-down-right" data-aos-duration="1500">
+                                    <p class="description nw1-clr fs20 max-520 m-auto mb-xxl-10 mb-lg-8 mb-5 text-center" data-aos="fade-down-right" data-aos-duration="1500">
                                         <?php echo esc_html($settings['maintitle']) ?>
                                     </p>
                                 <?php endif ?>
@@ -554,61 +1003,88 @@ class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
                                 <div class="bnv3-countedwrap d-flex align-items-center justify-content-between">
                                     <div class="employed-countv3">
                                         <div class="employed-itemv3 mb-xxl-6 mb-4">
-                                            <span class="display-five n0-clr">
-                                                175<span class="act4-clr">0</span><span class="act4-clr">+</span>
-                                            </span>
-                                            <span class="nw1-clr fs18 fw_600 mt-1">
-                                                Verified Users
-                                            </span>
+                                            <?php if (!empty($settings['numberone'])) :   ?>
+                                                <span class="display-five n0-clr">
+                                                    <?php echo wp_kses($settings['numberone'], wp_kses_allowed_html('post'))  ?>
+                                                </span>
+                                            <?php endif ?>
+                                            <?php if (!empty($settings['titleone'])) :   ?>
+                                                <span class="nw1-clr fs18 fw_600 mt-1">
+                                                    <?php echo esc_html($settings['titleone']) ?>
+                                                </span>
+                                            <?php endif ?>
                                         </div>
                                         <div class="employed-itemv3 mb-xxl-6 mb-4">
-                                            <span class="display-five n0-clr">
-                                                15<span class="act4-clr">k</span>
-                                            </span>
-                                            <span class="nw1-clr fs18 fw_600 mt-1">
-                                                Years on the market
-                                            </span>
+                                            <?php if (!empty($settings['numbertwo'])) :   ?>
+                                                <span class="display-five n0-clr">
+                                                    <?php echo wp_kses($settings['numbertwo'], wp_kses_allowed_html('post'))  ?>
+                                                </span>
+                                            <?php endif ?>
+                                            <?php if (!empty($settings['titletwo'])) :   ?>
+                                                <span class="nw1-clr fs18 fw_600 mt-1">
+                                                    <?php echo esc_html($settings['titletwo']) ?>
+                                                </span>
+                                            <?php endif ?>
                                         </div>
                                     </div>
-                                    <div class="win-bn3-thumb">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner/win.png" alt="win">
-                                    </div>
+
+                                    <?php if (!empty($settings['counterimage']['url'])) :   ?>
+                                        <div class="win-bn3-thumb">
+                                            <img src="<?php echo esc_url($settings['counterimage']['url']) ?>" alt="win">
+                                        </div>
+                                    <?php endif ?>
+
+
                                     <div class="banner-content-v1customer">
                                         <ul class="customer-review cmn-style-flex act3-border radius100 py-xxl-2 py-2 px-2">
-                                            <li>
-                                                <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner/customer1.png" alt="img">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner/customer2.png" alt="img">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner/customer3.png" alt="img">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
-                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner/customer4.png" alt="img">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
-                                                    <span class="d-grid customer-ratting text-center p-2 p1-bg align-items-center justify-content-center">
-                                                        <i class="ti ti-star-filled n4-clr"></i>
-                                                        <span class="d-block fs-eight fw_700 n4-clr">
-                                                            4.7
+                                            <?php if (!empty($settings['image1']['url'])) :   ?>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+                                                        <img src="<?php echo esc_url($settings['image1']['url']) ?>" alt="img">
+                                                    </a>
+                                                </li>
+                                            <?php endif ?>
+                                            <?php if (!empty($settings['image2']['url'])) :   ?>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+                                                        <img src="<?php echo esc_url($settings['image2']['url']) ?>" alt="img">
+                                                    </a>
+                                                </li>
+                                            <?php endif ?>
+                                            <?php if (!empty($settings['image3']['url'])) :   ?>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+                                                        <img src="<?php echo esc_url($settings['image3']['url']) ?>" alt="img">
+                                                    </a>
+                                                </li>
+                                            <?php endif ?>
+                                            <?php if (!empty($settings['image4']['url'])) :   ?>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+                                                        <img src="<?php echo esc_url($settings['image4']['url']) ?>" alt="img">
+                                                    </a>
+                                                </li>
+                                            <?php endif ?>
+                                            <?php if (!empty($settings['ratingnumbet'])) :   ?>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+                                                        <span class="d-grid customer-ratting text-center p-2 p1-bg align-items-center justify-content-center">
+                                                            <i class="ti ti-star-filled n4-clr"></i>
+                                                            <span class="d-block fs-eight fw_700 n4-clr">
+                                                                <?php echo esc_html($settings['ratingnumbet']) ?>
+                                                            </span>
                                                         </span>
-                                                    </span>
-                                                </a>
-                                            </li>
+                                                    </a>
+                                                </li>
+                                            <?php endif ?>
+
                                         </ul>
-                                        <span class="nw2-clr fs-eight fw_700 text-uppercase mt-xxl-4 mt-3">
-                                            <span class="act3-clr fs-five">70k</span> CUSTOMER REVIEW
-                                        </span>
+                                        <?php if (!empty($settings['customernumber'] and $settings['customertext'])) :   ?>
+                                            <span class="nw2-clr fs-eight fw_700 text-uppercase mt-xxl-4 mt-3">
+                                                <span class="act3-clr fs-five"><?php echo esc_html($settings['customernumber']) ?></span> <?php echo esc_html($settings['customertext']) ?>
+                                            </span>
+                                        <?php endif ?>
+
                                     </div>
                                 </div>
                                 <div class="banner-bike-animation position-relative">
@@ -616,21 +1092,17 @@ class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
                                         <div class="banner-oneslider">
                                             <div class="banner-bikeslide-wrap swiper mySwiper">
                                                 <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <div class="bn-carslide-item">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner/bannerv3-slide-bike1.png" alt="img">
+                                                    <?php foreach ($settings['list_repeater'] as $item) : ?>
+                                                        <div class="swiper-slide">
+                                                            <div class="bn-carslide-item">
+                                                                <?php if (!empty($item['imageslider']['url'])) :   ?>
+                                                                    <img src="<?php echo esc_url($item['imageslider']['url']) ?>" alt="img">
+                                                                <?php endif ?>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="bn-carslide-item">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner/bannerv3-slide-bike2.png.png" alt="img">
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="bn-carslide-item">
-                                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/banner/bannerv3-slide-bike3.png" alt="img">
-                                                        </div>
-                                                    </div>
+                                                    <?php endforeach; ?>
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -654,7 +1126,18 @@ class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
                 <div class="textcircle">
                     <div class="text">
                         <p>
-                            <span>Explore</span> <span>More</span> <span>Explore</span> <span>More</span>
+                            <?php if (!empty($settings['Textone'])) :   ?>
+                                <span><?php echo esc_html($settings['Textone']) ?></span>
+                            <?php endif ?>
+                            <?php if (!empty($settings['texttwoo'])) :   ?>
+                                <span><?php echo esc_html($settings['texttwoo']) ?></span>
+                            <?php endif ?>
+                            <?php if (!empty($settings['textthreee'])) :   ?>
+                                <span><?php echo esc_html($settings['textthreee']) ?></span>
+                            <?php endif ?>
+                            <?php if (!empty($settings['textfour'])) :   ?>
+                                <span><?php echo esc_html($settings['textfour']) ?></span>
+                            <?php endif ?>
                         </p>
                     </div>
                 </div>
