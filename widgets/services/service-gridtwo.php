@@ -224,6 +224,379 @@ class Reactheme_Elementor_Sservices_Gridtwo_Widget extends \Elementor\Widget_Bas
 
 
 		$this->end_controls_section();
+
+		// ==================================== STYLE TAB ===============================//
+
+
+
+		$this->start_controls_section(
+			 'imagestyle',
+			 [
+				'label' => esc_html__('Image', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_control(
+			'imagebacground_color',
+			[
+				'label' => esc_html__( 'Background Color', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .program-thumb::before' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'subtitlestyle',
+			 [
+				'label' => esc_html__('Subtitle', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'label'    => esc_html__('Typography', 'plugin-name'),
+				'name'     => 'subtitle_typ',
+				'selector' => '{{WRAPPER}} .subtitle',
+		
+			]
+		);
+		
+		$this->add_control(
+			'subtitle_color',
+			[
+				'label'     => esc_html__('Color', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .subtitle' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'subtitle_margin',
+			[
+				'label' => esc_html__( 'Margin', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			]
+		);
+		
+		$this->add_responsive_control(
+			'subtitle_padding',
+			[
+				'label'      => __('Padding', 'plugin-name'),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors'  => [
+					'{{WRAPPER}} .subtitle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+				]
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'titlestyle',
+			 [
+				'label' => esc_html__('Title', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'label'    => esc_html__('Typography', 'plugin-name'),
+				'name'     => 'titlestyle_typ',
+				'selector' => '{{WRAPPER}} .title1,title2,title3',
+		
+			]
+		);
+		
+		$this->add_control(
+			'titlestyle_color1',
+			[
+				'label'     => esc_html__('Color One', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .title1' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .title3' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+		
+		$this->add_control(
+			'titlestyle_color2',
+			[
+				'label'     => esc_html__('Color Two', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .title2' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .section__title .act4-underline::before' => 'background: {{VALUE}} !important;',
+					
+				],
+			]
+		);
+		
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'iconstyle',
+			 [
+				'label' => esc_html__('Icon', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_control(
+			'iconone',
+			[
+				'label' => esc_html__( 'Icon One', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'iconbac_color',
+			[
+				'label' => esc_html__( 'Backgroudn Color', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .pro-check.d-center.s1-bg.position-relative' => 'background: {{VALUE}} !important',
+					'{{WRAPPER}} .program-planwrap .program-plan-item .pro-check::before' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		$this->add_control(
+			'icontwo',
+			[
+				'label' => esc_html__( 'Icon Two', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'icontwo_color',
+			[
+				'label' => esc_html__( 'Background', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .icon.d-center.p1-bg' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'textstyle',
+			 [
+				'label' => esc_html__('Text', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'label'    => esc_html__('Typography', 'plugin-name'),
+				'name'     => 'textstyle_typ',
+				'selector' => '{{WRAPPER}} .text1',
+		
+			]
+		);
+		
+		$this->add_control(
+			'textstyle_color',
+			[
+				'label'     => esc_html__('Color', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .text1' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'textstyle_margin',
+			[
+				'label' => esc_html__( 'Margin', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .text1' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			]
+		);
+		
+		$this->add_responsive_control(
+			'textstyle_padding',
+			[
+				'label'      => __('Padding', 'plugin-name'),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors'  => [
+					'{{WRAPPER}} .text1' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+				]
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'desstyle',
+			 [
+				'label' => esc_html__('Description', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'label'    => esc_html__('Typography', 'plugin-name'),
+				'name'     => 'description_typ',
+				'selector' => '{{WRAPPER}} .description',
+		
+			]
+		);
+		
+		$this->add_control(
+			'description_color',
+			[
+				'label'     => esc_html__('Color', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .description' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'description_margin',
+			[
+				'label' => esc_html__( 'Margin', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			]
+		);
+		
+		$this->add_responsive_control(
+			'description_padding',
+			[
+				'label'      => __('Padding', 'plugin-name'),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors'  => [
+					'{{WRAPPER}} .description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+				]
+			]
+		);
+		
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'buttonstyle',
+			 [
+				'label' => esc_html__('Button', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_control(
+			'buttonstyle_color',
+			[
+				'label' => esc_html__( 'Background', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} span.kew-text.s1-bg.n0-clr' => 'background: {{VALUE}} !important',
+					'{{WRAPPER}} .kew-arrow.s1-bg' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+
+		$this->add_control(
+			'buttonn_color',
+			[
+				'label' => esc_html__( 'Color', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} span.kew-text.s1-bg.n0-clr' => 'color: {{VALUE}} !important',
+					'{{WRAPPER}} i.ti.ti-arrow-right.n0-clr' => 'color: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+
+		$this->start_controls_section(
+			 'sectionstyle',
+			 [
+				'label' => esc_html__('Section', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_control(
+			'left_background',
+			[
+				'label' => esc_html__( 'Left Background', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .bike-program-before::before' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		$this->add_control(
+			'right_background',
+			[
+				'label' => esc_html__( 'Right Background', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .winbg' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+
+
+
+
+
+
 	}
 
 	/**
@@ -257,7 +630,7 @@ class Reactheme_Elementor_Sservices_Gridtwo_Widget extends \Elementor\Widget_Bas
 
 
 
-		<section class="bike-program mb-120 bike-program-before position-relative winbg">
+		<section class="bike-program  bike-program-before position-relative winbg">
 			<div class="pt-120 pb-120">
 				<div class="container">
 					<div class="row g-6 align-items-center">
@@ -277,15 +650,15 @@ class Reactheme_Elementor_Sservices_Gridtwo_Widget extends \Elementor\Widget_Bas
 									<div class="subtitle-head mb-xxl-4 mb-sm-4 mb-3 d-flex flex-wrap align-items-center gap-3" data-aos="zoom-in-down" data-aos-duration="1200">
 										<img src="<?php echo get_template_directory_uri() ?>/assets/images/global/section-icon.png" alt="img">
 										<?php if (!empty($settings['subtitle'])) :   ?>
-											<h5 class="s1-clr fw_700">
+											<h5 class="s1-clr fw_700 subtitle">
 												<?php echo esc_html($settings['subtitle']) ?>
 											</h5>
 										<?php endif ?>
 
 									</div>
-									<span class="display-four d-block n4-clr">
-										<?php echo esc_html($settings['title1']) ?> <span class="act4-clr act4-underline" data-aos="zoom-in-left" data-aos-duration="1000"><?php echo esc_html($settings['title2']) ?> </span>
-										<span class="d-block" data-aos="zoom-in-right" data-aos-duration="1200">
+									<span class="display-four d-block n4-clr title1">
+										<?php echo esc_html($settings['title1']) ?> <span class="act4-clr act4-underline title2" data-aos="zoom-in-left" data-aos-duration="1000"><?php echo esc_html($settings['title2']) ?> </span>
+										<span class="d-block title3" data-aos="zoom-in-right" data-aos-duration="1200">
 											<?php echo esc_html($settings['title3']) ?>
 										</span>
 									</span>
@@ -304,12 +677,12 @@ class Reactheme_Elementor_Sservices_Gridtwo_Widget extends \Elementor\Widget_Bas
 												</div>
 												<div class="content">
 													<?php if (!empty($item['list_title'])) :   ?>
-														<span class="fs20 mb-xxl-3 mb-2 fw_700 n4-clr d-block">
+														<span class="fs20 mb-xxl-3 mb-2 fw_700 n4-clr d-block text1">
 															<?php echo esc_html($item['list_title']) ?>
 														</span>
 													<?php endif ?>
 													<?php if (!empty($item['list_description'])) :   ?>
-														<p class="n3-clr">
+														<p class="n3-clr description">
 															<?php echo esc_html($item['list_description']) ?>
 														</p>
 													<?php endif ?>
