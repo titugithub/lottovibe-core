@@ -388,6 +388,172 @@ class ReacTheme_Elementor_Team_Grid_Widget extends \Elementor\Widget_Base
 
 
 		$this->end_controls_section();
+
+		// ============================Style========================//
+
+		$this->start_controls_section(
+			 'subtitlestyle',
+			 [
+				'label' => esc_html__('Subtitle', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'label'    => esc_html__('Typography', 'plugin-name'),
+				'name'     => 'subtitle_typ',
+				'selector' => '{{WRAPPER}} .subtitle',
+		
+			]
+		);
+		
+		$this->add_control(
+			'subtitle_color',
+			[
+				'label'     => esc_html__('Color', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .subtitle' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'subtitle_margin',
+			[
+				'label' => esc_html__( 'Margin', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			]
+		);
+		
+		$this->add_responsive_control(
+			'subtitle_padding',
+			[
+				'label'      => __('Padding', 'plugin-name'),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors'  => [
+					'{{WRAPPER}} .subtitle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+				]
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'titlestyle',
+			 [
+				'label' => esc_html__('Title', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'label'    => esc_html__('Typography', 'plugin-name'),
+				'name'     => 'titlestyle_typ',
+				'selector' => '{{WRAPPER}} span.display-four.d-block.n4-clr.mb-xxl-10.mb-xl-7.mb-sm-5.mb-4',
+		
+			]
+		);
+		
+		$this->add_control(
+			'titlestyle_color1',
+			[
+				'label'     => esc_html__('Color One', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} span.display-four.d-block.n4-clr.mb-xxl-10.mb-xl-7.mb-sm-5.mb-4' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_control(
+			'titlestyle_color2',
+			[
+				'label'     => esc_html__('Color Two', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} span.act4-clr.act4-underline' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .section__title .act4-underline::before' => 'background: {{VALUE}} !important;',
+				],
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'buttonstyle',
+			 [
+				'label' => esc_html__('Button', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		
+		$this->add_control(
+			'buttonstyle_color',
+			[
+				'label' => esc_html__( 'Color', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} span.kew-text.act3-bg.n4-clr' => 'color: {{VALUE}} !important',
+					'{{WRAPPER}} i.ti.ti-arrow-right.n4-clr' => 'color: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		$this->add_control(
+			'buttonstyle_baccolor',
+			[
+				'label' => esc_html__( 'Background Color', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} span.kew-text.act3-bg.n4-clr' => 'background: {{VALUE}} !important',
+					'{{WRAPPER}} .kewta-btn .kew-arrow' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			 'winnerstyle',
+			 [
+				'label' => esc_html__('Winner', 'plugin-name'),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			 ]
+		);
+		
+		$this->add_control(
+			'winnerstyle_color',
+			[
+				'label' => esc_html__( 'Hover BackgroundColor', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .meet-previous-item:hover .man-bike' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+		
+		
+		
+		$this->end_controls_section();
+
+
+
+
 	}
 
 	/**
@@ -418,7 +584,7 @@ class ReacTheme_Elementor_Team_Grid_Widget extends \Elementor\Widget_Base
 									<img src="<?php echo esc_url($settings['iconsubtitle']['url']) ?>" alt="img">
 								<?php endif ?>
 								<?php if (!empty($settings['subtitle'])) :   ?>
-									<h5 class="s1-clr fw_700">
+									<h5 class="s1-clr fw_700 subtitle">
 										<?php echo esc_html($settings['subtitle']) ?>
 									</h5>
 								<?php endif ?>
@@ -429,9 +595,9 @@ class ReacTheme_Elementor_Team_Grid_Widget extends \Elementor\Widget_Base
 									<?php echo esc_html($settings['title3']) ?>
 								</span>
 							</span>
-							<a href="<?php echo esc_url($settings['buttonlink']['url'])?>" class="kewta-btn d-inline-flex align-items-center">
+							<a href="<?php echo esc_url($settings['buttonlink']['url']) ?>" class="kewta-btn d-inline-flex align-items-center">
 								<span class="kew-text act3-bg n4-clr">
-									<?php echo esc_html($settings['buttontext'])?>
+									<?php echo esc_html($settings['buttontext']) ?>
 								</span>
 								<div class="kew-arrow act3-bg n4-clr">
 									<div class="kt-one">
@@ -448,18 +614,26 @@ class ReacTheme_Elementor_Team_Grid_Widget extends \Elementor\Widget_Base
 						<div class="d-grid d-sm-flex align-items-center gap-xxl-6 gap-4">
 							<div class="meet-previous-item" data-aos="zoom-in-down" data-aos-duration="1200">
 								<div class="thumb-man">
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/man-global/t1.png" alt="img" class="mimg">
-									<div class="man-bike">
-										<img src="<?php echo get_template_directory_uri() ?>/assets/images/bike/b4.png" alt="img">
-									</div>
+									<?php if (!empty($settings['winnerimage1']['url'])) :   ?>
+										<img src="<?php echo esc_url($settings['winnerimage1']['url']) ?>" alt="img" class="mimg">
+									<?php endif ?>
+									<?php if (!empty($settings['productimage1']['url'])) :   ?>
+										<div class="man-bike">
+											<img src="<?php echo esc_url($settings['productimage1']['url']) ?>" alt="img">
+										</div>
+									<?php endif ?>
 								</div>
 							</div>
 							<div class="meet-previous-item" data-aos="zoom-in-down" data-aos-duration="1200">
 								<div class="thumb-man">
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/man-global/t2.png" alt="img" class="mimg">
-									<div class="man-bike">
-										<img src="<?php echo get_template_directory_uri() ?>/assets/images/bike/b3.png" alt="img">
-									</div>
+									<?php if (!empty($settings['winnerimage2']['url'])) :   ?>
+										<img src="<?php echo esc_url($settings['winnerimage2']['url']) ?>" alt="img" class="mimg">
+									<?php endif ?>
+									<?php if (!empty($settings['productimage2']['url'])) :   ?>
+										<div class="man-bike">
+											<img src="<?php echo esc_url($settings['productimage2']['url']) ?>" alt="img">
+										</div>
+									<?php endif ?>
 								</div>
 							</div>
 						</div>
@@ -474,40 +648,56 @@ class ReacTheme_Elementor_Team_Grid_Widget extends \Elementor\Widget_Base
 					<div class="col-lg-3 col-md-6 col-sm-6" data-aos="zoom-in-right" data-aos-duration="1200">
 						<div class="meet-previous-item">
 							<div class="thumb-man">
-								<img src="<?php echo get_template_directory_uri() ?>/assets/images/man-global/t3.png" alt="img" class="mimg">
-								<div class="man-bike">
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/bike/b1.png" alt="img">
-								</div>
+								<?php if (!empty($settings['winnerimage3']['url'])) :   ?>
+									<img src="<?php echo esc_url($settings['winnerimage3']['url']) ?>" alt="img" class="mimg">
+								<?php endif ?>
+								<?php if (!empty($settings['productimage3']['url'])) :   ?>
+									<div class="man-bike">
+										<img src="<?php echo esc_url($settings['productimage3']['url']) ?>" alt="img">
+									</div>
+								<?php endif ?>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6" data-aos="zoom-in-left" data-aos-duration="1400">
 						<div class="meet-previous-item">
 							<div class="thumb-man">
-								<img src="<?php echo get_template_directory_uri() ?>/assets/images/man-global/t4.png" alt="img" class="mimg">
-								<div class="man-bike">
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/bike/b2.png" alt="img">
-								</div>
+								<?php if (!empty($settings['winnerimage4']['url'])) :   ?>
+									<img src="<?php echo esc_url($settings['winnerimage4']['url']) ?>" alt="img" class="mimg">
+								<?php endif ?>
+								<?php if (!empty($settings['productimage4']['url'])) :   ?>
+									<div class="man-bike">
+										<img src="<?php echo esc_url($settings['productimage4']['url']) ?>" alt="img">
+									</div>
+								<?php endif ?>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6" data-aos="zoom-in-right" data-aos-duration="1600">
 						<div class="meet-previous-item">
 							<div class="thumb-man">
-								<img src="<?php echo get_template_directory_uri() ?>/assets/images/man-global/t5.png" alt="img" class="mimg">
-								<div class="man-bike">
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/bike/b5.png" alt="img">
-								</div>
+								<?php if (!empty($settings['winnerimage5']['url'])) :   ?>
+									<img src="<?php echo esc_url($settings['winnerimage5']['url']) ?>" alt="img" class="mimg">
+								<?php endif ?>
+								<?php if (!empty($settings['productimage5']['url'])) :   ?>
+									<div class="man-bike">
+										<img src="<?php echo esc_url($settings['productimage5']['url']) ?>" alt="img">
+									</div>
+								<?php endif ?>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6" data-aos="zoom-in-left" data-aos-duration="1800">
 						<div class="meet-previous-item">
 							<div class="thumb-man">
-								<img src="<?php echo get_template_directory_uri() ?>/assets/images/man-global/t6.png" alt="img" class="mimg">
-								<div class="man-bike">
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/bike/b6.png" alt="img">
-								</div>
+								<?php if (!empty($settings['winnerimage6']['url'])) :   ?>
+									<img src="<?php echo esc_url($settings['winnerimage6']['url']) ?>" alt="img" class="mimg">
+								<?php endif ?>
+								<?php if (!empty($settings['productimage6']['url'])) :   ?>
+									<div class="man-bike">
+										<img src="<?php echo esc_url($settings['productimage6']['url']) ?>" alt="img">
+									</div>
+								<?php endif ?>
 							</div>
 						</div>
 					</div>
