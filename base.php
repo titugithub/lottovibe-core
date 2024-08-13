@@ -326,6 +326,11 @@ final class RTelements_Elementor_Extension
 		
 	
 
+		//tablet animation
+
+		require_once(__DIR__ . '/widgets/tablet/tablet.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Tablet_Widget());
+
 		//product Car
 
 		require_once(__DIR__ . '/widgets/product/product.php');

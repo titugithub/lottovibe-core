@@ -222,7 +222,7 @@ class ReacTheme_Elementor_Barcode_Widget extends \Elementor\Widget_Base
 
 
 
-        <div class="smart-phone  pt-120 pb-120 overflow-hidden">
+        <div class="smart-phone   overflow-hidden">
             <div class="container">
                 <div class="row g-6 justify-content-between align-items-center">
                     <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-10">
