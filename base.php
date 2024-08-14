@@ -537,10 +537,20 @@ final class RTelements_Elementor_Extension
 
 		require_once(__DIR__ . '/widgets/testimonial/testimonial.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Testimonial_Widget());
+
+
+		
+		//banner bycle Slider
+
+		require_once(__DIR__ . '/widgets/banner/bannercycle.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannercycle_Widget());
+
+
 		//banner car Slider
 
 		require_once(__DIR__ . '/widgets/banner/banner.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Banner_Widget());
+
 		//banner bike Slider
 
 		require_once(__DIR__ . '/widgets/banner/bannerbike.php');
