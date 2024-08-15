@@ -383,6 +383,11 @@ final class RTelements_Elementor_Extension
 		require_once(__DIR__ . '/widgets/calltoaction/calltoaction.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Calltoaction_Widget());
 		
+		//cycle category
+
+		require_once(__DIR__ . '/widgets/carcat/cyclecat.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Cyclecat_Widget());
+		
 		//bike category
 
 		require_once(__DIR__ . '/widgets/carcat/bikecat.php');
