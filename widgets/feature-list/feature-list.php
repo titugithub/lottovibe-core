@@ -85,6 +85,65 @@ class RTS_Features_List_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Heading', 'plugin-name')
             ]
         );
+
+        $this->add_control(
+            'iconimage',
+            [
+                'label' => esc_html__( 'Subtitle Icon', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'subtitle',
+            [
+                'label' => esc_html__( 'Subtitle', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'How it works', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'title1',
+            [
+                'label' => esc_html__( 'Title One', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( ' Your Ultimate', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'title2',
+            [
+                'label' => esc_html__( 'Title Two', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( ' Guide to', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'title3',
+            [
+                'label' => esc_html__( 'Title Three', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'Winning!', 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'iconrightimage',
+            [
+                'label' => esc_html__( 'Choose Image', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+            ]
+        );
         
         
         $this->end_controls_section();  
@@ -94,6 +153,34 @@ class RTS_Features_List_Widget extends \Elementor\Widget_Base
             'videocontent',
             [
                 'label' => esc_html__('Video', 'plugin-name')
+            ]
+        );
+
+
+        $this->add_control(
+            'videoimage',
+            [
+                'label' => esc_html__( 'Choose Image', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'videolink',
+            [
+                'label' => esc_html__( 'Link', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+                'default' => [
+                    'url' => '#',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    'custom_attributes' => '',
+                ],
+                'label_block' => true,
             ]
         );
         
@@ -107,6 +194,39 @@ class RTS_Features_List_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Featues', 'plugin-name')
             ]
         );
+
+        // Repeater
+        $repeater = new \Elementor\Repeater();
+        
+        $repeater->add_control(
+            'list_title', [
+                'label' => esc_html__( 'Title', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__( 'List Title' , 'plugin-name' ),
+                'label_block' => true,
+            ]
+        );
+        
+        $repeater->add_control(
+            'list_content', [
+                'label' => esc_html__( 'Content', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::WYSIWYG,
+                'default' => esc_html__( 'List Content' , 'plugin-name' ),
+                'show_label' => false,
+            ]
+        );
+        
+        $this->add_control(
+            'list_repeater',
+            [
+                'label' => esc_html__( 'Repeater List', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+      
+                'title_field' => '{{{ list_title }}}',
+            ]
+        );
+        
         
         
         $this->end_controls_section();  
