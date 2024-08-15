@@ -717,8 +717,8 @@ final class RTelements_Elementor_Extension
 		require_once(__DIR__ . '/widgets/featured-image/image.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Featured_Image_Showcase_Widget());
 
-		require_once(__DIR__ . '/widgets/portfolio-features-list/feature-list.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Portfolio_Features_List_Widget());
+		require_once(__DIR__ . '/widgets/feature-list/feature-list.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \RTS_Features_List_Widget());
 
 		require_once(__DIR__ . '/widgets/image-parallax/image.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Image_Parallax_Widget());
