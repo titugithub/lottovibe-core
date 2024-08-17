@@ -502,6 +502,7 @@ class RTS_Features_List_Widget extends \Elementor\Widget_Base
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .description' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} p.fs18.n3-clr span' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
