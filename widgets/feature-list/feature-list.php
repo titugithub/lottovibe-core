@@ -273,6 +273,267 @@ class RTS_Features_List_Widget extends \Elementor\Widget_Base
 
 
         $this->end_controls_section();
+
+
+        // ===================================Style==============================//
+
+
+        $this->start_controls_section(
+             'subtitlestyle',
+             [
+                'label' => esc_html__('Subtitle', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'subtitle_typ',
+                'selector' => '{{WRAPPER}} h5.s1-clr.fw_700',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'subtitle_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} h5.s1-clr.fw_700' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'subtitle_margin',
+            [
+                'label' => esc_html__( 'Margin', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} h5.s1-clr.fw_700' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                ],
+            ]
+        );
+        
+        $this->add_responsive_control(
+            'subtitle_padding',
+            [
+                'label'      => __('Padding', 'plugin-name'),
+                'type'       => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors'  => [
+                    '{{WRAPPER}} h5.s1-clr.fw_700' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                ]
+            ]
+        );
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'titlestyle',
+             [
+                'label' => esc_html__('Title', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'titlestyle_typ',
+                'selector' => '{{WRAPPER}} span.display-four.d-block.n4-clr',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'titlestyle_color',
+            [
+                'label'     => esc_html__('Color One', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.display-four.d-block.n4-clr' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'titlestyle_colo2r',
+            [
+                'label'     => esc_html__('Color Two', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.act4-clr.act4-underline' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .section__title .act4-underline::before' => 'background: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'videostyle',
+             [
+                'label' => esc_html__('Video', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        
+        $this->add_control(
+            'videostyle_color',
+            [
+                'label' => esc_html__( 'Icon Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} i.ti.ti-player-play-filled.act3-clr.fs-five' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'videostyle_baccolor',
+            [
+                'label' => esc_html__( 'Icon Background Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .howit-video .bn-vid' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'featurestyle',
+             [
+                'label' => esc_html__('Feature', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        
+        $this->add_control(
+            'more_options1',
+            [
+                'label' => esc_html__( 'Text', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'text_typ',
+                'selector' => '{{WRAPPER}} h4.n4-clr.mb-xxl-4.mb-3.fw_700',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'text_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} h4.n4-clr.mb-xxl-4.mb-3.fw_700' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'text_margin',
+            [
+                'label' => esc_html__( 'Margin', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} h4.n4-clr.mb-xxl-4.mb-3.fw_700' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                ],
+            ]
+        );
+        
+        $this->add_responsive_control(
+            'text_padding',
+            [
+                'label'      => __('Padding', 'plugin-name'),
+                'type'       => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors'  => [
+                    '{{WRAPPER}} h4.n4-clr.mb-xxl-4.mb-3.fw_700' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                ]
+            ]
+        );
+        
+        $this->add_control(
+            'more_options2',
+            [
+                'label' => esc_html__( 'Content', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'description_typ',
+                'selector' => '{{WRAPPER}} .description',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'description_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .description' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'description_margin',
+            [
+                'label' => esc_html__( 'Margin', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} .description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                ],
+            ]
+        );
+        
+        $this->add_responsive_control(
+            'description_padding',
+            [
+                'label'      => __('Padding', 'plugin-name'),
+                'type'       => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors'  => [
+                    '{{WRAPPER}} .description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;'
+                ]
+            ]
+        );
+        
+        
+        $this->end_controls_section();
+
+
+
     }
 
 
@@ -293,8 +554,8 @@ class RTS_Features_List_Widget extends \Elementor\Widget_Base
                     <div class="col-xl-5 col-lg-6 col-md-7">
                         <div class="section__title text-md-start text-center">
                             <div class="subtitle-head mb-xxl-4 mb-sm-4 mb-3 d-flex flex-wrap justify-content-md-start justify-content-center align-items-center gap-3" data-aos="zoom-in-down" data-aos-duration="1200">
-                                <?php if (!empty($settings['iconrightimage']['url'])) :   ?>
-                                    <img src="<?php echo esc_url($settings['iconrightimage']['url']) ?>" alt="img">
+                                <?php if (!empty($settings['iconimage']['url'])) :   ?>
+                                    <img src="<?php echo esc_url($settings['iconimage']['url']) ?>" alt="img">
                                 <?php endif ?>
                                 <?php if (!empty($settings['subtitle'])) :   ?>
                                     <h5 class="s1-clr fw_700">
@@ -354,7 +615,7 @@ class RTS_Features_List_Widget extends \Elementor\Widget_Base
                                             <?php echo wp_kses($item['list_subtext'], wp_kses_allowed_html('post'))  ?>
                                         </span>
                                     <?php endif ?>
-                                    <?php \Elementor\Icons_Manager::render_icon( $item['list_icon'], [ 'aria-hidden' => 'true' ] ); ?>
+                                    <?php \Elementor\Icons_Manager::render_icon($item['list_icon'], ['aria-hidden' => 'true']); ?>
                                     <span class="number-shadow">
                                         <?php if (!empty($item['list_number'])) :   ?>
                                             <?php echo esc_html($item['list_number']) ?>
@@ -362,17 +623,20 @@ class RTS_Features_List_Widget extends \Elementor\Widget_Base
                                     </span>
                                 </div>
                                 <div class="box pt-xxl-20 pt-10">
-                                    <h4 class="n4-clr mb-xxl-4 mb-3 fw_700">
-                                        SELECT YOUR COMPETITION
-                                    </h4>
-                                    <p class="fs18 n3-clr">
-                                        Choose a prize from our
-                                        <span class="d-block">
-                                            selection.
-                                        </span>
-                                    </p>
+                                    <?php if (!empty($item['list_title'])) :   ?>
+                                        <h4 class="n4-clr mb-xxl-4 mb-3 fw_700">
+                                            <?php echo esc_html($item['list_title']) ?>
+                                        </h4>
+                                    <?php endif ?>
+                                    <?php if (!empty($item['list_description'])) :   ?>
+                                        <p class="fs18 n3-clr description">
+                                            <?php echo wp_kses($item['list_description'], wp_kses_allowed_html('post'))  ?>
+                                        </p>
+                                    <?php endif ?>
                                 </div>
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/global/step-dot.png" alt="img" class="step-donglobal">
+                                <?php if (!empty($item['listimage']['url'])) :   ?>
+                                    <img src="<?php echo esc_html($item['listimage']['url']) ?>" alt="img" class="step-donglobal">
+                                <?php endif ?>
                             </div>
                         </div>
                     <?php endforeach; ?>
