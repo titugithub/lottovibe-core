@@ -104,6 +104,7 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 					'style_one' => esc_html__('Style One', 'finview-core'),
 					'style_two' => esc_html__('Style Two', 'finview-core'),
 					'style_three' => esc_html__('Style Three', 'finview-core'),
+					'style_four' => esc_html__('Style Four', 'finview-core'),
 				],
 				'default' => 'style_one',
 			]
@@ -146,9 +147,7 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => esc_html__('Default title two', 'plugin-name'),
 				'label_block' => true,
-				'condition' => [
-					'content_style' => 'style_three'
-				]
+
 			]
 		);
 
@@ -159,11 +158,112 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => esc_html__('Default title three', 'plugin-name'),
 				'label_block' => true,
-				'condition' => [
-					'content_style' => 'style_three'
-				]
+
 			]
 		);
+
+
+
+		$this->add_control(
+            'user1',
+            [
+                'label' => esc_html__('User One', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+				'condition' => [
+					'content_style' => 'style_four'
+				]
+            ]
+        );
+
+        $this->add_control(
+            'user2',
+            [
+                'label' => esc_html__('User Two', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+				'condition' => [
+					'content_style' => 'style_four'
+				]
+            ]
+        );
+
+        $this->add_control(
+            'user3',
+            [
+                'label' => esc_html__('User Three', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+				'condition' => [
+					'content_style' => 'style_four'
+				]
+            ]
+        );
+
+        $this->add_control(
+            'usernumber',
+            [
+                'label' => esc_html__('User Number', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__('10k+', 'plugin-name'),
+                'label_block' => true,
+				'condition' => [
+					'content_style' => 'style_four'
+				]
+            ]
+        );
+
+		$this->add_control(
+            'ratingtitle',
+            [
+                'label' => esc_html__('Rating Title', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__('Default title', 'plugin-name'),
+                'label_block' => true,
+				'condition' => [
+					'content_style' => 'style_four'
+				]
+            ]
+        );
+
+        $this->add_control(
+            'ratingicon',
+            [
+                'label' => esc_html__('Rating Icon', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'rows' => 10,
+				'condition' => [
+					'content_style' => 'style_four'
+				]
+            ]
+        );
+
+        $this->add_control(
+            'review',
+            [
+                'label' => esc_html__('Review', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'rows' => 10,
+                'default' => esc_html__('Default description', 'plugin-name'),
+				'condition' => [
+					'content_style' => 'style_four'
+				]
+            ]
+        );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		$this->add_control(
@@ -178,6 +278,9 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 
 
 		$this->end_controls_section();
+
+
+		
 
 
 		// ==================================Style==================================//
@@ -375,6 +478,12 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 
 
 		$this->end_controls_section();
+
+
+
+		// =========================Heading Four Control======================================//
+
+ 
 	}
 
 	/**
@@ -500,6 +609,94 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 			</div>
 
 		<?php endif ?>
+
+
+
+
+
+
+		<?php if ($settings['content_style'] == 'style_four') : ?>
+			<section class="section-title-section">
+				<!--Section Header-->
+				<div class="container">
+					<div class="row g-xl-4 g-3 align-items-center justify-content-between mb-xxl-15 mb-xl-10 mb-8">
+						<div class="col-lg-6 col-md-8 col-sm-9">
+							<div class="section__title">
+								<div class="subtitle-head mb-xxl-4 mb-sm-4 mb-3 d-flex flex-wrap align-items-center gap-3" data-aos="zoom-in-down" data-aos-duration="1200">
+									<img src="assets/images/global/section-icon.png" alt="img">
+									<h5 class="s1-clr fw_700">
+										Bicycle Lottery Triumphs
+									</h5>
+								</div>
+								<div class="display-four testimonial-heading d-block n4-clr">
+									Bicycle Lottery <span class="act4-clr act4-underline" data-aos="zoom-in-left" data-aos-duration="1000">Success! </span>
+									<div class="d-flex flex-wrap align-items-center g-4">
+										<ul class="customer-review testi-people-title cmn-style-flex">
+											<li>
+												<a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+													<img src="assets/images/banner/customer1.png" alt="img">
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+													<img src="assets/images/banner/customer2.png" alt="img">
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+													<img src="assets/images/banner/customer4.png" alt="img">
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+													<span class="d-grid customer-ratting text-center p-2 p1-bg align-items-center justify-content-center">
+														<span class="d-block fs-eight fw_700 n4-clr">
+															10k+
+														</span>
+													</span>
+												</a>
+											</li>
+										</ul>
+										<span class="d-block ar-talking" data-aos="zoom-in-right" data-aos-duration="1200">
+											Reviews!
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+							<div class="testimonial-ratting" data-aos="zoom-in-down" data-aos-duration="1600">
+								<span class="n4-clr fw_700 mb-xxl-6 mb-xl-4 mb-3">
+									Trustpilot
+								</span>
+								<ul class="ratting d-flex align-items-center gap-1 mb-xxl-3 mb-2">
+									<li>
+										<i class="ph-fill ph-star fs-five act4-clr"></i>
+									</li>
+									<li>
+										<i class="ph-fill ph-star fs-five act4-clr"></i>
+									</li>
+									<li>
+										<i class="ph-fill ph-star fs-five act4-clr"></i>
+									</li>
+									<li>
+										<i class="ph-fill ph-star fs-five act4-clr"></i>
+									</li>
+									<li>
+										<i class="ph-fill ph-star-half fs-five act4-clr"></i>
+									</li>
+								</ul>
+								<h4 class="n2-clr">
+									4.5- <span class="fs-six fw_600">(25,750Reviews)</span>
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Section Header-->
+
+			</section>
+		<?php endif; ?>
 
 
 
