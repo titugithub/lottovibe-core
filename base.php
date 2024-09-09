@@ -342,6 +342,11 @@ final class RTelements_Elementor_Extension
 		require_once(__DIR__ . '/widgets/footersection/footersection.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Footersection_Widget());
 		
+		//workstep 2 category
+
+		require_once(__DIR__ . '/widgets/workstep/workstep2.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Workstep2_Widget());
+
 		//workstep category
 
 		require_once(__DIR__ . '/widgets/workstep/workstep.php');
@@ -372,6 +377,15 @@ final class RTelements_Elementor_Extension
 
 		require_once(__DIR__ . '/widgets/bloggrid/bloggrid.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bloggrid_Widget());
+
+		//blog Two 
+
+		require_once(__DIR__ . '/widgets/blog/blog2.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Blog2_Widget());
+		//blog Two 
+
+		require_once(__DIR__ . '/widgets/winner/winner.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Winner());
 
 		//bloig category
 
@@ -543,7 +557,16 @@ final class RTelements_Elementor_Extension
 		require_once(__DIR__ . '/widgets/testimonial/testimonial.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Testimonial_Widget());
 
+		//Testimonial Slider Two
 
+		require_once(__DIR__ . '/widgets/testimonial/testimonial2.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Testimonial2_Widget());
+
+
+		//banner electronic
+
+		require_once(__DIR__ . '/widgets/banner/bannerelectronic.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannerelectronic_Widget());
 		
 		//banner bycle Slider
 
@@ -560,6 +583,12 @@ final class RTelements_Elementor_Extension
 
 		require_once(__DIR__ . '/widgets/banner/bannerbike.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannerbike_Widget());
+		
+		//banner jewellery Slider
+
+		require_once(__DIR__ . '/widgets/banner/bannerjewellery.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannerjewellery_Widget());
+
 		//About
 
 		require_once(__DIR__ . '/widgets/about/about.php');
