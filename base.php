@@ -563,6 +563,11 @@ final class RTelements_Elementor_Extension
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Testimonial2_Widget());
 
 
+		//banner nft
+
+		require_once(__DIR__ . '/widgets/banner/bannernft.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannernft_Widget());
+
 		//banner electronic
 
 		require_once(__DIR__ . '/widgets/banner/bannerelectronic.php');

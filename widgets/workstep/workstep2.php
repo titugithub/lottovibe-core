@@ -107,9 +107,9 @@ class ReacTheme_Elementor_Workstep2_Widget extends \Elementor\Widget_Base
 
 
         $this->add_control(
-            'content',
+            'contentall',
             [
-                'label' => esc_html__('Content', 'plugin-name'),
+                'label' => esc_html__('Content Area', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
                 'rows' => 10,
 
@@ -124,6 +124,22 @@ class ReacTheme_Elementor_Workstep2_Widget extends \Elementor\Widget_Base
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
                 ],
+            ]
+        );
+
+        $this->add_control(
+            'videolink',
+            [
+                'label' => esc_html__('Video Link', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => esc_html__('https://your-link.com', 'plugin-name'),
+                'default' => [
+                    'url' => '#',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    'custom_attributes' => '',
+                ],
+                'label_block' => true,
             ]
         );
 
@@ -207,6 +223,158 @@ class ReacTheme_Elementor_Workstep2_Widget extends \Elementor\Widget_Base
 
 
         $this->end_controls_section();
+
+
+        // ==============================Style================================//
+
+        $this->start_controls_section(
+             'subtitlestyle',
+             [
+                'label' => esc_html__('Subtitle', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'subtitlestyle_typ',
+                'selector' => '{{WRAPPER}} span.fs20.fw_700.n4-clr.d-block.mb-xl-4.mb-lg-3.mb-2',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'subtitlestyle_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.fs20.fw_700.n4-clr.d-block.mb-xl-4.mb-lg-3.mb-2' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'titlestyle',
+             [
+                'label' => esc_html__('Title', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'label'    => esc_html__('Typography', 'plugin-name'),
+                'name'     => 'titlestyle_typ',
+                'selector' => '{{WRAPPER}} a.fs-four.act4-clr',
+        
+            ]
+        );
+        
+        $this->add_control(
+            'titlestyle_color',
+            [
+                'label'     => esc_html__('Color', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} a.fs-four.act4-clr' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} i.ti.ti-arrow-right.fs-four.act4-clr' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+             'videothumb',
+             [
+                'label' => esc_html__('Video Thumb', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        
+        $this->add_responsive_control(
+            'videothumb_height',
+            [
+                'label'       => esc_html__( 'Height', 'plugin-name' ),
+                'type'        => Controls_Manager::TEXT,
+                'description' => 'Unit in px',
+                'selectors'   => [
+                    '{{WRAPPER}} .howit-video.position-relative img ' => 'height: {{VALUE}}px;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'videothumb_width',
+            [
+                'label'       => esc_html__( 'Width', 'plugin-name' ),
+                'type'        => Controls_Manager::TEXT,
+                'description' => 'Unit in px',
+                'selectors'   => [
+                    '{{WRAPPER}} .howit-video.position-relative img ' => 'width: {{VALUE}}px;',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'videothumb_border_radius',
+            [
+                'label'      => __('Border Radius', 'plugin-name'),
+                'type'       => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors'  => [
+                    '{{WRAPPER}} .howit-video.position-relative img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ]
+            ]
+        );
+        
+        
+        $this->end_controls_section();
+
+
+        $this->start_controls_section(
+             'scrollstyle',
+             [
+                'label' => esc_html__('Scroll', 'plugin-name'),
+                'tab'   => Controls_Manager::TAB_STYLE,
+             ]
+        );
+        
+        $this->add_control(
+            'scrollstyle_color',
+            [
+                'label' => esc_html__( 'Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.n4-clr.fs18.d-block.fw_600' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} .scroll-iconrarea svg path' => 'fill: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        $this->add_control(
+            'scrollstyle_color_background',
+            [
+                'label' => esc_html__( 'Background', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .nexdraw-wrapperv9 .scroll-bn1' => 'background: {{VALUE}} !important',
+                ],
+            ]
+        );
+        
+        
+        
+        $this->end_controls_section();
     }
 
     /**
@@ -223,20 +391,19 @@ class ReacTheme_Elementor_Workstep2_Widget extends \Elementor\Widget_Base
         $settings    = $this->get_settings_for_display();
         ?>
 
-
-
-
-        <section class="banner-section-v9 electronic-shape   position-relative">
+        <section class="banner-section-v9   position-relative">
             <!-- Next Draw wrap -->
             <div class="nexdraw-wrapperv9 py-xxl-15 py-xl-12 py-11 position-relative">
                 <div class="container">
                     <div class="nextdraw-innerwrapv9 gap-4">
-                        <div class="howit-video position-relative">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/howit/how-bidv9.png" alt="img">
-                            <a href="https://www.youtube.com/watch?v=668nUCeBHyY" class="bn-vid popup-video">
-                                <i class="ti ti-player-play-filled p1-clr fs-five"></i>
-                            </a>
-                        </div>
+                        <?php if (!empty($settings['videoimage']['url'])) :   ?>
+                            <div class="howit-video position-relative">
+                                <img src="<?php echo esc_url($settings['videoimage']['url']) ?>" alt="img">
+                                <a href="<?php echo esc_url($settings['videolink']['url']) ?>" class="bn-vid popup-video">
+                                    <i class="ti ti-player-play-filled p1-clr fs-five"></i>
+                                </a>
+                            </div>
+                        <?php endif ?>
                         <div class="howit-nexdrawv9 text-center position-relative">
                             <span class="fs20 fw_700 n4-clr d-block mb-xl-4 mb-lg-3 mb-2">
                                 <?php if (!empty($settings['title'])) :   ?>
@@ -244,8 +411,8 @@ class ReacTheme_Elementor_Workstep2_Widget extends \Elementor\Widget_Base
                                 <?php endif ?>
                             </span>
                             <ul class="entry-win d-flex justify-content-center align-items-center gap-3 list-unstyled">
-                                <?php if (!empty($settings['content'])) :   ?>
-                                    <?php echo wp_kses($settings['content'], wp_kses_allowed_html('post'))  ?>
+                                <?php if (!empty($settings['contentall'])) :   ?>
+                                    <?php echo wp_kses($settings['contentall'], wp_kses_allowed_html('post'))  ?>
                                 <?php endif ?>
                             </ul>
                             <?php if (!empty($settings['rebornimage']['url'])) :   ?>
@@ -271,7 +438,7 @@ class ReacTheme_Elementor_Workstep2_Widget extends \Elementor\Widget_Base
                 </div>
                 <!--Scroll Top -->
                 <?php if (!empty($settings['scrolltext'])) :   ?>
-                    <a href="<?php echo esc_url($settings['scroollink']['url'])?>" class="scroll-bn1 act3-bg radius100 d-flex justify-content-center align-items-center justify-content-center">
+                    <a href="<?php echo esc_url($settings['scroollink']['url']) ?>" class="scroll-bn1 act3-bg radius100 d-flex justify-content-center align-items-center justify-content-center">
                         <span class="d-grid gap-xxl-5 gap-xl-4 gap-3 justify-content-center text-center m-auto">
                             <span class="n4-clr fs18 d-block fw_600">
                                 <?php echo esc_html($settings['scrolltext']) ?>

@@ -279,6 +279,8 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 		);
 
 
+
+
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
@@ -289,6 +291,8 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 			]
 		);
 
+		
+
 		$this->add_control(
 			'subtitle_color',
 			[
@@ -296,6 +300,17 @@ class Reactheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .subtitle' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_control(
+			'subtitle_color_hover',
+			[
+				'label'     => esc_html__('Hover Color', 'plugin-name'),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .subtitle:hover' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);

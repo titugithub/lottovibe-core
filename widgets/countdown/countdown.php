@@ -178,6 +178,7 @@ class Rsaddon_Elementor_Pro_Countdown_Widget extends \Elementor\Widget_Base
 				'tab'   => Controls_Manager::TAB_STYLE,
 			 ]
 		);
+
 		
 		$this->add_control(
 			'more_options',
