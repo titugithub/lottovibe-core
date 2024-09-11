@@ -935,21 +935,28 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                     <div class="bannerv17-trophy-wrap position-relative">
                         <div class="banner-content-v1customer">
                             <ul class="customer-reviewv17 act3-border radius100 py-xxl-2 py-2 px-2 mb-xxl-6 mb-lg-4 mb-3 list-unstyled">
-                                <li>
-                                    <a href="javascript:void(0)" class="customer-revew-item act3-bg d-flex align-items-center justify-content-center">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/testimonial/acv17-1.png" alt="img">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="customer-revew-item act3-bg d-flex align-items-center justify-content-center">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/testimonial/acv17-2.png" alt="img">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="customer-revew-item act3-bg d-flex align-items-center justify-content-center">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/testimonial/acv17-3.png" alt="img">
-                                    </a>
-                                </li>
+                                <?php if (!empty($settings['userimage1']['url'])) :   ?>
+                                    <li>
+                                        <a href="javascript:void(0)" class="customer-revew-item act3-bg d-flex align-items-center justify-content-center">
+                                            <img src="<?php echo esc_url($settings['userimage1']['url']) ?>" alt="img">
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                                <?php if (!empty($settings['userimage2']['url'])) :   ?>
+                                    <li>
+                                        <a href="javascript:void(0)" class="customer-revew-item act3-bg d-flex align-items-center justify-content-center">
+                                            <img src="<?php echo esc_url($settings['userimage2']['url']) ?>" alt="img">
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                                <?php if (!empty($settings['userimage3']['url'])) :   ?>
+                                    <li>
+                                        <a href="javascript:void(0)" class="customer-revew-item act3-bg d-flex align-items-center justify-content-center">
+                                            <img src="<?php echo esc_url($settings['userimage3']['url']) ?>" alt="img">
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+
                                 <li>
                                     <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
                                         <span class="d-grid customer-ratting text-center p-2 p1-bg align-items-center justify-content-center">
