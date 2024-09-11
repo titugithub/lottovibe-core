@@ -382,7 +382,11 @@ final class RTelements_Elementor_Extension
 
 		require_once(__DIR__ . '/widgets/blog/blog2.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Blog2_Widget());
-		//blog Two 
+		//blog Three 
+
+		require_once(__DIR__ . '/widgets/blog/blog3.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Blog3_Widget());
+		//Winner Two 
 
 		require_once(__DIR__ . '/widgets/winner/winner.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Winner());
@@ -562,6 +566,16 @@ final class RTelements_Elementor_Extension
 		require_once(__DIR__ . '/widgets/testimonial/testimonial2.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Testimonial2_Widget());
 
+
+		//banner game
+
+		require_once(__DIR__ . '/widgets/banner/bannergame.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannergame_Widget());
+
+		//banner clth
+
+		require_once(__DIR__ . '/widgets/banner/bannercloth.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannercloth_Widget());
 
 		//banner nft
 
