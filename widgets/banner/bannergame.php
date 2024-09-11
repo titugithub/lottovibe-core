@@ -904,10 +904,10 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                                         </span>
                                     </div>
                                     <div class="d-flex flex-wrap text-center flex-md-nowrap align-items-center justify-content-center gap-xl-8 gap-3 cus-z1 position-relative w-100 mb-xxl-15 mb-xl-10 mb-lg-9 mb-md-10 mb-sm-8 mb-6">
-                                        <?php if (!empty($settings['butttoontext'])) :   ?>
-                                            <a href="<?php echo esc_url($settings['buttonlink']['url']) ?>" class="kewta-btn kewta-alt d-inline-flex align-items-center" data-aos="zoom-in-right" data-aos-duration="1000">
+                                        <?php if (!empty($settings['button_text'])) :   ?>
+                                            <a href="<?php echo esc_url($settings['button_link']['url']) ?>" class="kewta-btn kewta-alt d-inline-flex align-items-center" data-aos="zoom-in-right" data-aos-duration="1000">
                                                 <span class="kew-text n4-clr act3-bg">
-                                                    <?php echo esc_html($settings['butttoontext']) ?>
+                                                    <?php echo esc_html($settings['button_text']) ?>
                                                 </span>
                                                 <div class="kew-arrow act3-bg">
                                                     <div class="kt-one">
@@ -956,68 +956,45 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                                         </a>
                                     </li>
                                 <?php endif ?>
-
-                                <li>
-                                    <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
-                                        <span class="d-grid customer-ratting text-center p-2 p1-bg align-items-center justify-content-center">
-                                            <span class="d-block fs20 fw_700 n4-clr">
-                                                99+
+                                <?php if (!empty($settings['usertext1'])) :   ?>
+                                    <li>
+                                        <a href="javascript:void(0)" class="customer-revew-item n0-bg d-flex align-items-center justify-content-center">
+                                            <span class="d-grid customer-ratting text-center p-2 p1-bg align-items-center justify-content-center">
+                                                <span class="d-block fs20 fw_700 n4-clr">
+                                                    <?php echo esc_html($settings['usertext1']) ?>
+                                                </span>
                                             </span>
-                                        </span>
-                                    </a>
-                                </li>
+                                        </a>
+                                    </li>
+                                <?php endif ?>
                             </ul>
                             <span class="active-userv17 fs18 fw_500 text-capitalize position-relative">
-                                Active Users
+                                <?php if (!empty($settings['usertext2'])) :   ?>
+                                    <?php echo esc_html($settings['usertext2']) ?>
+                                <?php endif ?>
                             </span>
                         </div>
                         <div class="trophyv17-thumb" data-aos="zoom-in-up" data-aos-duration="2200">
-                            <?php if (!empty($settings['trophyv17-thumb']['url'])) :   ?>
-                                <img src="<?php echo esc_url($settings['trophyv17-thumb']['url']) ?>" alt="img">
+                            <?php if (!empty($settings['banner_image']['url'])) :   ?>
+                                <img src="<?php echo esc_url($settings['banner_image']['url']) ?>" alt="img">
                             <?php endif ?>
                         </div>
                         <div class="bn1-odometer pt-0 d-grid align-items-center gap-xxl-10 gap-sm-8 gap-4">
                             <div class="odometer__items" data-aos="zoom-in-down" data-aos-duration="1000">
-                                <div class="cont d-flex align-items-center">
-                                    <span class="odometer display-four nw1-clr fw_800">
-                                        100
-                                    </span>
-                                    <span class="plus__icon display-four nw1-clr fw_800">
-                                        k
-                                    </span>
-                                    <span class="plus__icon display-four nw1-clr fw_800">
-                                        +
-                                    </span>
-                                </div>
-                                <p class="nw2-clr">Customers</p>
+
+                                <?php if (!empty($settings['customer'])) :   ?>
+                                    <?php echo wp_kses($settings['customer'], wp_kses_allowed_html('post'))  ?>
+                                <?php endif ?>
                             </div>
                             <div class="odometer__items" data-aos="zoom-in-down" data-aos-duration="1000">
-                                <div class="cont d-flex align-items-center">
-                                    <span class="odometer display-four nw1-clr fw_800">
-                                        32
-                                    </span>
-                                    <span class="plus__icon display-four nw1-clr fw_800">
-                                        k
-                                    </span>
-                                    <span class="plus__icon display-four nw1-clr fw_800">
-                                        +
-                                    </span>
-                                </div>
-                                <p class="nw2-clr">Artwork</p>
+                                <?php if (!empty($settings['artwork'])) :   ?>
+                                    <?php echo wp_kses($settings['artwork'], wp_kses_allowed_html('post'))  ?>
+                                <?php endif ?>
                             </div>
                             <div class="odometer__items" data-aos="zoom-in-down" data-aos-duration="1000">
-                                <div class="cont d-flex align-items-center">
-                                    <span class="odometer display-four nw1-clr fw_800">
-                                        12
-                                    </span>
-                                    <span class="plus__icon display-four nw1-clr fw_800">
-                                        k
-                                    </span>
-                                    <span class="plus__icon display-four nw1-clr fw_800">
-                                        +
-                                    </span>
-                                </div>
-                                <p class="nw2-clr">Owner</p>
+                                <?php if (!empty($settings['Owner'])) :   ?>
+                                    <?php echo wp_kses($settings['Owner'], wp_kses_allowed_html('post'))  ?>
+                                <?php endif ?>
                             </div>
                         </div>
                     </div>
@@ -1028,7 +1005,9 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                         <div class="textcircle2">
                             <div class="text2">
                                 <p>
-                                    <span>Explore</span> <span>More</span> <span>Explore</span> <span>More</span>
+                                    <?php if (!empty($settings['circle_text'])) :   ?>
+                                        <?php echo wp_kses($settings['circle_text'], wp_kses_allowed_html('post'))  ?>
+                                    <?php endif ?>
                                 </p>
                             </div>
                         </div>
