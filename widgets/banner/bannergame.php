@@ -342,7 +342,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
                 'name'     => 'subtitlestyle_typ',
-                'selector' => '{{WRAPPER}} h4.n4-clr.mb-xxl-4.mb-3.subtitle',
+                'selector' => '{{WRAPPER}} a.fs-four.act3-clr',
 
             ]
         );
@@ -353,7 +353,8 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'label'     => esc_html__('Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .subtitle' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} a.fs-four.act3-clr' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} i.ti.ti-arrow-right.fs-four.act3-clr' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -391,6 +392,18 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'selectors' => [
                     '{{WRAPPER}} .title span' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .title ' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'titlestyle_color2',
+            [
+                'label'     => esc_html__('Color Two', 'plugin-name'),
+                'type'      => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.fw_900.act4-clr.d-block.position-relative' => 'color: {{VALUE}} !important;',
+                   
                 ],
             ]
         );
@@ -507,7 +520,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'btrnn_typography',
-                'selector' => '{{WRAPPER}} .a.how-cont.act3-texthover.n4-clr.fw_700.aos-init.aos-animate',
+                'selector' => '{{WRAPPER}} a.how-cont.act3-texthover.nw1-clr.fw_700.aos-init.aos-animate',
             ]
         );
 
@@ -517,13 +530,21 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Color', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} a.how-cont.act3-texthover.n4-clr.fw_700.aos-init.aos-animate' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} a.how-cont.act3-texthover.nw1-clr.fw_700.aos-init.aos-animate' => 'color: {{VALUE}} !important',
                 ],
             ]
         );
 
-
-
+        $this->add_control(
+            'buttontwostyle_colorh',
+            [
+                'label' => esc_html__('HoverColor', 'plugin-name'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} a.how-cont.act3-texthover.nw1-clr.fw_700.aos-init.aos-animate:hover' => 'color: {{VALUE}} !important',
+                ],
+            ]
+        );
 
 
         $this->end_controls_section();
@@ -544,7 +565,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
                 'name'     => 'userstyle_typ',
-                'selector' => '{{WRAPPER}} span.d-flex.align-items-center.gap-2.d-block.fw_700.text-uppercase.mt-xxl-3.mt-2',
+                'selector' => '{{WRAPPER}} span.active-userv17.fs18.fw_500.text-capitalize.position-relative',
 
             ]
         );
@@ -555,7 +576,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'label'     => esc_html__('Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} span.d-flex.align-items-center.gap-2.d-block.fw_700.text-uppercase.mt-xxl-3.mt-2' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} span.active-userv17.fs18.fw_500.text-capitalize.position-relative' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -565,41 +586,6 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
         $this->end_controls_section();
 
 
-        $this->start_controls_section(
-            'scrollstyle',
-            [
-                'label' => esc_html__('Scroll', 'plugin-name'),
-                'tab'   => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-
-        $this->add_control(
-            'scrollstyle_color',
-            [
-                'label' => esc_html__('Color', 'plugin-name'),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} span.n4-clr.fs18.d-block.fw_600' => 'color: {{VALUE}} !important',
-                    '{{WRAPPER}} .scroll-iconrarea svg path' => 'fill: {{VALUE}} !important',
-                ],
-            ]
-        );
-
-
-        $this->add_control(
-            'scrollstyle_colorb',
-            [
-                'label' => esc_html__('Background', 'plugin-name'),
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} a.scroll-bn1.act3-bg.radius100.d-flex.justify-content-center.align-items-center.justify-content-center' => 'background: {{VALUE}} !important',
-                ],
-            ]
-        );
-
-
-        $this->end_controls_section();
 
         $this->start_controls_section(
             'imagestyle',
@@ -612,7 +598,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'more_options',
             [
-                'label' => esc_html__('Image One', 'plugin-name'),
+                'label' => esc_html__('Image ', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -625,7 +611,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'type'        => Controls_Manager::TEXT,
                 'description' => 'Unit in px',
                 'selectors'   => [
-                    '{{WRAPPER}} .thumb.mb-xxl-15.mb-xl-9.mb-lg-6.mb-4 img ' => 'height: {{VALUE}}px;',
+                    '{{WRAPPER}} trophyv17-thumb img ' => 'height: {{VALUE}}px;',
                 ],
             ]
         );
@@ -636,7 +622,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'type'        => Controls_Manager::TEXT,
                 'description' => 'Unit in px',
                 'selectors'   => [
-                    '{{WRAPPER}} .thumb.mb-xxl-15.mb-xl-9.mb-lg-6.mb-4 img ' => 'width: {{VALUE}}px;',
+                    '{{WRAPPER}} trophyv17-thumb img ' => 'width: {{VALUE}}px;',
                 ],
             ]
         );
@@ -647,93 +633,19 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors'  => [
-                    '{{WRAPPER}} .thumb.mb-xxl-15.mb-xl-9.mb-lg-6.mb-4 img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} trophyv17-thumb img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ]
             ]
         );
 
-        $this->add_control(
-            'more_options2',
-            [
-                'label' => esc_html__('Image Two', 'plugin-name'),
-                'type' => \Elementor\Controls_Manager::HEADING,
-                'separator' => 'before',
-            ]
-        );
-
-
-        $this->add_responsive_control(
-            'imagetwo_height',
-            [
-                'label'       => esc_html__('Height', 'plugin-name'),
-                'type'        => Controls_Manager::TEXT,
-                'description' => 'Unit in px',
-                'selectors'   => [
-                    '{{WRAPPER}} .thumb img ' => 'height: {{VALUE}}px;',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'imagetwo_width',
-            [
-                'label'       => esc_html__('Width', 'plugin-name'),
-                'type'        => Controls_Manager::TEXT,
-                'description' => 'Unit in px',
-                'selectors'   => [
-                    '{{WRAPPER}} .thumb img ' => 'width: {{VALUE}}px;',
-                ],
-            ]
-        );
-        $this->add_responsive_control(
-            'imagetwo_border_radius',
-            [
-                'label'      => __('Border Radius', 'plugin-name'),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors'  => [
-                    '{{WRAPPER}} .thumb img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                ]
-            ]
-        );
-
+     
 
 
 
         $this->end_controls_section();
 
 
-        $this->start_controls_section(
-            'bannertextstyle',
-            [
-                'label' => esc_html__('Banner Text', 'plugin-name'),
-                'tab'   => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'bannertextstyle_typ',
-                'selector' => '{{WRAPPER}} p.mb-xxl-10.mb-9.mb-lg-6.mb-4.fs20.n3-clr',
-
-            ]
-        );
-
-        $this->add_control(
-            'bannertextstyle_color',
-            [
-                'label'     => esc_html__('Color', 'plugin-name'),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} p.mb-xxl-10.mb-9.mb-lg-6.mb-4.fs20.n3-clr' => 'color: {{VALUE}} !important;',
-                ],
-            ]
-        );
-
-
-        $this->end_controls_section();
+ 
 
         $this->start_controls_section(
             'counterstyle',
@@ -758,7 +670,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
                 'name'     => 'numbet_typ',
-                'selector' => '{{WRAPPER}} span.display-four.n4-clr.fw_800.odometer.odometer-auto-theme,span.plus__icon.display-four.n4-clr.fw_800',
+                'selector' => '{{WRAPPER}} .odometer-inside span',
 
             ]
         );
@@ -769,14 +681,14 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'label'     => esc_html__('Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} span.display-four.n4-clr.fw_800.odometer.odometer-auto-theme' => 'color: {{VALUE}} !important;',
-                    '{{WRAPPER}} span.plus__icon.display-four.n4-clr.fw_800' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .odometer-inside span' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} span.plus__icon.display-four.nw1-clr.fw_800' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
 
         $this->add_control(
-            'more_optiofdfns',
+            'more_optiofdfffns',
             [
                 'label' => esc_html__('Text', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::HEADING,
@@ -789,7 +701,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
                 'name'     => 'counter_text_typ',
-                'selector' => '{{WRAPPER}} p.n4-clr',
+                'selector' => '{{WRAPPER}} p.nw2-clr',
 
             ]
         );
@@ -800,7 +712,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'label'     => esc_html__('Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} p.n4-clr' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} p.nw2-clr' => 'color: {{VALUE}} !important;',
                 ],
             ]
         );
@@ -881,7 +793,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
 
                                 </ul>
                                 <div class="bn-content-box pb-sm-0 pb-3">
-                                    <div class="display-three text-center position-relative cus-z1 fw_900 text-capitalize n0-clr mb-xxl-9 mb-xl-8 mb-6">
+                                    <div class="display-three text-center position-relative cus-z1 fw_900 text-capitalize n0-clr mb-xxl-9 mb-xl-8 mb-6 title">
                                         <span class="d-flex flex-wrap text-capitalize align-items-center justify-content-center n4-clr gap-lg-3 gap-0 text-uppercase" data-aos="zoom-in-up" data-aos-duration="2200">
                                             <?php if (!empty($settings['subtitle_line1'])) :   ?>
                                                 <?php echo esc_html($settings['subtitle_line1']) ?>
