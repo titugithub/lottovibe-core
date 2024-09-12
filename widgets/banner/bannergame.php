@@ -611,7 +611,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'type'        => Controls_Manager::TEXT,
                 'description' => 'Unit in px',
                 'selectors'   => [
-                    '{{WRAPPER}} trophyv17-thumb img ' => 'height: {{VALUE}}px;',
+                    '{{WRAPPER}} .trophyv17-thumb img ' => 'height: {{VALUE}}px;',
                 ],
             ]
         );
@@ -622,7 +622,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'type'        => Controls_Manager::TEXT,
                 'description' => 'Unit in px',
                 'selectors'   => [
-                    '{{WRAPPER}} trophyv17-thumb img ' => 'width: {{VALUE}}px;',
+                    '{{WRAPPER}} .trophyv17-thumb img ' => 'width: {{VALUE}}px;',
                 ],
             ]
         );
@@ -633,7 +633,7 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
                 'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors'  => [
-                    '{{WRAPPER}} trophyv17-thumb img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                    '{{WRAPPER}} .trophyv17-thumb img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                 ]
             ]
         );
@@ -732,13 +732,14 @@ class ReacTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
 
 
 
-        $this->add_group_control(
-            \Elementor\Group_Control_Background::get_type(),
+        $this->add_control(
+            'circlestyle_color',
             [
-                'name' => 'background',
-                'label' => esc_html__('Background', 'plugin-name'),
-                'types' => ['classic', 'gradient', 'video'],
-                'selector' => '{{WRAPPER}} .banner-textanimation::before',
+                'label' => esc_html__( 'Icon Color', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .banner-v16-wrap-customright .banner-textanimation .icon-explore .icon' => 'background: {{VALUE}} !important',
+                ],
             ]
         );
 
