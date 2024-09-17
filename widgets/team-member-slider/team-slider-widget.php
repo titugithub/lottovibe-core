@@ -496,8 +496,8 @@ class RTElements_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base {
                 ],          
 
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-addon-slider .testimonial-item' => 'margin-left:{{SIZE}}{{UNIT}};',     
-                    '{{WRAPPER}} .reactheme-addon-slider .testimonial-item' => 'margin-right:{{SIZE}}{{UNIT}};',                    
+                    '{{WRAPPER}} .svtheme-addon-slider .testimonial-item' => 'margin-left:{{SIZE}}{{UNIT}};',     
+                    '{{WRAPPER}} .svtheme-addon-slider .testimonial-item' => 'margin-right:{{SIZE}}{{UNIT}};',                    
                     '{{WRAPPER}} .rts-team.team-slider-style5 .team-item.swiper-slide-active' => 'margin-right:{{SIZE}}{{UNIT}};',                    
                 ],
             ]
@@ -519,7 +519,7 @@ class RTElements_Elementor_Team_Slider_Widget extends \Elementor\Widget_Base {
                 ],          
 
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-addon-slider .testimonial-item' => 'margin-bottom:{{SIZE}}{{UNIT}};',                    
+                    '{{WRAPPER}} .svtheme-addon-slider .testimonial-item' => 'margin-bottom:{{SIZE}}{{UNIT}};',                    
                 ],
             ]
         ); 

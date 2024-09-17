@@ -17,7 +17,7 @@ use Elementor\Group_Control_Typography;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacThemes_Client_Thumb_Showcase_Widget extends \Elementor\Widget_Base {   
+class SVThemes_Client_Thumb_Showcase_Widget extends \Elementor\Widget_Base {   
    
     /**
      * Get widget name.

@@ -7,7 +7,7 @@ use Elementor\Group_Control_Border;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacThemes_Elementor_Numnber_Widgets extends \Elementor\Widget_Base {
+class SVThemes_Elementor_Numnber_Widgets extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.

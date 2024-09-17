@@ -18,7 +18,7 @@ use Elementor\Group_Control_Background;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacTheme_Elementor_Pricing_Table_Widget extends \Elementor\Widget_Base {
+class SVTheme_Elementor_Pricing_Table_Widget extends \Elementor\Widget_Base {
 
     /**
      * Get widget name.

@@ -11,7 +11,7 @@ use Elementor\Utils;
 
 defined('ABSPATH') || die();
 
-class ReacTheme_Elementor_Team_Grid_Widget extends \Elementor\Widget_Base
+class SVTheme_Elementor_Team_Grid_Widget extends \Elementor\Widget_Base
 {
 
 	/**

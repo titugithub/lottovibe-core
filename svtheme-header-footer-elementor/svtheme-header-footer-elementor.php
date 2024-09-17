@@ -5,7 +5,7 @@ define( 'RTSHFE_FILE', __FILE__ );
 define( 'RTSHFE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'RTSHFE_URL', plugins_url( '/', __FILE__ ) );
 define( 'RTSHFE_PATH', plugin_basename( __FILE__ ) );
-define( 'RTSHFE_DOMAIN', trailingslashit( 'https://reacthemes.com' ) );
+define( 'RTSHFE_DOMAIN', trailingslashit( 'https://svthemes.com' ) );
 define( 'RTSHFE_DIR_URL_ADMIN', plugin_dir_url( __FILE__ ) );
 define( 'RTSHFE_ASSETS_ADMIN', trailingslashit( RTSHFE_DIR_URL_ADMIN ) );
 

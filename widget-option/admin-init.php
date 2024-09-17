@@ -8,12 +8,12 @@ class rt_Elements_Addon_Control {
         add_action( 'admin_menu', array( $this, 'rtelements_add_plugin_page' ) );
         add_action( 'admin_init', array( $this, 'rtelements_page_init' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'rtelements_admin_scripts' ) );
-        register_activation_hook( RTELEMENTS_FILE, [$this,'rseelements_plugin_activate'] );      
+        register_activation_hook( SVELEMENTS_FILE, [$this,'rseelements_plugin_activate'] );      
         
     }
 
     public function rtelements_admin_scripts(){
-        wp_register_style('rtelements-admin-styles', RTELEMENTS_DIR_URL_PRO . 'widget-option/assets/css/rtelements-admin.css', array(), null );
+        wp_register_style('rtelements-admin-styles', SVELEMENTS_DIR_URL_PRO . 'widget-option/assets/css/rtelements-admin.css', array(), null );
         wp_enqueue_style('rtelements-admin-styles');
     }
 

@@ -11,7 +11,7 @@ use Elementor\Group_Control_Background;
 defined( 'ABSPATH' ) || die();
 
 
-class Reactheme_Elementor_Image_Card_Widget extends \Elementor\Widget_Base {
+class SVTheme_Elementor_Image_Card_Widget extends \Elementor\Widget_Base {
 	//register css
 	public function get_style_depends() {
 		wp_register_style( 'rtelements-card', plugins_url( 'img-card-css/card.css', __FILE__ ) );

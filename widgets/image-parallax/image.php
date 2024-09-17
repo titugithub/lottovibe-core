@@ -17,7 +17,7 @@ use Elementor\Group_Control_Typography;
 
 defined('ABSPATH') || die();
 
-class Reactheme_Image_Parallax_Widget extends \Elementor\Widget_Base
+class SVTheme_Image_Parallax_Widget extends \Elementor\Widget_Base
 {
     /**    
      * @since 1.0.0

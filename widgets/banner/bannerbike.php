@@ -11,7 +11,7 @@ use Elementor\Utils;
 
 defined('ABSPATH') || die();
 
-class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
+class SVTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
 {
     /**
      * Get widget name.
@@ -923,19 +923,23 @@ class ReacTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
                         },
                     }
                 });
-                const texts = document.querySelectorAll(".text, .text2");
-                texts.forEach(text => {
-                    if (text) {
-                        text.innerHTML = text.innerText
-                            .split("")
-                            .map(
-                                (char, i) => `<span style="display:inline-block; transform:rotate(${i * 14}deg)">${char}</span>`
-                            )
-                            .join("");
-                    } else {
-                        console.log("print");
-                    }
-                });
+                // Check if we're in Elementor edit mode
+                if (typeof elementorFrontend !== 'undefined' && elementorFrontend.isEditMode()) {
+                    const texts = document.querySelectorAll(".text, .text2");
+                    texts.forEach(text => {
+                        if (text && !text.classList.contains('transformed')) {
+                            text.innerHTML = text.innerText
+                                .split("")
+                                .map(
+                                    (char, i) => `<span style="display:inline-block; transform:rotate(${i * 14}deg)">${char}</span>`
+                                )
+                                .join("");
+                            // Add a class to prevent reapplying the transformation
+                            text.classList.add('transformed');
+                        }
+                    });
+                }
+
             })
         </script>
 

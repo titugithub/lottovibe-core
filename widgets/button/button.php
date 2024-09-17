@@ -9,7 +9,7 @@ use Elementor\Group_Control_Background;
 
 defined('ABSPATH') || die();
 
-class Reactheme_Button_Widget extends \Elementor\Widget_Base
+class SVTheme_Button_Widget extends \Elementor\Widget_Base
 {
 
 	/**

@@ -862,8 +862,8 @@ class RTS_Navigation_Menu extends Widget_Base {
 					],
 					'default'   => '',
 					'selectors' => [
-						'#reactheme-header .sticky-wrapper .sticky' => 'background: {{VALUE}} !important',
-						'#reactheme-header .sticky-wrapper .sticky .bg-remove' => 'background: {{VALUE}} !important',
+						'#svtheme-header .sticky-wrapper .sticky' => 'background: {{VALUE}} !important',
+						'#svtheme-header .sticky-wrapper .sticky .bg-remove' => 'background: {{VALUE}} !important',
 					],
 				]
 			);	
@@ -872,7 +872,7 @@ class RTS_Navigation_Menu extends Widget_Base {
 				Group_Control_Box_Shadow::get_type(),
 				[
 					'name'      => 'stikcy_box_shadow',				
-					'selector'  => '#reactheme-header .menu-sticky.sticky',
+					'selector'  => '#svtheme-header .menu-sticky.sticky',
 					'separator' => 'after',
 				]
 			);

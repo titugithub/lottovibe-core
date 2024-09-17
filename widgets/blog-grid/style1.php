@@ -1,5 +1,5 @@
 <div class="grid-item <?php echo esc_html($col);?> <?php echo esc_attr($termsString);?>">
-<div class="align-items-center no-gutter blog-item reactheme-blog-grid1 col-md-12 swiper-slide">
+<div class="align-items-center no-gutter blog-item svtheme-blog-grid1 col-md-12 swiper-slide">
 		<div class="rts-blog-h-2-wrapper">
 			<div class="col-top">
 				<div class="image-part">

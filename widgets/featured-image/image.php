@@ -15,7 +15,7 @@ use Elementor\Group_Control_Typography;
 
 defined( 'ABSPATH' ) || die();
 
-class Reactheme_Featured_Image_Showcase_Widget extends \Elementor\Widget_Base {
+class SVTheme_Featured_Image_Showcase_Widget extends \Elementor\Widget_Base {
     /**    
      * @since 1.0.0
      * @access public

@@ -7,7 +7,7 @@ use Elementor\Controls_Manager;
 use Elementor\Group_Control_Border;
 
 defined('ABSPATH') || die();
-class ReacTheme_Widget_Accordion extends \Elementor\Widget_Base
+class SVTheme_Widget_Accordion extends \Elementor\Widget_Base
 {
 
     public function get_name()

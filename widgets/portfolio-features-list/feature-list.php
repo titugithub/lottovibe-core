@@ -9,7 +9,7 @@ use Elementor\Group_Control_Background;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacTheme_Portfolio_Features_List_Widget extends \Elementor\Widget_Base {
+class SVTheme_Portfolio_Features_List_Widget extends \Elementor\Widget_Base {
 
 
     public function get_name() {

@@ -9,7 +9,7 @@ use Elementor\Group_Control_Background;
 
 defined('ABSPATH') || die();
 
-class Reactheme_Elementor_Sservices_Grid_Widget extends \Elementor\Widget_Base
+class SVTheme_Elementor_Sservices_Grid_Widget extends \Elementor\Widget_Base
 {
 
 

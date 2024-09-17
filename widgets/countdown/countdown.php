@@ -387,35 +387,29 @@ class Rsaddon_Elementor_Pro_Countdown_Widget extends \Elementor\Widget_Base
 		$settings = $this->get_settings_for_display();
 		$deadline = strtotime($settings['countdown_date']); // Convert date to timestamp
 		$is_edit_mode = \Elementor\Plugin::$instance->editor->is_edit_mode();
-
+	
 		?>
-
-
-
-
-
-
+	
 		<section class="next-draw-sectionv5">
 			<div class="container">
-				<div class="draw-nextwrap-v4wrap draw-nextwrap-v5wrap d-flex
-            justify-content-center align-items-xl-center align-items-center">
+				<div class="draw-nextwrap-v4wrap draw-nextwrap-v5wrap d-flex justify-content-center align-items-xl-center align-items-center">
 					<div class="draw-netwrap-inner">
 						<div class="thumb" data-aos="zoom-in-right" data-aos-duration="1600">
-							<?php if (!empty($settings['image1']['url'])) :   ?>
-								<img src="<?php echo $settings['image1']['url'] ?>" alt="img">
-							<?php endif ?>
+							<?php if (!empty($settings['image1']['url'])) : ?>
+								<img src="<?php echo esc_url($settings['image1']['url']); ?>" alt="img">
+							<?php endif; ?>
 						</div>
 						<div class="right-side-nextdraw">
 							<div class="watch-live-wrap position-relative">
-								<?php if (!empty($settings['arrowimage']['url'])) :   ?>
-									<img src="<?php echo $settings['arrowimage']['url'] ?>" alt="img" class="next-arrow">
-								<?php endif ?>
-								<?php if (!empty($settings['image2']['url'])) :   ?>
+								<?php if (!empty($settings['arrowimage']['url'])) : ?>
+									<img src="<?php echo esc_url($settings['arrowimage']['url']); ?>" alt="img" class="next-arrow">
+								<?php endif; ?>
+								<?php if (!empty($settings['image2']['url'])) : ?>
 									<div class="watch-thumb cmn-width">
-										<img src="<?php echo esc_url($settings['image2']['url']) ?>" alt="img" class="radius-circle">
+										<img src="<?php echo esc_url($settings['image2']['url']); ?>" alt="img" class="radius-circle">
 									</div>
-								<?php endif ?>
-
+								<?php endif; ?>
+	
 								<a href="#" class="draw-watch cmn-width d-flex align-items-center justify-content-center">
 									<span>
 										<span class="icon-lonk">
@@ -430,12 +424,12 @@ class Rsaddon_Elementor_Pro_Countdown_Widget extends \Elementor\Widget_Base
 								</a>
 							</div>
 							<div class="draw-countdraw text-center position-relative">
-								<?php if (!empty($settings['title'])) :   ?>
+								<?php if (!empty($settings['title'])) : ?>
 									<h2 class="fw_800 n4-clr mb-xxl-8 mb-5 title">
-										<?php echo esc_html($settings['title']) ?>
+										<?php echo esc_html($settings['title']); ?>
 									</h2>
-								<?php endif ?>
-
+								<?php endif; ?>
+	
 								<div class="draw-timerwrap justify-content-center" id="clockdiv">
 									<div class="draw-timer-item">
 										<span class="text-hed days"><?php echo $is_edit_mode ? '00' : $this->calculate_remaining_time($deadline, 'days'); ?></span>
@@ -463,18 +457,21 @@ class Rsaddon_Elementor_Pro_Countdown_Widget extends \Elementor\Widget_Base
 				</div>
 			</div>
 		</section>
-
-
-
+	
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
-				var deadline = new Date('<?php echo esc_js($settings['countdown_date']); ?>');
+				var deadlineStr = '<?php echo esc_js($settings['countdown_date']); ?>';
+				var deadline = new Date(deadlineStr);
+	
+				// Debug: Check parsed deadline
+				console.log('Parsed Deadline:', deadline);
+	
 				var clockdiv = document.getElementById("clockdiv");
 				if (clockdiv) {
 					initializeClock(clockdiv, deadline);
 				}
 			});
-
+	
 			function getTimeRemaining(endtime) {
 				var t = Date.parse(endtime) - Date.parse(new Date());
 				var seconds = Math.floor((t / 1000) % 60);
@@ -489,57 +486,54 @@ class Rsaddon_Elementor_Pro_Countdown_Widget extends \Elementor\Widget_Base
 					'seconds': seconds
 				};
 			}
-
+	
 			function initializeClock(clock, endtime) {
 				var daysSpan = clock.querySelector('.days');
 				var hoursSpan = clock.querySelector('.hours');
 				var minutesSpan = clock.querySelector('.minutes');
 				var secondsSpan = clock.querySelector('.seconds');
-
+	
 				function updateClock() {
 					var t = getTimeRemaining(endtime);
 					daysSpan.innerHTML = t.days;
 					hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
 					minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
 					secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
+	
 					if (t.total <= 0) {
 						clearInterval(timeinterval);
 					}
 				}
-
+	
 				updateClock();
 				var timeinterval = setInterval(updateClock, 1000);
 			}
 		</script>
-
-
-
-
-
-
-	<?php
-		}
-
-		private function calculate_remaining_time($deadline, $unit)
-		{
-			$now = time();
-			$time_remaining = $deadline - $now;
-
-			if ($time_remaining < 0) {
-				return '00';
-			}
-
-			switch ($unit) {
-				case 'days':
-					return floor($time_remaining / (60 * 60 * 24));
-				case 'hours':
-					return floor(($time_remaining % (60 * 60 * 24)) / (60 * 60));
-				case 'minutes':
-					return floor(($time_remaining % (60 * 60)) / 60);
-				case 'seconds':
-					return floor($time_remaining % 60);
-			}
+	
+		<?php
+	}
+	
+	private function calculate_remaining_time($deadline, $unit)
+	{
+		$now = time();
+		$time_remaining = $deadline - $now;
+	
+		if ($time_remaining < 0) {
 			return '00';
 		}
+	
+		switch ($unit) {
+			case 'days':
+				return floor($time_remaining / (60 * 60 * 24));
+			case 'hours':
+				return floor(($time_remaining % (60 * 60 * 24)) / (60 * 60));
+			case 'minutes':
+				return floor(($time_remaining % (60 * 60)) / 60);
+			case 'seconds':
+				return floor($time_remaining % 60);
+			default:
+				return '00';
+		}
 	}
+	}
+	

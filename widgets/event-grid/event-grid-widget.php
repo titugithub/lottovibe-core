@@ -11,7 +11,7 @@ use Elementor\Utils;
 
 defined( 'ABSPATH' ) || die();
 
-class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
+class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.
@@ -554,7 +554,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .event-btm' => 'border-color: {{VALUE}};',                   
-                    '{{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short' => 'border-color: {{VALUE}};',                   
+                    '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short' => 'border-color: {{VALUE}};',                   
                 ],
                 'condition' => [
                     'event_grid_style' => ['style1', 'style4'],
@@ -598,7 +598,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => [ 'px', 'em', '%' ],
 		        'selectors' => [
-		            '{{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short .content-part' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		            '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .content-part' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 		        ],
 		        'condition' => [
 		            'event_grid_style' => ['style4'],
@@ -613,7 +613,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => [ 'px', 'em', '%' ],
 		        'selectors' => [
-		            '{{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		            '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 		        ],
 		        'condition' => [
 		            'event_grid_style' => ['style4'],
@@ -760,7 +760,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                     '{{WRAPPER}} .react-event-slider .event-item .events-short .time i:before' => 'color: {{VALUE}};',                   
                     '{{WRAPPER}} .react-event-slider.event-slider-style3 .event-item .time-sec .timesec i:before' => 'color: {{VALUE}};',                   
                     '{{WRAPPER}} .react-event-slider.event-slider-style3 .event-item .time-sec .timesec' => 'color: {{VALUE}};',                   
-                    '{{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short .timesec' => 'color: {{VALUE}};',                   
+                    '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .timesec' => 'color: {{VALUE}};',                   
                 ],                
             ]
         ); 
@@ -771,7 +771,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 				'name' => 'time_typography',
 				'label' => esc_html__( 'Typography', 'rtelements' ),
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short .time, {{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short .timesec, {{WRAPPER}} .react-event-slider.event-slider-style3 .event-item .time-sec .timesec',                                    
+				'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short .time, {{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .timesec, {{WRAPPER}} .react-event-slider.event-slider-style3 .event-item .time-sec .timesec',                                    
 			]
 		);
 		$this->end_controls_section(); 
@@ -848,7 +848,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .dates' => 'background-color: {{VALUE}};',                                     
-                    '{{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short .date-sec' => 'background-color: {{VALUE}};',                                     
+                    '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .date-sec' => 'background-color: {{VALUE}};',                                     
                 ],                 
                 'condition' => [
                     'event_grid_style' => ['style3', 'style4'],
@@ -863,7 +863,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .events-short i' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .reactheme-event-grid .event-item .time-secs .time i::before' => 'color: {{VALUE}} !important;',
+                    '{{WRAPPER}} .svtheme-event-grid .event-item .time-secs .time i::before' => 'color: {{VALUE}} !important;',
                 ],             
             ]
         );
@@ -874,7 +874,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Date Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-event-grid .event-item .date-part span' => 'color: {{VALUE}};',                    
+                    '{{WRAPPER}} .svtheme-event-grid .event-item .date-part span' => 'color: {{VALUE}};',                    
                 ], 
                 'condition' => [
                     'event_grid_style' => ['style1'],
@@ -890,7 +890,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'selectors' => [
                     '{{WRAPPER}} .events-short .date-part .date' => 'color: {{VALUE}};',                   
                     '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .dates' => 'color: {{VALUE}};',                   
-                    '{{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short .date-sec' => 'color: {{VALUE}};',                   
+                    '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .date-sec' => 'color: {{VALUE}};',                   
                 ],                 
                 'condition' => [
                     'show_meta' => 'yes',
@@ -903,7 +903,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 			[
 				'name' => 'month_typography',
 				'label' => esc_html__( 'Typography', 'rtelements' ),
-				'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .date-part, {{WRAPPER}} .date-part .date, {{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short .date-sec, {{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .dates',				
+				'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .date-part, {{WRAPPER}} .date-part .date, {{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .date-sec, {{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .dates',				
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 			]
 		);  
@@ -1044,7 +1044,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'label' => esc_html__( 'Hover Color', 'rtelements' ),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
-		            '{{WRAPPER}} .reactheme-event-grid .event-item .events-short .btn-part a.join-btn:hover' => 'color: {{VALUE}};',                   
+		            '{{WRAPPER}} .svtheme-event-grid .event-item .events-short .btn-part a.join-btn:hover' => 'color: {{VALUE}};',                   
 		        ],   
 		                  
 		    ]
@@ -1082,7 +1082,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::SLIDER,
 		        'size_units' => ['px'],
 		        'selectors' => [
-		            '{{WRAPPER}} .reactheme-event-grid.event-slider-style4 .event-item .events-short .event-btm' => 'margin-top: {{SIZE}}{{UNIT}};',
+		            '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .event-btm' => 'margin-top: {{SIZE}}{{UNIT}};',
 		        ],
 		        'condition' => [
 		            'event_grid_style' => 'style4',
@@ -1106,7 +1106,7 @@ class Reactheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 	?>	 
 
 
-		<div class="react-unique-sliders react-event-slider reactheme-event-grid event-slider-<?php echo esc_attr($settings['event_grid_style']); ?>">
+		<div class="react-unique-sliders react-event-slider svtheme-event-grid event-slider-<?php echo esc_attr($settings['event_grid_style']); ?>">
 			<div id="react-grid" class="react-addon-sliders row">
 				<?php 
 					if('style1' == $settings['event_grid_style']){

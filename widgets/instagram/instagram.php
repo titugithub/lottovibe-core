@@ -8,7 +8,7 @@ use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Typography;
 use Elementor\Core\Schemes\Typography;
 
-class ReacTheme_Instagram_Widget extends \Elementor\Widget_Base {
+class SVTheme_Instagram_Widget extends \Elementor\Widget_Base {
     
     /**
 	 * Retrieve instagram feed widget name.

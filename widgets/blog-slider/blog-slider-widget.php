@@ -10,7 +10,7 @@ use Elementor\Group_Control_Border;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacTheme_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base {
+class SVTheme_Elementor_Blog_Slider_Widget extends \Elementor\Widget_Base {
 
     /**
      * Get widget name.
@@ -592,8 +592,8 @@ $this->add_responsive_control(
         ],          
 
         'selectors' => [
-            '{{WRAPPER}} .reactheme-addon-slider .testimonial-item' => 'margin-left:{{SIZE}}{{UNIT}};',     
-            '{{WRAPPER}} .reactheme-addon-slider .testimonial-item' => 'margin-right:{{SIZE}}{{UNIT}};',                    
+            '{{WRAPPER}} .svtheme-addon-slider .testimonial-item' => 'margin-left:{{SIZE}}{{UNIT}};',     
+            '{{WRAPPER}} .svtheme-addon-slider .testimonial-item' => 'margin-right:{{SIZE}}{{UNIT}};',                    
         ],
     ]
 ); 
@@ -660,7 +660,7 @@ $this->end_controls_section();
             [
                 'name' => 'title_typography',
                 'label' => esc_html__( 'Title Typography', 'rtelements' ),
-                'selector' => '{{WRAPPER}} .reactheme-blog-grid1 .title a',                    
+                'selector' => '{{WRAPPER}} .svtheme-blog-grid1 .title a',                    
             ]
         );
 

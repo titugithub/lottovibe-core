@@ -3,8 +3,8 @@
  * --------------------------------------------------------------------
  *
  * Template : Custom Js Template
- * Author : reacthemes
- * Author URI : http://www.reactheme.com/
+ * Author : svthemes
+ * Author URI : http://www.svtheme.com/
  *
  * --------------------------------------------------------------------
  *

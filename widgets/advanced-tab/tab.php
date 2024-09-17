@@ -15,7 +15,7 @@ use Elementor\Group_Control_Typography;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacThemes_Advance_Tab_Widget extends \Elementor\Widget_Base {
+class SVThemes_Advance_Tab_Widget extends \Elementor\Widget_Base {
     /**
      * Get widget name.
      *

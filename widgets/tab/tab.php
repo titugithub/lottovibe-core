@@ -15,7 +15,7 @@ use Elementor\Group_Control_Typography;
 
 defined( 'ABSPATH' ) || die();
 
-class Reactheme_Tab_Widget extends \Elementor\Widget_Base {
+class SVTheme_Tab_Widget extends \Elementor\Widget_Base {
     public function get_name() {
         return 'rt-tab';
     }

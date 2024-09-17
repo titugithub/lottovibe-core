@@ -1,5 +1,5 @@
 <?php
-class ReacTheme_Project_Portfolio{	
+class SVTheme_Project_Portfolio{	
 
 	public function __construct() {
 		add_action( 'init', array( $this, 'rt_portfolio_register_post_type' ) );		
@@ -56,4 +56,4 @@ class ReacTheme_Project_Portfolio{
 
 
 }
-new ReacTheme_Project_Portfolio();
+new SVTheme_Project_Portfolio();

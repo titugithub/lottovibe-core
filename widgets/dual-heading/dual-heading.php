@@ -18,7 +18,7 @@ use Elementor\Utils;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacThemes_Elementor_Heading_dual_Widget extends \Elementor\Widget_Base {
+class SVThemes_Elementor_Heading_dual_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.

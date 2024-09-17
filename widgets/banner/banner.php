@@ -11,7 +11,7 @@ use Elementor\Utils;
 
 defined('ABSPATH') || die();
 
-class ReacTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
+class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
 {
     /**
      * Get widget name.
@@ -1093,46 +1093,6 @@ class ReacTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
         $settings    = $this->get_settings_for_display();
         ?>
 
-        <script>
-            jQuery(document).ready(function($) {
-                var swiper = new Swiper(".banner-carslide-wrap", {
-                    loop: true,
-                    slidesPerView: 1,
-                    slidesToShow: 1,
-                    spaceBetween: 24,
-                    speed: 1000,
-                    navigation: {
-                        nextEl: ".swiper-button-prevteam",
-                        prevEl: ".swiper-button-nextteam",
-                    },
-                    autoplay: {
-                        delay: 1200,
-                    },
-                    breakpoints: {
-                        1400: {
-                            slidesPerView: 1,
-                            spaceBetween: 24,
-                        },
-                        992: {
-                            slidesPerView: 1,
-                            spaceBetween: 14,
-                        },
-                        768: {
-                            slidesPerView: 1,
-                            spaceBetween: 14,
-                        },
-                        576: {
-                            slidesPerView: 1,
-                            spaceBetween: 14,
-                        },
-                        500: {
-                            slidesPerView: 1,
-                            spaceBetween: 14,
-                        },
-                    }
-                });
-            })
-        </script>
 
 
 

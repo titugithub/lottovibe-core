@@ -10,7 +10,7 @@ use Elementor\Group_Control_Background;
 
 defined( 'ABSPATH' ) || die();
 
-class Reacthemes_Elementor_Progress_Pie_Widget extends \Elementor\Widget_Base {
+class SVThemes_Elementor_Progress_Pie_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.

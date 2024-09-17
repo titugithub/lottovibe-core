@@ -13,7 +13,7 @@ use Elementor\Utils;
 
 defined('ABSPATH') || die();
 
-class Reactheme_Elementor_Description_Widget extends \Elementor\Widget_Base
+class SVTheme_Elementor_Description_Widget extends \Elementor\Widget_Base
 {
 
 	/*

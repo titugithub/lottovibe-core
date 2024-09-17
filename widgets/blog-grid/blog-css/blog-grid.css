@@ -50,35 +50,35 @@
 
 /** Blog Style CSS --------------
 -----------------------------------*/
-.reactheme-blog-grid .image-part.yes:hover img {
+.svtheme-blog-grid .image-part.yes:hover img {
   filter: grayscale(100%);
 }
-.reactheme-blog-grid .blog-item .blog-content .title {
+.svtheme-blog-grid .blog-item .blog-content .title {
   margin-bottom: 0;
 }
-.reactheme-blog-grid .blog-item .blog-content .title a {
+.svtheme-blog-grid .blog-item .blog-content .title a {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   color: #1F1F25;
 }
-.reactheme-blog-grid .blog-item .blog-content .title a:hover {
+.svtheme-blog-grid .blog-item .blog-content .title a:hover {
   color: var(--color-primary);
 }
-.reactheme-blog-grid.blog--style1 .blog-item .col-top {
+.svtheme-blog-grid.blog--style1 .blog-item .col-top {
   background: linear-gradient(0deg, #F7F7F7 80%, rgba(0, 0, 0, 0) 80%);
   padding: 0 10px;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .col-top .image-part {
+.svtheme-blog-grid.blog--style1 .blog-item .col-top .image-part {
   overflow: hidden;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .col-top .image-part a img {
+.svtheme-blog-grid.blog--style1 .blog-item .col-top .image-part a img {
   transition: all 0.5s;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .col-top .image-part a img:hover {
+.svtheme-blog-grid.blog--style1 .blog-item .col-top .image-part a img:hover {
   transform: scale(1.15);
 }
-.reactheme-blog-grid.blog--style1 .blog-item .blog-meta {
+.svtheme-blog-grid.blog--style1 .blog-item .blog-meta {
   margin: 0;
   list-style: none;
   padding: 0px 15px;
@@ -87,32 +87,32 @@
   display: flex;
   align-items: center;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .blog-meta li {
+.svtheme-blog-grid.blog--style1 .blog-item .blog-meta li {
   margin-right: 30px;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .blog-meta li i {
+.svtheme-blog-grid.blog--style1 .blog-item .blog-meta li i {
   font-size: 16px;
   line-height: 16px;
   color: var(--color-primary);
   margin-right: 2px;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .blog-meta li a {
+.svtheme-blog-grid.blog--style1 .blog-item .blog-meta li a {
   font-size: 16px;
   color: #6E777D;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .blog-content {
+.svtheme-blog-grid.blog--style1 .blog-item .blog-content {
   padding: 23px 30px 30px 30px;
   background: #F7F7F7;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .blog-content .blog-btn a {
+.svtheme-blog-grid.blog--style1 .blog-item .blog-content .blog-btn a {
   color: #1F1F25;
   border-radius: 0;
   border: 1px solid rgba(31, 31, 37, 0.1);
   padding: 15px 43px;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .blog-content .blog-btn a::before {
+.svtheme-blog-grid.blog--style1 .blog-item .blog-content .blog-btn a::before {
   border-radius: 0;
 }
-.reactheme-blog-grid.blog--style1 .blog-item .blog-content .blog-btn a:hover {
+.svtheme-blog-grid.blog--style1 .blog-item .blog-content .blog-btn a:hover {
   color: #ffffff;
 }/*# sourceMappingURL=blog-grid.css.map */

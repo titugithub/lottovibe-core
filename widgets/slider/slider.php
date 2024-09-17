@@ -19,7 +19,7 @@ use Elementor\Group_Control_Background;
 use Elementor\register_controls;
 
 defined('ABSPATH') || die();
-class Reactheme_Elementor_Slider_Widget  extends \Elementor\Widget_Base
+class SVTheme_Elementor_Slider_Widget  extends \Elementor\Widget_Base
 {
 
     /**

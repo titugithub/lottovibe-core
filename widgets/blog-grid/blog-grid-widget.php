@@ -11,7 +11,7 @@ use Elementor\Utils;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
+class SVTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
 
     public function get_style_depends() {
 
@@ -473,7 +473,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Item Border radius', 'rtelements' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'selectors' => [
-					'{{WRAPPER}} .reactheme-blog-grid1.blog-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .svtheme-blog-grid1.blog-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .single-blog-solaric-lg' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .single-blog-solaric-sm' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .blog-style-four' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -490,7 +490,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid .blog-item' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-blog-grid .blog-item' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .single-blog-solaric-lg-mb' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .blog-style-four' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .single-blog-solaric-sm' => 'margin-bottom: {{SIZE}}{{UNIT}};',
@@ -529,7 +529,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .blog-item .blog-content .blog-meta i' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .reactheme-blog-grid1 .blog-content .btn-btm .post-categories li::before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .svtheme-blog-grid1 .blog-content .btn-btm .post-categories li::before' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .inner-content-solari-blog .head .single i' => 'color: {{VALUE}};',
                     '{{WRAPPER}} .blog-style-four .inner-content-blog .head .date i' => 'color: {{VALUE}};',
                 ],                
@@ -542,7 +542,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Meta Area Bg', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid.blog--style3 .blog-content .blog-meta' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .svtheme-blog-grid.blog--style3 .blog-content .blog-meta' => 'background: {{VALUE}};',
                    
                 ],    
                 'condition' => [
@@ -564,7 +564,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 ],
                
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid1 ul' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-blog-grid1 ul' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     '{{WRAPPER}} .inner-content-solari-blog .head' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     '{{WRAPPER}} .blog-style-four .inner-content-blog .head' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -588,8 +588,8 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Category Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid .blog-item .blog-content .cat_list ul li a' => 'color: {{VALUE}};',                 
-                    '{{WRAPPER}} .blogs-style3 .reactheme-articles .blog-heading .cat_list ul li a, .cat_list ul li a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .svtheme-blog-grid .blog-item .blog-content .cat_list ul li a' => 'color: {{VALUE}};',                 
+                    '{{WRAPPER}} .blogs-style3 .svtheme-articles .blog-heading .cat_list ul li a, .cat_list ul li a' => 'color: {{VALUE}};',
                 ],
                 'condition' => [
                     'blog_cat_show_hide' => 'yes',
@@ -603,8 +603,8 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Category Hover Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid .blog-item .blog-content .cat_list ul li a:hover' => 'color: {{VALUE}};',                  
-                    '{{WRAPPER}} .blogs-style3 .reactheme-articles .blog-heading .cat_list ul li a:hover, .cat_list ul li a:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .svtheme-blog-grid .blog-item .blog-content .cat_list ul li a:hover' => 'color: {{VALUE}};',                  
+                    '{{WRAPPER}} .blogs-style3 .svtheme-articles .blog-heading .cat_list ul li a:hover, .cat_list ul li a:hover' => 'color: {{VALUE}};',
                 ],
                 'condition' => [
                     'blog_cat_show_hide' => 'yes',
@@ -618,7 +618,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
 				'name' => 'cat_list_background',
 				'label' => esc_html__( 'Background', 'plugin-name' ),
 				'types' => [ 'classic', 'gradient' ],
-				'selector' => '{{WRAPPER}} .reactheme-blog-grid .blog-item .cat_list ul li a',
+				'selector' => '{{WRAPPER}} .svtheme-blog-grid .blog-item .cat_list ul li a',
                 'condition' => [
                     'blog_cat_show_hide' => 'yes',
                 ]
@@ -788,7 +788,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Description Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid1 .blog-content p.txt ' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .svtheme-blog-grid1 .blog-content p.txt ' => 'color: {{VALUE}};',
                 ],                
             ]
         );
@@ -800,7 +800,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Description Typography', 'rtelements' ),
                 'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => 
-                    '{{WRAPPER}} .reactheme-blog-grid1 .blog-content p.txt ',
+                    '{{WRAPPER}} .svtheme-blog-grid1 .blog-content p.txt ',
             ]
         );
 
@@ -818,7 +818,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                     'size' => 30,
                 ],  
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid1 .blog-content p.txt ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-blog-grid1 .blog-content p.txt ' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -871,7 +871,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                     'blog_grid_style' => 'style2'
                 ],
 				'selectors' => [
-					'{{WRAPPER}} .reactheme-blog-grid .blog-item .image-part a img' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .svtheme-blog-grid .blog-item .image-part a img' => 'width: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -891,7 +891,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                     'blog_grid_style' => 'style2'
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid .blog-item .image-part a img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-blog-grid .blog-item .image-part a img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -911,7 +911,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                     'blog_grid_style' => 'style2'
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid .blog-item .image-part a img' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-blog-grid .blog-item .image-part a img' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -931,7 +931,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                     'blog_grid_style' => 'style2'
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-blog-grid .blog-item .image-part, {{WRAPPER}} .single-blog-solaric-sm .thumbnail, {{WRAPPER}} .single-blog-solaric-lg .thumbnail, {{WRAPPER}} .single-blog-solaric-lg .thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-blog-grid .blog-item .image-part, {{WRAPPER}} .single-blog-solaric-sm .thumbnail, {{WRAPPER}} .single-blog-solaric-lg .thumbnail, {{WRAPPER}} .single-blog-solaric-lg .thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -953,7 +953,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Content Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .blog-item .blog-content p, {{WRAPPER}} .article-content p, {{WRAPPER}} .blogs-style3 .reactheme-articles.reactheme-articles .article-grid .article-content p' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .blog-item .blog-content p, {{WRAPPER}} .article-content p, {{WRAPPER}} .blogs-style3 .svtheme-articles.svtheme-articles .article-grid .article-content p' => 'color: {{VALUE}};',
                 ],                
             ]
         );
@@ -1232,7 +1232,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::COLOR,
 		        'default' => '',
 		        'selectors' => [
-		            '{{WRAPPER}} .reactheme-blog-grid .reactheme-pagination-area .nav-links a' => 'color: {{VALUE}};',
+		            '{{WRAPPER}} .svtheme-blog-grid .svtheme-pagination-area .nav-links a' => 'color: {{VALUE}};',
 		        ],
 		        'condition' => [
                     'blog_pagination_show_hide' => 'yes',
@@ -1247,8 +1247,8 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::COLOR,
 		        'default' => '',
 		        'selectors' => [
-		            '{{WRAPPER}} .reactheme-blog-grid .reactheme-pagination-area .nav-links a:hover' => 'color: {{VALUE}};',
-		            '{{WRAPPER}} .reactheme-blog-grid .reactheme-pagination-area .nav-links span.current' => 'color: {{VALUE}};',
+		            '{{WRAPPER}} .svtheme-blog-grid .svtheme-pagination-area .nav-links a:hover' => 'color: {{VALUE}};',
+		            '{{WRAPPER}} .svtheme-blog-grid .svtheme-pagination-area .nav-links span.current' => 'color: {{VALUE}};',
 		        ],
 		        'condition' => [
                     'blog_pagination_show_hide' => 'yes',
@@ -1263,8 +1263,8 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::COLOR,
 		        'default' => '',
 		        'selectors' => [
-		            '{{WRAPPER}} .reactheme-blog-grid .reactheme-pagination-area .nav-links a' => 'border-color: {{VALUE}};',
-		            '{{WRAPPER}} .reactheme-blog-grid .reactheme-pagination-area .nav-links span.current' => 'border-color: {{VALUE}};',
+		            '{{WRAPPER}} .svtheme-blog-grid .svtheme-pagination-area .nav-links a' => 'border-color: {{VALUE}};',
+		            '{{WRAPPER}} .svtheme-blog-grid .svtheme-pagination-area .nav-links span.current' => 'border-color: {{VALUE}};',
 		        ],
 		        'condition' => [
                     'blog_pagination_show_hide' => 'yes',
@@ -1278,7 +1278,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
 		        'label' => esc_html__( 'Background Color', 'rtelements' ),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
-		            '{{WRAPPER}} .reactheme-blog-grid .reactheme-pagination-area .nav-links' => 'background-color: {{VALUE}};',
+		            '{{WRAPPER}} .svtheme-blog-grid .svtheme-pagination-area .nav-links' => 'background-color: {{VALUE}};',
 		        ],
 		        'condition' => [
                     'blog_pagination_show_hide' => 'yes',
@@ -1291,7 +1291,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
 			[
 				'name' => 'box_pagi_shadow',
 				'label' => esc_html__( 'Box Shadow', 'plugin-domain' ),
-				'selector' => '{{WRAPPER}} .reactheme-blog-grid .reactheme-pagination-area .nav-links',
+				'selector' => '{{WRAPPER}} .svtheme-blog-grid .svtheme-pagination-area .nav-links',
 				'condition' => [
                     'blog_pagination_show_hide' => 'yes',
                 ]
@@ -1332,7 +1332,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
         $col = 'col-lg-'.$col_lg.' col-md-'.$col_md.' col-sm-'.$col_sm.' col-12';    
         ?>
 
-		<div class="reactheme-blog-grid2x reactheme-blog-grid<?php echo esc_attr( $styleClass);?>">            
+		<div class="svtheme-blog-grid2x svtheme-blog-grid<?php echo esc_attr( $styleClass);?>">            
 
             <div class="row blog-gird-item">
                 
@@ -1443,7 +1443,7 @@ class ReacTheme_Elementor_Blog_Grid_Widget extends \Elementor\Widget_Base {
 			));
 
 			if(!empty($paginate ) && ($settings['blog_pagination_show_hide'] == 'yes')){ ?>
-				<div class="reactheme-pagination-area"><div class="nav-links"><?php echo wp_kses_post($paginate); ?></div></div>
+				<div class="svtheme-pagination-area"><div class="nav-links"><?php echo wp_kses_post($paginate); ?></div></div>
 			<?php } ?>              
 		</div>
 	   <?php

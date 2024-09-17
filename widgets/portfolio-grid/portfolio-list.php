@@ -11,7 +11,7 @@ use Elementor\Group_Control_Background;
 
 defined( 'ABSPATH' ) || die();
 
-class Reactheme_Portfolio_List_Widget extends \Elementor\Widget_Base {
+class SVTheme_Portfolio_List_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.

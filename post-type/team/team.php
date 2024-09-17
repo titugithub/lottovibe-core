@@ -4,11 +4,11 @@
  * This file is the basic custom post type for use any where in theme.
  * 
  * @package Team Post Type
- * @author ReacTheme
- * @link http://www.reactheme.com
+ * @author SVTheme
+ * @link http://www.svtheme.com
  */
 // Register Team Post Type
-function reactheme_team_register_post_type() {
+function svtheme_team_register_post_type() {
 	$labels = array(
 		'name'               => esc_html__( 'Team', 'rtelements'),
 		'singular_name'      => esc_html__( 'Team', 'rtelements'),
@@ -40,9 +40,9 @@ function reactheme_team_register_post_type() {
 	);
 	register_post_type( 'teams', $args );
 }
-add_action( 'init', 'reactheme_team_register_post_type' );
+add_action( 'init', 'svtheme_team_register_post_type' );
 
-function reactheme_tr_create_team() {
+function svtheme_tr_create_team() {
 	
 	register_taxonomy(
 		'team-category',
@@ -54,7 +54,7 @@ function reactheme_tr_create_team() {
 		)
 	);
 }
-add_action( 'init', 'reactheme_tr_create_team' );
+add_action( 'init', 'svtheme_tr_create_team' );
 
 
 

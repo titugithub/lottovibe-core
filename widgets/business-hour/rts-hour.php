@@ -15,7 +15,7 @@ use Elementor\Group_Control_Typography;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacThemes_Elementor_Business_Hour_Widget extends \Elementor\Widget_Base {
+class SVThemes_Elementor_Business_Hour_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.

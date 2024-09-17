@@ -15,7 +15,7 @@ use Elementor\Core\Schemes\Typography;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacThemes_Elementor_Animated_Heading_Widget extends \Elementor\Widget_Base {
+class SVThemes_Elementor_Animated_Heading_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.

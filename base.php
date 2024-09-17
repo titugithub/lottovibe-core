@@ -329,103 +329,103 @@ final class RTelements_Elementor_Extension
 		//tablet animation
 
 		require_once(__DIR__ . '/widgets/tablet/tablet.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Tablet_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Tablet_Widget());
 
 		//product Car
 
 		require_once(__DIR__ . '/widgets/product/product.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Product_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Product_Widget());
 
 		
 		//footer category
 
 		require_once(__DIR__ . '/widgets/footersection/footersection.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Footersection_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Footersection_Widget());
 		
 		//workstep 2 category
 
 		require_once(__DIR__ . '/widgets/workstep/workstep2.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Workstep2_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Workstep2_Widget());
 
 		//workstep category
 
 		require_once(__DIR__ . '/widgets/workstep/workstep.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Workstep_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Workstep_Widget());
 		
 		//bonus category
 
 		require_once(__DIR__ . '/widgets/bonus/bonus.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bonus_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bonus_Widget());
 		
 		//Sponsor category
 
 		require_once(__DIR__ . '/widgets/sponsor/sponsor.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Sponsor_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Sponsor_Widget());
 
 		
 		//barcode category
 
 		require_once(__DIR__ . '/widgets/barcode/barcode.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Barcode_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Barcode_Widget());
 
 		//faq category
 
 		require_once(__DIR__ . '/widgets/faq/faq.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Faq_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Faq_Widget());
 		
 		//blogrid category
 
 		require_once(__DIR__ . '/widgets/bloggrid/bloggrid.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bloggrid_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bloggrid_Widget());
 
 		//blog Two 
 
 		require_once(__DIR__ . '/widgets/blog/blog2.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Blog2_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Blog2_Widget());
 		//blog Three 
 
 		require_once(__DIR__ . '/widgets/blog/blog3.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Blog3_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Blog3_Widget());
 		//Winner Two 
 
 		require_once(__DIR__ . '/widgets/winner/winner.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Winner());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Winner());
 
 		//bloig category
 
 		require_once(__DIR__ . '/widgets/blog/blog.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Blog_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Blog_Widget());
 		
 		//call to action category
 
 		require_once(__DIR__ . '/widgets/calltoaction/calltoaction.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Calltoaction_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Calltoaction_Widget());
 		
 		//cycle category
 
 		require_once(__DIR__ . '/widgets/carcat/cyclecat.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Cyclecat_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Cyclecat_Widget());
 		
 		//bike category
 
 		require_once(__DIR__ . '/widgets/carcat/bikecat.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bikecat_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bikecat_Widget());
 		
 		//car category
 
 		require_once(__DIR__ . '/widgets/carcat/carcat.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Carcat_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Carcat_Widget());
 		
 		//step
 
 		require_once(__DIR__ . '/widgets/step/step.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Step_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Step_Widget());
 
 
 		//selection
 
 		require_once(__DIR__ . '/widgets/select/select.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Select_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Select_Widget());
 		
 		
 
@@ -433,29 +433,29 @@ final class RTelements_Elementor_Extension
 		//list
 
 		require_once(__DIR__ . '/widgets/list/list.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_List_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_List_Widget());
 
 		
 		//description
 
 		require_once(__DIR__ . '/widgets/description/description.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Description_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Description_Widget());
 
 		
 		//title
 
 		require_once(__DIR__ . '/widgets/title/title.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Title_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Title_Widget());
 
 		//subtitle
 
 		require_once(__DIR__ . '/widgets/subtitle/subtitle.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Subtitle_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Subtitle_Widget());
 
 		//heading
 		if (isset($rtelements_addon_setting['rt_heading_setting']) == 'rselement_heading') {
 			require_once(__DIR__ . '/widgets/heading/heading.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Heading_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Heading_Widget());
 		}
 
 
@@ -463,24 +463,24 @@ final class RTelements_Elementor_Extension
 		//Animated Hheading Setting
 		if (isset($rtelements_addon_setting['rt_animated_heading_setting']) == 'rselement_animated_heading') {
 			require_once(__DIR__ . '/widgets/animated-heading/animated-heading.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacThemes_Elementor_Animated_Heading_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Elementor_Animated_Heading_Widget());
 		}
 		//dual heading
 		require_once(__DIR__ . '/widgets/dual-heading/dual-heading.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacThemes_Elementor_Heading_dual_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Elementor_Heading_dual_Widget());
 
 		require_once(__DIR__ . '/widgets/image-about-home/about-image.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Quote_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Quote_Widget());
 
 
 		if (isset($rtelements_addon_setting['rt_image_showcase_setting']) == 'rselement_image_showcase') {
 			require_once(__DIR__ . '/widgets/image-widget/image.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Image_Showcase_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Image_Showcase_Widget());
 		}
 
 		if (isset($rtelements_addon_setting['rt_team_gread_setting']) == 'rt_team_gread_setting') {
 			require_once(__DIR__ . '/widgets/team-member/team-grid-widget.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Team_Grid_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Team_Grid_Widget());
 		}
 
 		//Team Slider
@@ -492,121 +492,121 @@ final class RTelements_Elementor_Extension
 		//Service Grid 2
 	
 			require_once(__DIR__ . '/widgets/services/service-gridtwo.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Sservices_Gridtwo_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Sservices_Gridtwo_Widget());
 		
 		//Service Grid
 		if (isset($rtelements_addon_setting['rt_service_grid_setting']) == 'rt_service_grid_setting') {
 			require_once(__DIR__ . '/widgets/services/service-grid.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Sservices_Grid_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Sservices_Grid_Widget());
 		}
 
 		//Service Slider
 		if (isset($rtelements_addon_setting['rt_service_slider_setting']) == 'rt_service_slider_setting') {
 			require_once(__DIR__ . '/widgets/services/service-slider.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Services_Slider_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Services_Slider_Widget());
 		}
 
 		//Video
 		if (isset($rtelements_addon_setting['rt_video_setting']) == 'rt_video_setting') {
 			require_once(__DIR__ . '/widgets/video/rt-video.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Video_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Video_Widget());
 		}
 
 		//Button
 		if (isset($rtelements_addon_setting['rt_button_setting']) == 'rt_button_setting') {
 			require_once(__DIR__ . '/widgets/button/button.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Button_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Button_Widget());
 		}
 		//Testimonial Slider
 		if (isset($rtelements_addon_setting['rt_testimonial_slider_setting']) == 'rt_testimonial_slider_setting') {
 			require_once(__DIR__ . '/widgets/slider/slider.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Slider_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Slider_Widget());
 		}
 
 
 		//Blog Grid
 		if (isset($rtelements_addon_setting['rt_blog_grid_setting']) == 'rtelement_blog_grid') {
 			require_once(__DIR__ . '/widgets/blog-grid/blog-grid-widget.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Blog_Grid_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Blog_Grid_Widget());
 		}
 
 		if (isset($rtelements_addon_setting['rt_tab_setting']) == 'rtelement_tab') {
 			require_once(__DIR__ . '/widgets/tab/tab.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Tab_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Tab_Widget());
 		}
 
 		if (isset($rtelements_addon_setting['rt_counter_setting']) == 'rtelement_counter') {
 			require_once(__DIR__ . '/widgets/counter/rt-counter.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Counter_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Counter_Widget());
 		}
 
 		//Contact Form 7
 		if (isset($rtelements_addon_setting['rt_contact_form_7_setting']) == 'rs_contact_form_7_setting') {
 			require_once(__DIR__ . '/widgets/cf7/contact-cf7.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_CF7_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_CF7_Widget());
 		}
 		//Logo Showcase
 		if (isset($rtelements_addon_setting['rt_logo_showcase_setting']) == 'rtelement_logo_showcase') {
 			require_once(__DIR__ . '/widgets/logo-widget/logo.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacThemes_Logo_Showcase_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Logo_Showcase_Widget());
 		}
 
 		//Blog Slider
 		if (isset($rtelements_addon_setting['rt_blog_slider_setting']) == 'rtelement_blog_slider') {
 			require_once(__DIR__ . '/widgets/blog-slider/blog-slider-widget.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Blog_Slider_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Blog_Slider_Widget());
 		}
 		//Testimonial Slider
 
 		require_once(__DIR__ . '/widgets/testimonial/testimonial.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Testimonial_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Testimonial_Widget());
 
 		//Testimonial Slider Two
 
 		require_once(__DIR__ . '/widgets/testimonial/testimonial2.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Testimonial2_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Testimonial2_Widget());
 
 
 		//banner game
 
 		require_once(__DIR__ . '/widgets/banner/bannergame.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannergame_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bannergame_Widget());
 
 		//banner clth
 
 		require_once(__DIR__ . '/widgets/banner/bannercloth.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannercloth_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bannercloth_Widget());
 
 		//banner nft
 
 		require_once(__DIR__ . '/widgets/banner/bannernft.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannernft_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bannernft_Widget());
 
 		//banner electronic
 
 		require_once(__DIR__ . '/widgets/banner/bannerelectronic.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannerelectronic_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bannerelectronic_Widget());
 		
 		//banner bycle Slider
 
 		require_once(__DIR__ . '/widgets/banner/bannercycle.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannercycle_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bannercycle_Widget());
 
 
 		//banner car Slider
 
 		require_once(__DIR__ . '/widgets/banner/banner.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Banner_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Banner_Widget());
 
 		//banner bike Slider
 
 		require_once(__DIR__ . '/widgets/banner/bannerbike.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannerbike_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bannerbike_Widget());
 		
 		//banner jewellery Slider
 
 		require_once(__DIR__ . '/widgets/banner/bannerjewellery.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Bannerjewellery_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Bannerjewellery_Widget());
 
 		//About
 
@@ -630,18 +630,18 @@ final class RTelements_Elementor_Extension
 		//price table
 		if (isset($rtelements_addon_setting['rt_pricing_table_setting']) == 'rselement_pricing_table') {
 			require_once(__DIR__ . '/widgets/pricing-table/pricing-table.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Pricing_Table_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Pricing_Table_Widget());
 		}
 		//work process
 
 		require_once(__DIR__ . '/widgets/work/work.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Elementor_Work_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Work_Widget());
 
 
 		//Portfolio Grid
 		if (isset($rtelements_addon_setting['rt_portfolio_grid_setting']) == 'rtelement_portfolio_grid') {
 			require_once(__DIR__ . '/widgets/portfolio-grid/portfolio-grid-widget.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Portfolio_Grid_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Portfolio_Grid_Widget());
 		}
 
 		//Newsletter
@@ -653,7 +653,7 @@ final class RTelements_Elementor_Extension
 		//Accordion
 		if (isset($rtelements_addon_setting['rt_accordion_setting']) == 'rt_accordion_setting') {
 			require_once(__DIR__ . '/widgets/accordion/accordion.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Widget_Accordion());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Widget_Accordion());
 		}
 
 		//CTA
@@ -664,18 +664,18 @@ final class RTelements_Elementor_Extension
 
 		//Advance Tab
 		require_once(__DIR__ . '/widgets/advanced-tab/tab.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacThemes_Advance_Tab_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Advance_Tab_Widget());
 
 		//Portfolio Filter
 		if (isset($rtelements_addon_setting['rt_portfolio_slider_setting']) == 'rselement_portfolio_slider') {
 			require_once(__DIR__ . '/widgets/portfolio-slider/portfolio-slider-widget.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacTheme_Portfolio_Slider_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Portfolio_Slider_Widget());
 		}
 
 		//Progress Bar
 		if (isset($rtelements_addon_setting['rt_progress_bar_setting']) == 'rt_progress_bar_setting') {
 			require_once(__DIR__ . '/widgets/progress/rs-progress.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Progress_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Progress_Widget());
 		}
 
 
@@ -685,15 +685,15 @@ final class RTelements_Elementor_Extension
 		}
 		if (isset($rtelements_addon_setting['rt_number_grid_setting']) == 'rt_number_grid_setting') {
 			require_once(__DIR__ . '/widgets/number/rt-number.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacThemes_Elementor_Numnber_Widgets());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Elementor_Numnber_Widgets());
 		}
 
 		//Progress Pie
 		if (isset($rtelements_addon_setting['rt_progress_pie_setting']) == 'rt_progress_pie_setting') {
 			require_once(__DIR__ . '/widgets/progress-pie/progress-pie.php');
 			require_once(__DIR__ . '/widgets/progress-pie/chart.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reacthemes_Elementor_Progress_Pie_Widget());
-			\Elementor\Plugin::instance()->widgets_manager->register(new \Reacthemes_Elementor_chart_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Elementor_Progress_Pie_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Elementor_chart_Widget());
 		}
 		//countdown
 		if (isset($rtelements_addon_setting['rt_countdown_setting']) == 'rtelement_countdown_box') {
@@ -710,11 +710,11 @@ final class RTelements_Elementor_Extension
 		//business hour
 		if (isset($rtelements_addon_setting['rt_business_hour_setting']) == 'rtelement_business_hour_box') {
 			require_once(__DIR__ . '/widgets/business-hour/rts-hour.php');
-			\Elementor\Plugin::instance()->widgets_manager->register(new \ReacThemes_Elementor_Business_Hour_Widget());
+			\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Elementor_Business_Hour_Widget());
 		}
 
 		require_once(__DIR__ . '/widgets/image-card/image-card.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Image_Card_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Image_Card_Widget());
 
 		// Marque		
 		require_once(__DIR__ . '/widgets/marquee/marquee.php');
@@ -732,7 +732,7 @@ final class RTelements_Elementor_Extension
 		}
 
 		require_once(__DIR__ . '/widgets/client-thumb/client-thumb.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \ReacThemes_Client_Thumb_Showcase_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVThemes_Client_Thumb_Showcase_Widget());
 
 		require_once(__DIR__ . '/widgets/timeline/timeline.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \RTS_timeline_Showcase_Widget());
@@ -760,16 +760,16 @@ final class RTelements_Elementor_Extension
 		\Elementor\Plugin::instance()->widgets_manager->register(new \RTS_Single_Navigation_Menu());
 
 		require_once(__DIR__ . '/widgets/header-footer/copyright.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Elementor_Copyright_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Copyright_Widget());
 
 		require_once(__DIR__ . '/widgets/featured-image/image.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Featured_Image_Showcase_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Featured_Image_Showcase_Widget());
 
 		require_once(__DIR__ . '/widgets/feature-list/feature-list.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \RTS_Features_List_Widget());
 
 		require_once(__DIR__ . '/widgets/image-parallax/image.php');
-		\Elementor\Plugin::instance()->widgets_manager->register(new \Reactheme_Image_Parallax_Widget());
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Image_Parallax_Widget());
 
 		// Register widget				
 		add_action('elementor/elements/categories_registered', [$this, 'add_category']);

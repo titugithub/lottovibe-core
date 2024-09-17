@@ -26,7 +26,7 @@ while ($best_wp->have_posts()) : $best_wp->the_post();
 	$blog_date      = get_the_date('M d y');
 	$post_admin     = get_the_author();
 	?>
-	<div class="align-items-center no-gutter blog-item reactheme-blog-grid1 col-md-12 swiper-slide">
+	<div class="align-items-center no-gutter blog-item svtheme-blog-grid1 col-md-12 swiper-slide">
 		<div class="rts-blog-h-2-wrapper">
 			<div class="col-top">
 				<div class="image-part">

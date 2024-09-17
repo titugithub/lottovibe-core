@@ -8,7 +8,7 @@ use Elementor\Group_Control_Background;
 
 defined( 'ABSPATH' ) || die();
 
-class ReacTheme_Elementor_CF7_Widget extends \Elementor\Widget_Base {
+class SVTheme_Elementor_CF7_Widget extends \Elementor\Widget_Base {
 
  
     /**

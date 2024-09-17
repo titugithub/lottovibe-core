@@ -11,7 +11,7 @@ use Elementor\Utils;
 
 defined('ABSPATH') || die();
 
-class ReacTheme_Portfolio_Slider_Widget extends \Elementor\Widget_Base
+class SVTheme_Portfolio_Slider_Widget extends \Elementor\Widget_Base
 {
     /**
      * Get widget name.
@@ -656,8 +656,8 @@ class ReacTheme_Portfolio_Slider_Widget extends \Elementor\Widget_Base
                 ],
 
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-addon-slider .testimonial-item' => 'margin-left:{{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .reactheme-addon-slider .testimonial-item' => 'margin-right:{{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-addon-slider .testimonial-item' => 'margin-left:{{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-addon-slider .testimonial-item' => 'margin-right:{{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -678,7 +678,7 @@ class ReacTheme_Portfolio_Slider_Widget extends \Elementor\Widget_Base
                 ],
 
                 'selectors' => [
-                    '{{WRAPPER}} .reactheme-addon-slider .testimonial-item' => 'margin-bottom:{{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .svtheme-addon-slider .testimonial-item' => 'margin-bottom:{{SIZE}}{{UNIT}};',
                 ],
             ]
         );

@@ -7,7 +7,7 @@ use Elementor\Group_Control_Background;
 
 defined( 'ABSPATH' ) || die();
 
-class Reacthemes_Elementor_chart_Widget extends \Elementor\Widget_Base {
+class SVThemes_Elementor_chart_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.

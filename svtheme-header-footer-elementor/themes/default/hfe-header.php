@@ -44,7 +44,7 @@
     ?>
     <div id="page" class="site <?php echo esc_attr( $gap );?> <?php echo esc_attr($extrapadding);?>">
     <?php  get_template_part('inc/header/search'); get_template_part('inc/header/off-canvas'); ?>
-    	<header id="reactheme-header" class="header-style-1  mainsmenu <?php echo $fixed_header ;?>">   
+    	<header id="svtheme-header" class="header-style-1  mainsmenu <?php echo $fixed_header ;?>">   
 	     
 	    <div class="header-inner<?php echo esc_attr($sticky_menu);?>">
        <?php 

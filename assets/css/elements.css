@@ -14798,26 +14798,26 @@ body button.metform-btn, body button.metform-btn:not(.toggle) {
   top: -11px;
 }
 
-.single .reactheme-porfolio-details .ps-navigation {
+.single .svtheme-porfolio-details .ps-navigation {
   padding: 60px 60px 50px;
   background: #f8f8f8;
   border: none;
   margin-bottom: 110px;
 }
-.single .reactheme-porfolio-details .ps-navigation .rts-left-write-blog-wrapper-main {
+.single .svtheme-porfolio-details .ps-navigation .rts-left-write-blog-wrapper-main {
   display: flex;
   justify-content: space-between;
 }
-.single .reactheme-porfolio-details .ps-navigation .rts-left-write-blog-wrapper-main .single {
+.single .svtheme-porfolio-details .ps-navigation .rts-left-write-blog-wrapper-main .single {
   display: flex;
   align-items: center;
   gap: 50px;
   cursor: pointer;
 }
-.single .reactheme-porfolio-details .ps-navigation .rts-left-write-blog-wrapper-main .left-icon-area {
+.single .svtheme-porfolio-details .ps-navigation .rts-left-write-blog-wrapper-main .left-icon-area {
   text-align: left;
 }
-.single .reactheme-porfolio-details .ps-navigation .rts-left-write-blog-wrapper-main .right-icon-area {
+.single .svtheme-porfolio-details .ps-navigation .rts-left-write-blog-wrapper-main .right-icon-area {
   text-align: right;
 }
 
@@ -16609,7 +16609,7 @@ ul.offcanvas-icon.layout-1 li {
   margin-bottom: 0;
 }
 
-#reactheme-header .header-inner .menu-area {
+#svtheme-header .header-inner .menu-area {
   background: unset !important;
 }
 
