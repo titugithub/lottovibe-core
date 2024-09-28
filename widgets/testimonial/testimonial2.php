@@ -25,7 +25,7 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
      */
     public function get_name()
     {
-        return 'rt-testimonial2';
+        return 'sv-testimonial2';
     }
 
     /**
@@ -258,14 +258,14 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Title Typography', 'plugin-name'),
-                'name'     => 'titler_typ',
+                'name'     => 'titlyer_typ',
                 'selector' => '{{WRAPPER}} h3.n4-clr.mb-xxl-4.mb-xl-3.mb-2',
         
             ]
         );
         
         $this->add_control(
-            'titler_color',
+            'tiytler_color',
             [
                 'label'     => esc_html__('Title Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,

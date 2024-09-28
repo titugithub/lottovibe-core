@@ -25,7 +25,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
      */
     public function get_name()
     {
-        return 'rt-testimonial';
+        return 'sv-testimonial';
     }
 
     /**
@@ -336,7 +336,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
         // =======================style===========================//
 
         $this->start_controls_section(
-             'subtitlestyle',
+             'subtitlestfyle',
              [
                 'label' => esc_html__('Subtitle', 'plugin-name'),
                 'tab'   => Controls_Manager::TAB_STYLE,
@@ -348,14 +348,14 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'subtitle_typ',
+                'name'     => 'subtitlse_typ',
                 'selector' => '{{WRAPPER}} .subtitle',
         
             ]
         );
         
         $this->add_control(
-            'subtitle_color',
+            'subtitgle_color',
             [
                 'label'     => esc_html__('Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
@@ -365,7 +365,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
             ]
         );
         $this->add_responsive_control(
-            'subtitle_margin',
+            'subtictle_margin',
             [
                 'label' => esc_html__( 'Margin', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
@@ -377,7 +377,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
         );
         
         $this->add_responsive_control(
-            'subtitle_padding',
+            'subftitle_padding',
             [
                 'label'      => __('Padding', 'plugin-name'),
                 'type'       => Controls_Manager::DIMENSIONS,
@@ -392,7 +392,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
         $this->end_controls_section();
 
         $this->start_controls_section(
-             'titlestyle',
+             'titslestyle',
              [
                 'label' => esc_html__('Title', 'plugin-name'),
                 'tab'   => Controls_Manager::TAB_STYLE,
@@ -401,7 +401,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
         
         
         $this->add_control(
-            'more_fdoptions',
+            'more_fdfoptions',
             [
                 'label' => esc_html__( 'Title One', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::HEADING,
@@ -413,14 +413,14 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'spinffner_typ',
+                'name'     => 'spifnffner_typ',
                 'selector' => '{{WRAPPER}} .title1',
         
             ]
         );
         
         $this->add_control(
-            'spinneffr_color',
+            'spinfeffr_color',
             [
                 'label'     => esc_html__('Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
@@ -431,7 +431,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
         );
         
         $this->add_control(
-            'more_fdoptifons',
+            'more_fdfoptifons',
             [
                 'label' => esc_html__( 'Title Two', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::HEADING,
@@ -443,14 +443,14 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'spinne22_typ',
+                'name'     => 'spisnne22_typ',
                 'selector' => '{{WRAPPER}} .title2',
         
             ]
         );
         
         $this->add_control(
-            'spinner22_color',
+            'spinnfer22_color',
             [
                 'label'     => esc_html__('Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
@@ -462,7 +462,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
         );
         
         $this->add_control(
-            'more_fdoptifffons',
+            'more_fdosptifffons',
             [
                 'label' => esc_html__( 'Title Three', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::HEADING,
@@ -474,14 +474,14 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'spinneffr_typ',
+                'name'     => 'spinnefffr_typ',
                 'selector' => '{{WRAPPER}} .title3',
         
             ]
         );
         
         $this->add_control(
-            'spinnedfr_color',
+            'spinnfedfr_color',
             [
                 'label'     => esc_html__('Color', 'plugin-name'),
                 'type'      => Controls_Manager::COLOR,
@@ -493,7 +493,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
 
 
         $this->add_control(
-            'mfdore_options',
+            'mfdore_ofptions',
             [
                 'label' => esc_html__( 'User', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::HEADING,
@@ -502,7 +502,7 @@ class SVTheme_Elementor_Testimonial_Widget extends \Elementor\Widget_Base
         );
         
         $this->add_control(
-            'sfdfdpinner_color',
+            'sfdfdpsinner_color',
             [
                 'label' => esc_html__( 'Background Color', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
