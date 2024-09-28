@@ -1,5 +1,5 @@
 @import '../../../scss/base';
-.react-button {
+.sv-button {
     a{
         display: inline-block;
         color: #fff;
@@ -52,7 +52,7 @@
 }
 
 // //Slider Button
-.slider-react-button {
+.slider-sv-button {
     display: inline-block;
     color: #fff;
     padding: 17px 33px;
@@ -168,7 +168,7 @@
 }
 
 // Handyman Slider Button
-.slider-react-button.handyman_slider_btn.rs-layer {
+.slider-sv-button.handyman_slider_btn.rs-layer {
     padding: 15px 60px 15px 24px;
     position: relative;
     &:hover {
@@ -192,7 +192,7 @@
 }
 
 // Engineer Slider Button
-.slider-react-button.engineer.rs-layer {
+.slider-sv-button.engineer.rs-layer {
     background: transparent !important;
     border: 1px solid #FFFFFF !important;
     color: $whiteColor !important;
@@ -206,7 +206,7 @@
         background: $primaryColor !important;
     }
 }
-.slider-react-button.engineer.btn-1.rs-layer {
+.slider-sv-button.engineer.btn-1.rs-layer {
     position: relative;
     display: flex;
     align-items: center;

@@ -3,7 +3,7 @@
 /**
  * @since 1.0.0
  */
-global $solari_option;
+global $lottovite_option;
 if( is_404() ){
     return;
 } else {
@@ -12,7 +12,7 @@ if( is_404() ){
 } ?>
 </div><!-- #page -->
 <?php 
-if(!empty($solari_option['show_top_bottom'])){
+if(!empty($lottovite_option['show_top_bottom'])){
 ?>
  <!-- start top-to-bottom  -->
 <div id="top-to-bottom">

@@ -877,7 +877,7 @@ $this->end_controls_section();
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
-                    '{{WRAPPER}} .rt-blog-slider.slider-style-3 .blog-btn.react-button a, .rt-blog-slider.slider-style-5 .footer-area .rts-read-more' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .rt-blog-slider.slider-style-3 .blog-btn.sv-button a, .rt-blog-slider.slider-style-5 .footer-area .rts-read-more' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'portfolio_slider_style' => ['3', '5']

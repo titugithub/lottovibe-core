@@ -1245,7 +1245,7 @@ class RTS_CTA_Widget extends \Elementor\Widget_Base {
 
     				<?php $target = $settings['btn_link']['is_external'] ? 'target=_blank' : '';?>
 
-    				<a class="readon react_button elementor-animation-<?php echo esc_html($settings['hover_animation']);?>" href="<?php echo esc_url($settings['btn_link']['url']);?>" <?php echo esc_attr($target);?>>				
+    				<a class="readon sv_button elementor-animation-<?php echo esc_html($settings['hover_animation']);?>" href="<?php echo esc_url($settings['btn_link']['url']);?>" <?php echo esc_attr($target);?>>				
     					<span <?php echo wp_kses_post($this->print_render_attribute_string('btn_text'));?>><?php echo esc_html($settings['btn_text']);?></span>
 
     					<?php if(!empty($settings['btn_icon'])) : ?>

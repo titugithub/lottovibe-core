@@ -48,12 +48,12 @@
   --h6: 18px;
 }
 
-.react-image {
+.sv-image {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.react-image.yes .veritcal {
+.sv-image.yes .veritcal {
   animation-name: veritcal;
   animation-timing-function: linear;
   animation-duration: 12s;
@@ -73,7 +73,7 @@
     transform: translate3d(0, 0, 0);
   }
 }
-.react-image.yes .veritcal_two {
+.sv-image.yes .veritcal_two {
   animation-name: veritcal_two;
   animation-timing-function: linear;
   animation-duration: 12s;
@@ -90,7 +90,7 @@
     transform: translateY(100px);
   }
 }
-.react-image.yes .horizontal {
+.sv-image.yes .horizontal {
   animation-name: horizontal;
   animation-timing-function: linear;
   animation-duration: 12s;
@@ -107,7 +107,7 @@
     transform: translateX(0);
   }
 }
-.react-image.yes .rotated_style {
+.sv-image.yes .rotated_style {
   animation: rotate1 30s linear infinite;
   -webkit-animation: rotate1 30s linear infinite;
 }

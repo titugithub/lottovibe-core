@@ -25,7 +25,7 @@ class SVTheme_Elementor_Heading_Widget extends \Elementor\Widget_Base
 	 */
 	public function get_name()
 	{
-		return 'react-heading';
+		return 'sv-heading';
 	}
 
 	/**

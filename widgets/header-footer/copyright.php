@@ -119,7 +119,7 @@ class SVTheme_Elementor_Copyright_Widget extends \Elementor\Widget_Base {
                 ],
                 'toggle' => true,
                 'selectors' => [
-                    '{{WRAPPER}} .react-copyright' => 'text-align: {{VALUE}}'
+                    '{{WRAPPER}} .sv-copyright' => 'text-align: {{VALUE}}'
                 ]
             ]
         );
@@ -143,7 +143,7 @@ class SVTheme_Elementor_Copyright_Widget extends \Elementor\Widget_Base {
 				'name' => 'desc_typography',
 				'label' => esc_html__( 'Copyright Typography', 'rtelements' ),
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_2,
-				'selector' => '{{WRAPPER}} .react-copyright .description p',
+				'selector' => '{{WRAPPER}} .sv-copyright .description p',
 			]
 		);
 
@@ -153,9 +153,9 @@ class SVTheme_Elementor_Copyright_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Copyright text Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .react-copyright .description' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .react-copyright .description p' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .react-copyright .description p a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sv-copyright .description' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sv-copyright .description p' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sv-copyright .description p a' => 'color: {{VALUE}};',
                 ],                
             ]
         ); 
@@ -165,7 +165,7 @@ class SVTheme_Elementor_Copyright_Widget extends \Elementor\Widget_Base {
 				'name' => 'link_typography',
 				'label' => esc_html__( 'Link Text Typography', 'rtelements' ),
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_2,
-				'selector' => '{{WRAPPER}} .react-copyright .description a',
+				'selector' => '{{WRAPPER}} .sv-copyright .description a',
 			]
 		);
 
@@ -175,8 +175,8 @@ class SVTheme_Elementor_Copyright_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( ' Link Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .react-copyright .description a' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .react-copyright .description p a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sv-copyright .description a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sv-copyright .description p a' => 'color: {{VALUE}};',
                     
                 ],                
             ]
@@ -188,7 +188,7 @@ class SVTheme_Elementor_Copyright_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( ' Link Hover Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .react-copyright .description a:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .sv-copyright .description a:hover' => 'color: {{VALUE}};',
                     
                     
                 ],                
@@ -204,7 +204,7 @@ class SVTheme_Elementor_Copyright_Widget extends \Elementor\Widget_Base {
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
-                    '{{WRAPPER}} .react-copyright .description p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sv-copyright .description p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         ); 
@@ -227,7 +227,7 @@ class SVTheme_Elementor_Copyright_Widget extends \Elementor\Widget_Base {
 		$settings = $this->get_settings_for_display();	
 	
       ?>
-        <div class="react-copyright  <?php echo esc_attr($settings['align']);?>">
+        <div class="sv-copyright  <?php echo esc_attr($settings['align']);?>">
         	
 	        <?php if ($settings['content']) { ?>
             	<div class="description">

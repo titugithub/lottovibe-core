@@ -222,7 +222,7 @@ class RTS_timeline_Showcase_Widget extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .journey-list li .timeline-box .left-content h2' => 'color: {{VALUE}}',
-					'{{WRAPPER}} .reacttimeline .draw-line' => 'background: {{VALUE}}',
+					'{{WRAPPER}} .svtimeline .draw-line' => 'background: {{VALUE}}',
 				],
 			]
 		);

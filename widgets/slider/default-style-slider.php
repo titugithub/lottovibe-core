@@ -1,4 +1,4 @@
-<div class="react-addon-services services-style1">
+<div class="sv-addon-services services-style1">
     <div class="services-part">
     	<?php if( !empty($settings['selected_icon']) || !empty($settings['selected_image']['url'])){?>
     		<div class="services-icon">

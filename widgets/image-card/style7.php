@@ -5,7 +5,7 @@ if( $settings['show_image_right'] == 'yes' ){
 	$row_reverse = '';
 }
 ?>
-<div class="react-addon-services services-<?php echo esc_attr( $settings['services_style'] ); ?>">
+<div class="sv-addon-services services-<?php echo esc_attr( $settings['services_style'] ); ?>">
     <div class="single-work d-flex align-items-center<?php echo esc_attr( $row_reverse ); ?> justify-content-between">
 		<span>
 			<?php if( !empty($settings['selected_icon']) || !empty($settings['selected_image']['url'])){?>	    		

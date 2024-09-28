@@ -24,7 +24,7 @@ class SVTheme_Featured_Image_Showcase_Widget extends \Elementor\Widget_Base {
      */
 
     public function get_name() {
-        return 'react-featured-image';
+        return 'sv-featured-image';
     }
 
     /**

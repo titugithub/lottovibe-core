@@ -24,7 +24,7 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 	 */
 	public function get_name()
 	{
-		return 'react-button';
+		return 'sv-button';
 	}
 
 	/**
@@ -232,6 +232,29 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .cmn__collection::after' => 'background: {{VALUE}} !important',
+				],
+			]
+		);
+
+
+		$this->add_control(
+			'button_border_color',
+			[
+				'label' => esc_html__( 'Button BorderColor', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} span.kew-text.p1-border.n0-clr' => 'border-color: {{VALUE}} !important',
+				],
+			]
+		);
+
+		$this->add_control(
+			'icon_bac_color',
+			[
+				'label' => esc_html__( 'Icon BackgroundColor', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .kew-arrow.p1-bg' => 'background: {{VALUE}} !important',
 				],
 			]
 		);

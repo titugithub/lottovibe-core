@@ -26,7 +26,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 	 */
 	public function get_name()
 	{
-		return 'react-video';
+		return 'sv-video';
 	}
 
 	/**
@@ -135,14 +135,14 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'default'     => 'center',
 				'toggle' => true,
 				'selectors' => [
-					'{{WRAPPER}} .react-video' => 'text-align: {{VALUE}}'
+					'{{WRAPPER}} .sv-video' => 'text-align: {{VALUE}}'
 				],
 				'separator' => 'before',
 			]
 		);
 
 		$this->add_control(
-			'react_video_style',
+			'sv_video_style',
 			[
 				'label'   => esc_html__('Select Video Style', 'pielements'),
 				'type'    => Controls_Manager::SELECT,
@@ -177,14 +177,14 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 		);
 
 		$this->add_control(
-			'react_video_title',
+			'sv_video_title',
 			[
 				'label' => esc_html__('Video Title', 'pielements'),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
 				'separator' => 'before',
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 		);
@@ -207,14 +207,14 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 
 
 		$this->add_control(
-			'react_video_subtitle',
+			'sv_video_subtitle',
 			[
 				'label' => esc_html__('Video Subtitle', 'pielements'),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
 				'separator' => 'before',
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 
@@ -222,7 +222,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 
 
 		$this->add_control(
-			'react_video_btn',
+			'sv_video_btn',
 			[
 				'label' => esc_html__('Button Text', 'pielements'),
 				'type' => Controls_Manager::TEXT,
@@ -231,14 +231,14 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'default'     => 'Button Text',
 				'placeholder' => esc_html__('Add button text here..', 'pielements'),
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 
 		);
 
 		$this->add_control(
-			'react_video_btn_link',
+			'sv_video_btn_link',
 			[
 				'label' => esc_html__('Button Link Text', 'pielements'),
 				'type' => Controls_Manager::TEXT,
@@ -247,7 +247,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'default'     => '#',
 				'placeholder' => esc_html__('Add button link here..', 'pielements'),
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 
@@ -323,7 +323,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .react-video .video-desc' => 'top: {{SIZE}}px;',
+					'{{WRAPPER}} .sv-video .video-desc' => 'top: {{SIZE}}px;',
 				],
 			]
 		);
@@ -335,7 +335,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', 'em', '%'],
 				'selectors' => [
-					'{{WRAPPER}} .react-video' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .sv-video' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -357,11 +357,11 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Button Color', 'pielements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .react-video.style2 .rs-icon-inner .rs-icon-btn a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .sv-video.style2 .rs-icon-inner .rs-icon-btn a' => 'color: {{VALUE}};',
 				],
 				'separator' => 'before',
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 		);
@@ -373,11 +373,11 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Button Hover Color', 'pielements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .react-video.style2 .rs-icon-inner .rs-icon-btn a:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .sv-video.style2 .rs-icon-inner .rs-icon-btn a:hover' => 'color: {{VALUE}};',
 				],
 				'separator' => 'before',
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 		);
@@ -387,10 +387,10 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 			[
 				'label' => esc_html__('Typography', 'pielements'),
 				'name' => 'typography_btn',
-				'selector' => '{{WRAPPER}} .react-video.style2 .rs-icon-inner .rs-icon-btn a',
+				'selector' => '{{WRAPPER}} .sv-video.style2 .rs-icon-inner .rs-icon-btn a',
 				'separator' => 'before',
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 		);
@@ -401,11 +401,11 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Button Background Color', 'pielements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .react-video.style2 .rs-icon-inner .rs-icon-btn a' => 'background: {{VALUE}};',
+					'{{WRAPPER}} .sv-video.style2 .rs-icon-inner .rs-icon-btn a' => 'background: {{VALUE}};',
 				],
 				'separator' => 'before',
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 		);
@@ -416,12 +416,12 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Button Hover Background Color', 'pielements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .react-video.style2 .rs-icon-inner .rs-icon-btn a:hover' => 'background: {{VALUE}};',
-					'{{WRAPPER}} .react-video.style2 .rs-icon-inner .rs-icon-btn a:before' => 'background: {{VALUE}};',
+					'{{WRAPPER}} .sv-video.style2 .rs-icon-inner .rs-icon-btn a:hover' => 'background: {{VALUE}};',
+					'{{WRAPPER}} .sv-video.style2 .rs-icon-inner .rs-icon-btn a:before' => 'background: {{VALUE}};',
 				],
 				'separator' => 'before',
 				'condition' => [
-					'react_video_style' => 'style2'
+					'sv_video_style' => 'style2'
 				],
 			]
 		);
@@ -441,7 +441,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .react-video .popup-videos' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .sv-video .popup-videos' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -453,7 +453,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Icon Color', 'pielements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .react-video .popup-videos i:before' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .sv-video .popup-videos i:before' => 'color: {{VALUE}};',
 				],
 				'separator' => 'before',
 			]
@@ -464,7 +464,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 			[
 				'label' => esc_html__('Icon Typography', 'pielements'),
 				'name' => 'typography_icon',
-				'selector' => '{{WRAPPER}} .react-video .popup-videos i',
+				'selector' => '{{WRAPPER}} .sv-video .popup-videos i',
 				'separator' => 'before',
 			]
 		);
@@ -482,7 +482,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .react-video .popup-videos i' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .sv-video .popup-videos i' => 'top: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -493,7 +493,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Icon Box Background Color', 'pielements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .react-video .popup-videos' => 'background: {{VALUE}};',
+					'{{WRAPPER}} .sv-video .popup-videos' => 'background: {{VALUE}};',
 
 				],
 				'separator' => 'before',
@@ -507,8 +507,8 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 				'label' => esc_html__('Icon Border Color', 'pielements'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .react-video .overly-border' => 'border-color: {{VALUE}};',
-					'{{WRAPPER}} .react-video .popup-videos:before' => 'border-color: {{VALUE}};',
+					'{{WRAPPER}} .sv-video .overly-border' => 'border-color: {{VALUE}};',
+					'{{WRAPPER}} .sv-video .popup-videos:before' => 'border-color: {{VALUE}};',
 				],
 				'separator' => 'before',
 			]
@@ -529,7 +529,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 
 
 				'selectors' => [
-					'{{WRAPPER}} .react-video .overly-border' => 'top: {{SIZE}}%;',
+					'{{WRAPPER}} .sv-video .overly-border' => 'top: {{SIZE}}%;',
 				],
 			]
 		);
@@ -549,7 +549,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 
 
 				'selectors' => [
-					'{{WRAPPER}} .react-video .overly-border' => 'left: {{SIZE}}%;',
+					'{{WRAPPER}} .sv-video .overly-border' => 'left: {{SIZE}}%;',
 				],
 			]
 		);
@@ -582,12 +582,12 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 		$this->add_inline_editing_attributes('description', 'basic');
 		$this->add_render_attribute('description', 'class', 'video-desc');
 		?>
-		<div class="react-video video-item-<?php echo esc_attr($rand); ?> <?php echo esc_html($settings['align']); ?> <?php echo esc_html($settings['react_video_style']); ?>" <?php if (!empty($settings['image']['url'])) : ?>style="background: url(<?php echo esc_url($settings['image']['url']); ?>);" <?php endif; ?>>
+		<div class="sv-video video-item-<?php echo esc_attr($rand); ?> <?php echo esc_html($settings['align']); ?> <?php echo esc_html($settings['sv_video_style']); ?>" <?php if (!empty($settings['image']['url'])) : ?>style="background: url(<?php echo esc_url($settings['image']['url']); ?>);" <?php endif; ?>>
 
 
 
 
-			<?php if ($settings['react_video_style'] == 'style1') { ?>
+			<?php if ($settings['sv_video_style'] == 'style1') { ?>
 
 				<div class="real-estate-video freature-videobg  d-center position-relative overflow-hidden">
 					<div class="real-vid position-relative">
@@ -601,13 +601,13 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 			<?php }; ?>
 
 
-			<?php if ($settings['react_video_style'] == 'style3') { ?>
+			<?php if ($settings['sv_video_style'] == 'style3') { ?>
 
 				<div class="overly-border popp">
 					<a class="popup-videos" href="<?php echo esc_url($settings['video_link']); ?>">
 						<i class="fas fa-play"></i>
 					</a>
-					<?php if (!empty($settings['description']) || !empty($settings['react_video_subtitle'])) : ?>
+					<?php if (!empty($settings['description']) || !empty($settings['sv_video_subtitle'])) : ?>
 						<div <?php echo wp_kses_post($this->print_render_attribute_string('description')); ?>>
 							<?php echo wp_kses_post($settings['description']); ?>
 						</div>
@@ -621,7 +621,7 @@ class SVTheme_Elementor_Video_Widget extends \Elementor\Widget_Base
 
 			<?php }; ?>
 
-			<?php if ($settings['react_video_style'] == 'style2') : ?>
+			<?php if ($settings['sv_video_style'] == 'style2') : ?>
 
 				<div class="overly-border">
 					<a class="popup-videos" href="<?php echo esc_url($settings['video_link']); ?>">

@@ -25,7 +25,7 @@ class SVTheme_Elementor_Description_Widget extends \Elementor\Widget_Base
 	 */
 	public function get_name()
 	{
-		return 'react-description';
+		return 'sv-description';
 	}
 
 	/**

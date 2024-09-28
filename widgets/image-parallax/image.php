@@ -146,7 +146,7 @@ class SVTheme_Image_Parallax_Widget extends \Elementor\Widget_Base
                 'default' => 'left',
                 'toggle' => true,
                 'selectors' => [
-                    '{{WRAPPER}} .react-image' => 'text-align: {{VALUE}}'
+                    '{{WRAPPER}} .sv-image' => 'text-align: {{VALUE}}'
                 ],
                 'separator' => 'before',
             ]
@@ -186,10 +186,10 @@ class SVTheme_Image_Parallax_Widget extends \Elementor\Widget_Base
 
             <div class="rt-image">
                 <?php if (!empty($settings['first_image']['url'])) : ?>
-                    <img class="react-parallax-image" src="<?php echo esc_url($settings['first_image']['url']); ?>" alt="image" />
+                    <img class="sv-parallax-image" src="<?php echo esc_url($settings['first_image']['url']); ?>" alt="image" />
                 <?php endif; ?>
                 <?php if (!empty($settings['stitle']) || !empty($settings['ssubtitle']) ):?>
-                    <div class="experiencea-area images react-parallax-image">
+                    <div class="experiencea-area images sv-parallax-image">
                         <?php if (!empty($settings['stitle'])) :   ?>
                             <h3 class="title"><?php echo esc_html($settings['stitle']) ?></h3>
                         <?php endif ?>
@@ -207,7 +207,7 @@ class SVTheme_Image_Parallax_Widget extends \Elementor\Widget_Base
 
 
             <div class="rt-image rts-about-left-image-area">
-                <div class="small-image-area images react-parallax-image">
+                <div class="small-image-area images sv-parallax-image">
                     <?php if (!empty($settings['second_image']['url'])) :   ?>
                         <img src="<?php echo esc_html($settings['second_image']['url']) ?>" alt="<?php echo esc_html('image')?>">
                     <?php endif ?>
@@ -223,10 +223,10 @@ class SVTheme_Image_Parallax_Widget extends \Elementor\Widget_Base
         <?php if ($settings['images_translate'] == 'veritcal') : ?>
             <div class="rt-image">
                 <?php if (!empty($settings['first_image']['url'])) : ?>
-                    <img class="react-parallax-image2" src="<?php echo esc_url($settings['first_image']['url']); ?>" alt="image" />
+                    <img class="sv-parallax-image2" src="<?php echo esc_url($settings['first_image']['url']); ?>" alt="image" />
                 <?php endif; ?>
                 <?php if (!empty($settings['stitle']) || !empty($settings['ssubtitle']) ):?>
-                    <div class="experiencea-area images react-parallax-image2 ">
+                    <div class="experiencea-area images sv-parallax-image2 ">
                         <?php if (!empty($settings['stitle'])) :   ?>
                             <h3 class="title"><?php echo esc_html($settings['stitle']) ?></h3>
                         <?php endif ?>

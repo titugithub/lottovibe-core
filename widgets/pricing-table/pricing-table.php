@@ -1890,7 +1890,7 @@ class SVTheme_Elementor_Pricing_Table_Widget extends \Elementor\Widget_Base {
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors' => [
-                    '{{WRAPPER}} a.react_button.pbtn' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} a.sv_button.pbtn' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -2714,8 +2714,8 @@ class SVTheme_Elementor_Pricing_Table_Widget extends \Elementor\Widget_Base {
                   </ul>
               <?php endif; ?>
               <?php if ( $settings['button_text'] ) : ?>
-                  <div class="btn-part price-btn react-button">
-                      <a class="react_button pbtn" <?php $this->print_render_attribute_string( 'button_text' ); ?>><?php echo esc_html( $settings['button_text'] ); ?>                
+                  <div class="btn-part price-btn sv-button">
+                      <a class="sv_button pbtn" <?php $this->print_render_attribute_string( 'button_text' ); ?>><?php echo esc_html( $settings['button_text'] ); ?>                
                                             
                       </a>
                   </div>

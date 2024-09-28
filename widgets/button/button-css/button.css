@@ -48,7 +48,7 @@
   --h6: 18px;
 }
 
-.react-button a {
+.sv-button a {
   display: inline-block;
   color: #fff;
   padding: 17px 33px;
@@ -66,14 +66,14 @@
   z-index: 1;
   overflow: hidden;
 }
-.react-button a:hover {
+.sv-button a:hover {
   background: #1F1F25;
 }
-.react-button a svg {
+.sv-button a svg {
   width: 20px;
   position: relative;
 }
-.react-button a::after {
+.sv-button a::after {
   position: absolute;
   left: 0;
   top: 0;
@@ -85,17 +85,17 @@
   transition: 0.3s;
   z-index: -1;
 }
-.react-button a:hover::after {
+.sv-button a:hover::after {
   transform: translateY(0%);
 }
-.react-button.secondary_btn a {
+.sv-button.secondary_btn a {
   background: #1F1F25;
 }
-.react-button.secondary_btn a:after {
+.sv-button.secondary_btn a:after {
   background: #4AAB3D;
 }
 
-.slider-react-button {
+.slider-sv-button {
   display: inline-block;
   color: #fff;
   padding: 17px 33px;
@@ -114,14 +114,14 @@
   overflow: hidden;
   cursor: pointer;
 }
-.slider-react-button:hover {
+.slider-sv-button:hover {
   background: #1F1F25;
 }
-.slider-react-button svg {
+.slider-sv-button svg {
   width: 20px;
   position: relative;
 }
-.slider-react-button::after {
+.slider-sv-button::after {
   position: absolute;
   left: 0;
   top: 0;
@@ -133,10 +133,10 @@
   transition: 0.3s;
   z-index: -1;
 }
-.slider-react-button:hover::after {
+.slider-sv-button:hover::after {
   transform: translateY(0%);
 }
-.slider-react-button.style-2:hover {
+.slider-sv-button.style-2:hover {
   background: #1F1F25;
   color: #fff !important;
 }
@@ -199,14 +199,14 @@
   margin-top: 10px;
 }
 
-.slider-react-button.handyman_slider_btn.rs-layer {
+.slider-sv-button.handyman_slider_btn.rs-layer {
   padding: 15px 60px 15px 24px;
   position: relative;
 }
-.slider-react-button.handyman_slider_btn.rs-layer:hover {
+.slider-sv-button.handyman_slider_btn.rs-layer:hover {
   color: #fff !important;
 }
-.slider-react-button.handyman_slider_btn.rs-layer::before {
+.slider-sv-button.handyman_slider_btn.rs-layer::before {
   content: "\ea65";
   font-family: "rt-icons";
   display: inline-block;
@@ -222,7 +222,7 @@
   transform: translateY(-50%);
 }
 
-.slider-react-button.engineer.rs-layer {
+.slider-sv-button.engineer.rs-layer {
   background: transparent !important;
   border: 1px solid #FFFFFF !important;
   color: #ffffff !important;
@@ -230,20 +230,20 @@
   align-items: center;
   padding: 18px 30px 18px 30px;
 }
-.slider-react-button.engineer.rs-layer:hover {
+.slider-sv-button.engineer.rs-layer:hover {
   border: 1px solid #4AAB3D !important;
 }
-.slider-react-button.engineer.rs-layer:hover::after {
+.slider-sv-button.engineer.rs-layer:hover::after {
   background: #4AAB3D !important;
 }
 
-.slider-react-button.engineer.btn-1.rs-layer {
+.slider-sv-button.engineer.btn-1.rs-layer {
   position: relative;
   display: flex;
   align-items: center;
   padding: 18px 70px 18px 30px !important;
 }
-.slider-react-button.engineer.btn-1.rs-layer::before {
+.slider-sv-button.engineer.btn-1.rs-layer::before {
   content: "\ea65";
   font-family: "rt-icons";
   display: inline-block;

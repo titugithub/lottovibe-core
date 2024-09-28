@@ -23,7 +23,7 @@ class SVTheme_Elementor_Quote_Widget extends \Elementor\Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'react-image';
+		return 'sv-image';
 	}		
 
 	/**

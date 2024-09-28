@@ -24,7 +24,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
      */
 
     public function get_name() {
-        return 'rt-react-image';
+        return 'rt-sv-image';
     }
 
     /**
@@ -107,7 +107,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
                 'default' => 'left',
                 'toggle' => true,
                 'selectors' => [
-                    '{{WRAPPER}} .react-image' => 'text-align: {{VALUE}}'
+                    '{{WRAPPER}} .sv-image' => 'text-align: {{VALUE}}'
                 ],
                 'separator' => 'before',
             ]
@@ -163,7 +163,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
         );
 
         $this->add_responsive_control(
-            'react_image_size',
+            'sv_image_size',
             [
 
                 'label' => esc_html__( 'Image Size', 'rtelements' ),
@@ -185,7 +185,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
 					'size'=> '150',
 				],
                 'selectors' => [
-					'{{WRAPPER}} img.react-multi-image' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} img.sv-multi-image' => 'width: {{SIZE}}{{UNIT}};',
 				],
                 
             ]
@@ -222,7 +222,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
                    ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .react-image.react-multi-image' => 'animation-duration: {{SIZE}}s;',
+                    '{{WRAPPER}} .sv-image.sv-multi-image' => 'animation-duration: {{SIZE}}s;',
                 ],
                 'condition' => [
                     'image_animation' => 'yes',
@@ -231,7 +231,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
         ); 
 
         $this->add_responsive_control(
-            'react_image_animation_start_x',
+            'sv_image_animation_start_x',
             [
 
                 'label' => esc_html__( 'Translate X Start', 'rtelements' ),
@@ -251,7 +251,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
         );  
 
         $this->add_responsive_control(
-            'react_image_animation_end_x',
+            'sv_image_animation_end_x',
             [
 
                 'label' => esc_html__( 'Translate X End', 'rtelements' ),
@@ -272,7 +272,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
 
 
         $this->add_responsive_control(
-            'react_image_animation_start_y',
+            'sv_image_animation_start_y',
             [
 
                 'label' => esc_html__( 'Translate Y Start', 'rtelements' ),
@@ -296,7 +296,7 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
         );  
 
         $this->add_responsive_control(
-            'react_image_animation_end_y',
+            'sv_image_animation_end_y',
             [
 
                 'label' => esc_html__( 'Translate Y End', 'rtelements' ),
@@ -332,14 +332,14 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
            if(!empty($settings['first_image']['url'])) : ?>
            <div class="reveal-item overflow-hidden aos-init">
                 <div class="reveal-animation reveal-end reveal-primary aos aos-init" data-aos="reveal-end"></div>
-                <img class="react-multi-image <?php echo esc_attr($settings['images_translate']); ?> " src="<?php echo esc_url($settings['first_image']['url']);?>" alt="image"/>
+                <img class="sv-multi-image <?php echo esc_attr($settings['images_translate']); ?> " src="<?php echo esc_url($settings['first_image']['url']);?>" alt="image"/>
             </div>
             <?php endif;
         }else {
             ?>
-                <div class="react-image <?php echo esc_attr($settings['image_animation']); ?>">
+                <div class="sv-image <?php echo esc_attr($settings['image_animation']); ?>">
                     <?php if(!empty($settings['first_image']['url'])) : ?>
-                        <img class="react-multi-image <?php echo esc_attr($settings['images_translate']); ?> <?php echo esc_attr($image_rotate);?> <?php echo esc_attr($image_scale);?>" src="<?php echo esc_url($settings['first_image']['url']);?>" alt="image"/>
+                        <img class="sv-multi-image <?php echo esc_attr($settings['images_translate']); ?> <?php echo esc_attr($image_rotate);?> <?php echo esc_attr($image_scale);?>" src="<?php echo esc_url($settings['first_image']['url']);?>" alt="image"/>
                     <?php endif; ?>
                 </div>
             <?php
@@ -347,20 +347,20 @@ class SVTheme_Image_Showcase_Widget extends \Elementor\Widget_Base {
         }?>
         
         <?php        
-             if(!empty($settings['react_image_animation_start_x']['size'])):
-                $start   = $settings['react_image_animation_start_x']['size'].$settings['react_image_animation_start_x']['unit'];   
+             if(!empty($settings['sv_image_animation_start_x']['size'])):
+                $start   = $settings['sv_image_animation_start_x']['size'].$settings['sv_image_animation_start_x']['unit'];   
             endif; 
 
-            if(!empty($settings['react_image_animation_end_x']['size'])):         
-            $end     = $settings['react_image_animation_end_x']['size'].$settings['react_image_animation_end_x']['unit'];  
+            if(!empty($settings['sv_image_animation_end_x']['size'])):         
+            $end     = $settings['sv_image_animation_end_x']['size'].$settings['sv_image_animation_end_x']['unit'];  
             endif;
 
-            if(!empty($settings['react_image_animation_start_y']['size'])):          
-            $start_y = $settings['react_image_animation_start_y']['size'].$settings['react_image_animation_start_y']['unit'];  
+            if(!empty($settings['sv_image_animation_start_y']['size'])):          
+            $start_y = $settings['sv_image_animation_start_y']['size'].$settings['sv_image_animation_start_y']['unit'];  
             endif; 
 
-            if(!empty($settings['react_image_animation_end_y']['size'])):          
-            $end_y   = $settings['react_image_animation_end_y']['size'].$settings['react_image_animation_end_y']['unit'];
+            if(!empty($settings['sv_image_animation_end_y']['size'])):          
+            $end_y   = $settings['sv_image_animation_end_y']['size'].$settings['sv_image_animation_end_y']['unit'];
             endif; 
         ?>
        

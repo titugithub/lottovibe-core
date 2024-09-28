@@ -567,7 +567,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
             [
                 'name' => 'box_shadows',
                 'label' => esc_html__( 'Box Shadow', 'plugin-domain' ),
-                'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short',
+                'selector' => '{{WRAPPER}} .sv-event-slider .event-item .events-short',
                 'condition' => [
                     'event_grid_style' => 'style1',
                 ],
@@ -583,7 +583,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'size_units' => [ 'px', 'em', '%' ],
 		        'selectors' => [
 		            '{{WRAPPER}} .content-part' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-		            '{{WRAPPER}} .react-event-slider.event-slider-style2 .event-item .events-short .content-part' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		            '{{WRAPPER}} .sv-event-slider.event-slider-style2 .event-item .events-short .content-part' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 		        ],
 		        'condition' => [
 		            'event_grid_style' => ['style1', 'style2', 'style3'],
@@ -639,7 +639,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .categorie a' => 'background-color: {{VALUE}};',                   
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .categorie a' => 'background-color: {{VALUE}};',                   
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .categorie a' => 'background-color: {{VALUE}};',                   
 		        ],                
 		    ]
 		);
@@ -651,7 +651,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .categorie a' => 'color: {{VALUE}};',                   
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .categorie a' => 'color: {{VALUE}};',                   
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .categorie a' => 'color: {{VALUE}};',                   
 
 		        ],                
 		    ]
@@ -665,7 +665,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .categorie a:hover' => 'color: {{VALUE}};',                    
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .categorie a:hover' => 'color: {{VALUE}};',                    
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .categorie a:hover' => 'color: {{VALUE}};',                    
 		        ],                
 		    ]		    
 		);  
@@ -675,7 +675,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 			[
 				'name' => 'cates_typography',
 				'label' => esc_html__( 'Typography', 'rtelements' ),
-				'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .categorie a, {{WRAPPER}} .events-short .categorie a',
+				'selector' => '{{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .categorie a, {{WRAPPER}} .events-short .categorie a',
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 			]
 		);
@@ -688,7 +688,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'size_units' => [ 'px', 'em', '%' ],
 		        'selectors' => [
 		            '{{WRAPPER}} .content-part .categorie' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .categorie a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .categorie a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 		        ],
 		    ]
 		);
@@ -700,7 +700,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%' ],
                 'selectors' => [
-                    '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .categorie a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .categorie a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition' => [
                     'cate_position' => 'tops',
@@ -756,10 +756,10 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .react-event-slider .event-item .events-short .time' => 'color: {{VALUE}};',                   
-                    '{{WRAPPER}} .react-event-slider .event-item .events-short .time i:before' => 'color: {{VALUE}};',                   
-                    '{{WRAPPER}} .react-event-slider.event-slider-style3 .event-item .time-sec .timesec i:before' => 'color: {{VALUE}};',                   
-                    '{{WRAPPER}} .react-event-slider.event-slider-style3 .event-item .time-sec .timesec' => 'color: {{VALUE}};',                   
+                    '{{WRAPPER}} .sv-event-slider .event-item .events-short .time' => 'color: {{VALUE}};',                   
+                    '{{WRAPPER}} .sv-event-slider .event-item .events-short .time i:before' => 'color: {{VALUE}};',                   
+                    '{{WRAPPER}} .sv-event-slider.event-slider-style3 .event-item .time-sec .timesec i:before' => 'color: {{VALUE}};',                   
+                    '{{WRAPPER}} .sv-event-slider.event-slider-style3 .event-item .time-sec .timesec' => 'color: {{VALUE}};',                   
                     '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .timesec' => 'color: {{VALUE}};',                   
                 ],                
             ]
@@ -771,7 +771,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 				'name' => 'time_typography',
 				'label' => esc_html__( 'Typography', 'rtelements' ),
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short .time, {{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .timesec, {{WRAPPER}} .react-event-slider.event-slider-style3 .event-item .time-sec .timesec',                                    
+				'selector' => '{{WRAPPER}} .sv-event-slider .event-item .events-short .time, {{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .timesec, {{WRAPPER}} .sv-event-slider.event-slider-style3 .event-item .time-sec .timesec',                                    
 			]
 		);
 		$this->end_controls_section(); 
@@ -814,7 +814,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 				'name' => 'title_typography',
 				'label' => esc_html__( 'Typography', 'rtelements' ),
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .events-short .content-part .title, {{WRAPPER}} .react-event-slider .event-item .events-short .content-part .title a',                   
+				'selector' => '{{WRAPPER}} .events-short .content-part .title, {{WRAPPER}} .sv-event-slider .event-item .events-short .content-part .title a',                   
 			]
 		);
 
@@ -847,7 +847,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'label' => esc_html__( 'Background Color', 'rtelements' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .dates' => 'background-color: {{VALUE}};',                                     
+                    '{{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .dates' => 'background-color: {{VALUE}};',                                     
                     '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .date-sec' => 'background-color: {{VALUE}};',                                     
                 ],                 
                 'condition' => [
@@ -889,7 +889,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .events-short .date-part .date' => 'color: {{VALUE}};',                   
-                    '{{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .dates' => 'color: {{VALUE}};',                   
+                    '{{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .dates' => 'color: {{VALUE}};',                   
                     '{{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .date-sec' => 'color: {{VALUE}};',                   
                 ],                 
                 'condition' => [
@@ -903,7 +903,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 			[
 				'name' => 'month_typography',
 				'label' => esc_html__( 'Typography', 'rtelements' ),
-				'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .date-part, {{WRAPPER}} .date-part .date, {{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .date-sec, {{WRAPPER}} .react-event-slider .event-item .events-short .featured-img .dates',				
+				'selector' => '{{WRAPPER}} .sv-event-slider .event-item .events-short .event-btm .date-part, {{WRAPPER}} .date-part .date, {{WRAPPER}} .svtheme-event-grid.event-slider-style4 .event-item .events-short .date-sec, {{WRAPPER}} .sv-event-slider .event-item .events-short .featured-img .dates',				
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 			]
 		);  
@@ -915,7 +915,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => [ 'px', 'em', '%' ],
 		        'selectors' => [
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .event-btm' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 		        ],
 		        'condition' => [
 		            'event_grid_style' => 'style2',
@@ -952,7 +952,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 				'name' => 'exc_typography',
 				'label' => esc_html__( 'Typography', 'rtelements' ),
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .events-short .content-part .txt, {{WRAPPER}} .react-event-slider .event-item .events-short .content-part .txt',               
+				'selector' => '{{WRAPPER}} .events-short .content-part .txt, {{WRAPPER}} .sv-event-slider .event-item .events-short .content-part .txt',               
 			]
 		);
 
@@ -964,7 +964,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'size_units' => [ 'px', 'em', '%' ],
 		        'selectors' => [
 		            '{{WRAPPER}} .content-part .txt' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .content-part .txt' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .content-part .txt' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 		        ],
 		    ]
 		);
@@ -986,7 +986,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'label' => esc_html__( 'Background Color', 'rtelements' ),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .join-btn' => 'background-color: {{VALUE}};',                   
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .event-btm .join-btn' => 'background-color: {{VALUE}};',                   
 
 		        ], 
 		        'condition' => [
@@ -1001,7 +1001,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'label' => esc_html__( 'Hover Background Color', 'rtelements' ),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .join-btn:hover' => 'background-color: {{VALUE}};',                              
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .event-btm .join-btn:hover' => 'background-color: {{VALUE}};',                              
 		                             
 
 		        ], 
@@ -1015,7 +1015,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'label' => esc_html__( 'Hover Border Color', 'rtelements' ),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .join-btn:hover' => 'border-color: {{VALUE}};',                              
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .event-btm .join-btn:hover' => 'border-color: {{VALUE}};',                              
 		                             
 
 		        ], 
@@ -1030,7 +1030,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'label' => esc_html__( 'Color', 'rtelements' ),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .join-btn' => 'color: {{VALUE}};',                   
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .event-btm .join-btn' => 'color: {{VALUE}};',                   
 
 		        ],                
 		    ]
@@ -1056,7 +1056,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 				'name' => 'btn_typography',
 				'label' => esc_html__( 'Typography', 'rtelements' ),
 				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .join-btn',                                     
+				'selector' => '{{WRAPPER}} .sv-event-slider .event-item .events-short .event-btm .join-btn',                                     
 			]
 		);
 
@@ -1067,7 +1067,7 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => [ 'px', 'em', '%' ],
 		        'selectors' => [
-		            '{{WRAPPER}} .react-event-slider .event-item .events-short .event-btm .join-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		            '{{WRAPPER}} .sv-event-slider .event-item .events-short .event-btm .join-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 		        ],
 		        'condition' => [
 		            'event_grid_style' => ['style1', 'style2', 'style3'], 
@@ -1106,8 +1106,8 @@ class SVTheme_Elementor_Events_Grid_Widget extends \Elementor\Widget_Base {
 	?>	 
 
 
-		<div class="react-unique-sliders react-event-slider svtheme-event-grid event-slider-<?php echo esc_attr($settings['event_grid_style']); ?>">
-			<div id="react-grid" class="react-addon-sliders row">
+		<div class="sv-unique-sliders sv-event-slider svtheme-event-grid event-slider-<?php echo esc_attr($settings['event_grid_style']); ?>">
+			<div id="sv-grid" class="sv-addon-sliders row">
 				<?php 
 					if('style1' == $settings['event_grid_style']){
 						include(plugin_dir_path(__FILE__)."/style1.php");

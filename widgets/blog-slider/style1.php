@@ -61,7 +61,7 @@ while ($best_wp->have_posts()) : $best_wp->the_post();
 			<div class="blog_content">
 				<h3 class="title dd"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<?php if ($settings['blog_readmore_text']) : ?>
-					<div class="blog-btn react-button secondary_btn">
+					<div class="blog-btn sv-button secondary_btn">
 						<a class="rts-btn btn-border radious-0" href="<?php the_permalink(); ?>">
 							<?php echo $settings['blog_readmore_text']; ?> </a>
 					</div>

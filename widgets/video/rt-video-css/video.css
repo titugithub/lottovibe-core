@@ -60,37 +60,37 @@
     opacity: 0;
   }
 }
-.react-video {
+.sv-video {
   position: relative;
   background-repeat: no-repeat !important;
   background-size: content !important;
   padding: 100px 20px;
 }
-.react-video.center .overly-border {
+.sv-video.center .overly-border {
   margin: 0 auto;
 }
-.react-video.left .overly-border {
+.sv-video.left .overly-border {
   margin-left: 0;
   margin-right: auto;
 }
-.react-video.right .overly-border {
+.sv-video.right .overly-border {
   margin-left: auto;
   margin-right: 0;
 }
-.react-video.style1 .video-desc {
+.sv-video.style1 .video-desc {
   top: 60px;
 }
-.react-video .video-desc {
+.sv-video .video-desc {
   z-index: 1;
   font-size: 20px;
   position: relative;
 }
-.react-video .video-desc span {
+.sv-video .video-desc span {
   display: block;
   font-size: 22px;
   font-weight: 400;
 }
-.react-video .overly-border {
+.sv-video .overly-border {
   border-radius: 50%;
   position: absolute;
   width: 100px;
@@ -100,20 +100,20 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-.react-video .video-content {
+.sv-video .video-content {
   z-index: 10;
 }
-.react-video .video-content h4 {
+.sv-video .video-content h4 {
   margin-top: 40px;
   margin-bottom: 0;
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
 }
-.react-video:hover .popup-videos {
+.sv-video:hover .popup-videos {
   animation-duration: 0.8s;
 }
-.react-video .popup-videos {
+.sv-video .popup-videos {
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   box-sizing: content-box;
@@ -130,7 +130,7 @@
   text-align: center;
   background: #4AAB3D;
 }
-.react-video .popup-videos:after {
+.sv-video .popup-videos:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -143,7 +143,7 @@
   border-radius: 50%;
   transition: all 200ms;
 }
-.react-video .popup-videos:before {
+.sv-video .popup-videos:before {
   border: 1px solid #fff;
   content: "";
   position: absolute;
@@ -157,7 +157,7 @@
   border-radius: 50%;
   animation: pulse-border 1500ms ease-out infinite;
 }
-.react-video .popup-videos i {
+.sv-video .popup-videos i {
   text-indent: 5px;
   transition: 0.3s ease all;
   font-size: 28px;
@@ -165,14 +165,14 @@
   position: relative;
   top: -4px;
 }
-.react-video .popup-videos i:before {
+.sv-video .popup-videos i:before {
   color: #fff;
   top: -1px;
 }
-.react-video .popup-videos:hover {
+.sv-video .popup-videos:hover {
   border-color: rgba(255, 255, 255, 0.7);
 }
-.react-video .popup-videos span {
+.sv-video .popup-videos span {
   display: block;
   position: relative;
   z-index: 3;
@@ -182,11 +182,11 @@
   border-top: 17px solid transparent;
   border-bottom: 17px solid transparent;
 }
-.react-video:hover .overly-border:before, .react-video:hover .overly-border:after {
+.sv-video:hover .overly-border:before, .sv-video:hover .overly-border:after {
   opacity: 1;
   transform: scale(1);
 }
-.react-video.style2 .overly-border {
+.sv-video.style2 .overly-border {
   width: 60px;
   height: 60px;
 }/*# sourceMappingURL=video.css.map */

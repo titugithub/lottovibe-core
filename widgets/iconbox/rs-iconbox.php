@@ -444,8 +444,8 @@ class RTS_Icon_Box_Widget extends \Elementor\Widget_Base {
 		            'services_btn_icon!' => '',
 		        ],
 		        'selectors' => [
-		            '{{WRAPPER}} .react-addon-services .services-part .services-text .services-btn-part .services-btn.icon-before i' => 'margin-right: {{SIZE}}{{UNIT}};',
-		            '{{WRAPPER}} .react-addon-services .services-part .services-text .services-btn-part .services-btn.icon-after i' => 'margin-left: {{SIZE}}{{UNIT}};',
+		            '{{WRAPPER}} .sv-addon-services .services-part .services-text .services-btn-part .services-btn.icon-before i' => 'margin-right: {{SIZE}}{{UNIT}};',
+		            '{{WRAPPER}} .sv-addon-services .services-part .services-text .services-btn-part .services-btn.icon-after i' => 'margin-left: {{SIZE}}{{UNIT}};',
 		        ],
 		    ]
 		);

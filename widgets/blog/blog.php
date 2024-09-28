@@ -83,6 +83,30 @@ class SVTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
         ];
     }
 
+    function get_post_list_by_post_type($post_type)
+    {
+        $return_val = [];
+        $args       = array(
+            'post_type'      => $post_type,
+            'posts_per_page' => -1,
+            'post_status'      => 'publish',
+        );
+        $all_post   = new \WP_Query($args);
+
+        while ($all_post->have_posts()) {
+            $all_post->the_post();
+            $return_val[get_the_ID()] = get_the_title();
+        }
+        wp_reset_query();
+        return $return_val;
+    }
+
+    function get_all_post_key($post_type)
+    {
+        $return_val = [];
+       
+    }
+
     /**
      * Register rsgallery widget controls.
      *
@@ -98,6 +122,18 @@ class SVTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
             'lottovibe_blog_section_genaral',
             [
                 'label' => esc_html__('General', 'lottovibe-core')
+            ]
+        );
+
+        $this->add_control(
+            'post_select',
+            [
+                'label' => __('Select Projects', 'turio-core'),
+                'type' => \Elementor\Controls_Manager::SELECT2,
+                'label_block' => true,
+                'multiple'    => true,
+                'options' => $this->get_post_list_by_post_type('post'),
+                'default'     => [],
             ]
         );
 
@@ -377,7 +413,8 @@ class SVTheme_Elementor_Blog_Widget extends \Elementor\Widget_Base
                 'orderby'        => $settings['lottovibe_blog_template_orderby'],
                 'order'          => $settings['lottovibe_blog_template_order'],
                 'offset'         => 0,
-                'post_status'    => 'publish'
+                'post_status'    => 'publish',
+                'post__in'       => $settings['post_select'],
             )
         );
         ?>

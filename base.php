@@ -331,10 +331,15 @@ final class RTelements_Elementor_Extension
 		require_once(__DIR__ . '/widgets/tablet/tablet.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Tablet_Widget());
 
-		//product Car
+		//product One Style
 
 		require_once(__DIR__ . '/widgets/product/product.php');
 		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Product_Widget());
+
+		//product Two Style
+
+		require_once(__DIR__ . '/widgets/product/product2.php');
+		\Elementor\Plugin::instance()->widgets_manager->register(new \SVTheme_Elementor_Product2_Widget());
 
 		
 		//footer category
