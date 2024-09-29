@@ -299,7 +299,7 @@ class SVTheme_Elementor_Bannerelectronic_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'subtitle_typ',
+                'name'     => 'subtfitle_typ',
                 'selector' => '{{WRAPPER}} .subtitle',
         
             ]
@@ -354,7 +354,7 @@ class SVTheme_Elementor_Bannerelectronic_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titlestyle_typ',
+                'name'     => 'titlesftyle_typ',
                 'selector' => '{{WRAPPER}} .title span',
         
             ]
@@ -410,7 +410,7 @@ class SVTheme_Elementor_Bannerelectronic_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'description_typ',
+                'name'     => 'descdription_typ',
                 'selector' => '{{WRAPPER}} .description',
         
             ]
@@ -611,7 +611,7 @@ class SVTheme_Elementor_Bannerelectronic_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'textstyle_typ',
+                'name'     => 'textstfyle_typ',
                 'selector' => '{{WRAPPER}} .banner-v9-countreview .bn1-odometer p',
         
             ]

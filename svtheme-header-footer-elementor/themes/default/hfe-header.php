@@ -4,7 +4,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="//gmpg.org/xfn/11">
-<?php global $lottovite_option; ?>
+<?php global $lottovibe_option; ?>
 <?php wp_head(); ?>
 </head>
 
@@ -38,8 +38,8 @@
     $fixed_header = !empty($fixed_header) ? 'fixed-header' : '';?>
     
     <?php        
-        $extrapadding = !empty($lottovite_option['show_call_btns']) ? '' : 'lesspadding';   
-        $sticky             = !empty($lottovite_option['off_sticky']) ? $lottovite_option['off_sticky'] : ''; 
+        $extrapadding = !empty($lottovibe_option['show_call_btns']) ? '' : 'lesspadding';   
+        $sticky             = !empty($lottovibe_option['off_sticky']) ? $lottovibe_option['off_sticky'] : ''; 
         $sticky_menu        = ($sticky == 1) ? ' menu-sticky' : '';   
     ?>
     <div id="page" class="site <?php echo esc_attr( $gap );?> <?php echo esc_attr($extrapadding);?>">

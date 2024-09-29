@@ -23,8 +23,8 @@ class SVTheme_Project_Portfolio{
 			'parent_item_colon'  => esc_html__( 'Parent Portfolio:', 'rsaddons'),
 			'menu_name'          => esc_html__( 'Portfolio', 'rsaddons'),
 		);
-		global $lottovite_option;
-	   	$portfolio_slug = (!empty($lottovite_option['portfolio_slug']))? $lottovite_option['portfolio_slug'] :'rt-portfolio';
+		global $lottovibe_option;
+	   	$portfolio_slug = (!empty($lottovibe_option['portfolio_slug']))? $lottovibe_option['portfolio_slug'] :'rt-portfolio';
 		$args = array(
 			'labels'             => $labels,
 			'public'             => true,	

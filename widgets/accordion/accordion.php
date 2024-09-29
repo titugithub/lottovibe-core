@@ -310,7 +310,7 @@ class SVTheme_Widget_Accordion extends \Elementor\Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'title__typography',
+                'name' => 'titdle__typography',
                 'selector' => '{{WRAPPER}} .accordion .cart-button-rt',
                 'selector' => '{{WRAPPER}} .rts-accordion .accordion-item .accordion-button',
             ]
@@ -440,7 +440,7 @@ class SVTheme_Widget_Accordion extends \Elementor\Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'desc__typography',
+                'name' => 'defsc__typography',
                 'selector' => '{{WRAPPER}} .accordion-item .accordion-body .inner .content .title',
             ]
         );
@@ -506,7 +506,7 @@ class SVTheme_Widget_Accordion extends \Elementor\Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'desc__typography2',
+                'name' => 'defsc__typography2',
                 'selector' => '{{WRAPPER}} .accordion .card-body',
             ]
         );

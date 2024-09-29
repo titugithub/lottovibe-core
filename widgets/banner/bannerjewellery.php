@@ -344,7 +344,7 @@ class SVTheme_Elementor_Bannerjewellery_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'subtitlestyle_typ',
+                'name'     => 'subtitlesftyle_typ',
                 'selector' => '{{WRAPPER}} h4.n4-clr.mb-xxl-3.mb-3',
         
             ]
@@ -379,7 +379,7 @@ class SVTheme_Elementor_Bannerjewellery_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titlestyle_typ',
+                'name'     => 'titlestfyle_typ',
                 'selector' => '{{WRAPPER}} .display-two.position-relative.cus-z1.fw_900.text-capitalize.n4-clr.mb-xxl-5.mb-4 span',
         
             ]
@@ -425,7 +425,7 @@ class SVTheme_Elementor_Bannerjewellery_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'descriptionstyle_typ',
+                'name'     => 'descriptfionstyle_typ',
                 'selector' => '{{WRAPPER}} p.n3-clr.fs18.fw_500.mb-xxl-10.mb-lg-8.mb-5',
         
             ]
@@ -556,7 +556,7 @@ class SVTheme_Elementor_Bannerjewellery_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'userstyle_typ',
+                'name'     => 'userssftyle_typ',
                 'selector' => '{{WRAPPER}} span.fw_600.text-uppercase span',
         
             ]

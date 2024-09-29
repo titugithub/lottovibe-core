@@ -296,7 +296,7 @@ class Rsaddon_Elementor_About_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'subtitle_typ',
+                'name'     => 'sdubtitle_typ',
                 'selector' => '{{WRAPPER}} .subtitle',
         
             ]
@@ -353,7 +353,7 @@ class Rsaddon_Elementor_About_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titlestyle_typ',
+                'name'     => 'titlesddtyle_typ',
                 'selector' => '{{WRAPPER}} span.display-four.d-block.n0-clr',
         
             ]
@@ -397,7 +397,7 @@ class Rsaddon_Elementor_About_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'descriptionstyle_typ',
+                'name'     => 'descripddtionstyle_typ',
                 'selector' => '{{WRAPPER}} p.fs20.nw1-clr.mb-xxl-8.mb-xxl-6.mb-5',
             ]
         );
@@ -513,7 +513,7 @@ class Rsaddon_Elementor_About_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titlestyle_typ',
+                'name'     => 'titleddstyle_typ',
                 'selector' => '{{WRAPPER}} h3.counters.fw_700.mb-2.gap-2.d-flex.align-items-center.n500-color',
 
             ]
@@ -559,7 +559,7 @@ class Rsaddon_Elementor_About_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'description_typ',
+                'name'     => 'descripddtion_typ',
                 'selector' => '{{WRAPPER}} .description',
 
             ]

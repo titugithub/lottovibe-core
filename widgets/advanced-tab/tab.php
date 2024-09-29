@@ -797,7 +797,7 @@ class SVThemes_Advance_Tab_Widget extends \Elementor\Widget_Base {
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'     => 'content_typography',
+                'name'     => 'contfent_typography',
                 'selector' => '{{WRAPPER}} .rstab-main .tab-content',                
                 'separator' => 'before',
             ]

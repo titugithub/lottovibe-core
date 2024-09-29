@@ -391,7 +391,7 @@ class SVTheme_Elementor_Bloggrid_Widget extends \Elementor\Widget_Base
                                     <div class="boxs">
                                         <?php if (has_post_thumbnail()) : ?>
                                             <div class="thumb mb-xxl-6 mb-4 w-100">
-                                                <?php the_post_thumbnail('lottovite-blog-gridtwo') ?>
+                                                <?php the_post_thumbnail('lottovibe-blog-gridtwo') ?>
                                             </div>
                                         <?php endif; ?>
                                         <div class="content">

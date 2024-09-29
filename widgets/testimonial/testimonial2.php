@@ -213,7 +213,7 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
                 'label' => esc_html__('Testimonial List', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
-                
+
             ]
         );
 
@@ -224,29 +224,29 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
         // ============================Style=============================//
 
         $this->start_controls_section(
-             'contentstyle',
-             [
+            'contentstyle',
+            [
                 'label' => esc_html__('Style', 'plugin-name'),
                 'tab'   => Controls_Manager::TAB_STYLE,
-             ]
+            ]
         );
-        
-        
+
+
         $this->add_control(
             'ciccle_color',
             [
-                'label' => esc_html__( 'Circle Background', 'plugin-name' ),
+                'label' => esc_html__('Circle Background', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .happy-cbox.d-flex.align-items-center.justify-content-center.radius-circle.s1-bg' => 'background: {{VALUE}} !important',
                 ],
             ]
         );
-        
+
         $this->add_control(
             'icon_color',
             [
-                'label' => esc_html__( 'Icon Color', 'plugin-name' ),
+                'label' => esc_html__('Icon Color', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .quotes.d-center.n0-bg.radius-circle i' => 'color: {{VALUE}} !important',
@@ -260,10 +260,10 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
                 'label'    => esc_html__('Title Typography', 'plugin-name'),
                 'name'     => 'titlyer_typ',
                 'selector' => '{{WRAPPER}} h3.n4-clr.mb-xxl-4.mb-xl-3.mb-2',
-        
+
             ]
         );
-        
+
         $this->add_control(
             'tiytler_color',
             [
@@ -282,10 +282,10 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
                 'label'    => esc_html__('Description Typography', 'plugin-name'),
                 'name'     => 'des_typ',
                 'selector' => '{{WRAPPER}} p.fs18.n3-clr',
-        
+
             ]
         );
-        
+
         $this->add_control(
             'des_color',
             [
@@ -305,10 +305,10 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
                 'label'    => esc_html__('Name Typography', 'plugin-name'),
                 'name'     => 'name_typ',
                 'selector' => '{{WRAPPER}} span.fs20.mb-1.fw_700.d-block',
-        
+
             ]
         );
-        
+
         $this->add_control(
             'name_color',
             [
@@ -327,10 +327,10 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
                 'label'    => esc_html__('Meta Typography', 'plugin-name'),
                 'name'     => 'meta_typ',
                 'selector' => '{{WRAPPER}} span.fw_600.n2-clr.d-block',
-        
+
             ]
         );
-        
+
         $this->add_control(
             'meta_color',
             [
@@ -341,12 +341,9 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
                 ],
             ]
         );
-        
-        
+
+
         $this->end_controls_section();
-
-
-
     }
 
     /**
@@ -408,21 +405,22 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
                         },
                     }
                 });
-            })
 
-            let windowHeight = $(window).height();
-            $('.odometer').children().each(function() {
-                if ($(this).isInViewport({
-                        "tolerance": windowHeight,
-                        "toleranceForLast": windowHeight,
-                        "debug": false
-                    })) {
-                    var section = $(this).closest(".counters");
-                    section.find(".odometer").each(function() {
-                        $(this).html($(this).attr("data-odometer-final"));
-                    });
-                }
-            });
+
+                let windowHeight = $(window).height();
+                $('.odometer').children().each(function() {
+                    if ($(this).isInViewport({
+                            "tolerance": windowHeight,
+                            "toleranceForLast": windowHeight,
+                            "debug": false
+                        })) {
+                        var section = $(this).closest(".counters");
+                        section.find(".odometer").each(function() {
+                            $(this).html($(this).attr("data-odometer-final"));
+                        });
+                    }
+                });
+            })
         </script>
 
 
@@ -503,7 +501,7 @@ class SVTheme_Elementor_Testimonial2_Widget extends \Elementor\Widget_Base
                                                 <?php if (!empty($item['meta'])) :   ?>
                                                     <span class="fw_600 n2-clr d-block">
                                                         <?php echo esc_html($item['meta']) ?>
-                                                </span>
+                                                    </span>
                                                 <?php endif ?>
                                             </div>
                                         </div>

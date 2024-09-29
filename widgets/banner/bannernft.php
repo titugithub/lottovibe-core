@@ -386,7 +386,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'subtitlestyle_typ',
+                'name'     => 'subtitlfdfestyle_typ',
                 'selector' => '{{WRAPPER}} h4.n4-clr.mb-xxl-4.mb-3.subtitle',
 
             ]
@@ -421,7 +421,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titlestyle_typ',
+                'name'     => 'titfdflestyle_typ',
                 'selector' => '{{WRAPPER}} .title span',
                 'selector' => '{{WRAPPER}} .title',
 
@@ -457,7 +457,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'descriptionstyle_typ',
+                'name'     => 'descfdriptionstyle_typ',
                 'selector' => '{{WRAPPER}} .description',
 
             ]
@@ -588,7 +588,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'userstyle_typ',
+                'name'     => 'usersfstyle_typ',
                 'selector' => '{{WRAPPER}} span.d-flex.align-items-center.gap-2.d-block.fw_700.text-uppercase.mt-xxl-3.mt-2',
 
             ]
@@ -760,7 +760,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'bannertextstyle_typ',
+                'name'     => 'bannertfdfextstyle_typ',
                 'selector' => '{{WRAPPER}} p.mb-xxl-10.mb-9.mb-lg-6.mb-4.fs20.n3-clr',
         
             ]
@@ -790,7 +790,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
 
 
         $this->add_control(
-            'more_optiofdfns',
+            'more_optfsfsfiofdfns',
             [
                 'label' => esc_html__( 'Number', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::HEADING,
@@ -802,7 +802,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'numbet_typ',
+                'name'     => 'numbfdet_typ',
                 'selector' => '{{WRAPPER}} span.display-four.n4-clr.fw_800.odometer.odometer-auto-theme,span.plus__icon.display-four.n4-clr.fw_800',
         
             ]
@@ -821,7 +821,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'more_optiofdfns',
+            'mogdfdfre_optiofdfns',
             [
                 'label' => esc_html__( 'Text', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::HEADING,
@@ -833,7 +833,7 @@ class SVTheme_Elementor_Bannernft_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'counter_text_typ',
+                'name'     => 'countfer_text_typ',
                 'selector' => '{{WRAPPER}} p.n4-clr',
         
             ]

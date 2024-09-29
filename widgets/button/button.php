@@ -103,21 +103,21 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 
 		//Content Section Start
 		$this->start_controls_section(
-			'lottovitebutton_content_general_section',
+			'lottovibebutton_content_general_section',
 			[
-				'label' => esc_html__('General', 'lottovite-core')
+				'label' => esc_html__('General', 'lottovibe-core')
 			]
 		);
 
 		$this->add_control(
 			'style_selection',
 			[
-				'label'   => esc_html__('Select Style', 'lottovite-core'),
+				'label'   => esc_html__('Select Style', 'lottovibe-core'),
 				'type'    => Controls_Manager::SELECT,
 				'options' => [
-					'style_one' => esc_html__('Style One', 'lottovite-core'),
-					'style_two' => esc_html__('Style Two', 'lottovite-core'),
-					'style_three' => esc_html__('Style Three', 'lottovite-core'),
+					'style_one' => esc_html__('Style One', 'lottovibe-core'),
+					'style_two' => esc_html__('Style Two', 'lottovibe-core'),
+					'style_three' => esc_html__('Style Three', 'lottovibe-core'),
 				],
 				'default' => 'style_one',
 			]
@@ -125,21 +125,21 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 
 
 		$this->add_responsive_control(
-			'lottovitebutton_content_button_align',
+			'lottovibebutton_content_button_align',
 			[
-				'label'         => esc_html__('Button Align', 'lottovite-core'),
+				'label'         => esc_html__('Button Align', 'lottovibe-core'),
 				'type'             => \Elementor\Controls_Manager::CHOOSE,
 				'options'         => [
 					'start'         => [
-						'title' => esc_html__('Left', 'lottovite-core'),
+						'title' => esc_html__('Left', 'lottovibe-core'),
 						'icon'     => 'eicon-text-align-left',
 					],
 					'center'     => [
-						'title' => esc_html__('Center', 'lottovite-core'),
+						'title' => esc_html__('Center', 'lottovibe-core'),
 						'icon'     => 'eicon-text-align-center',
 					],
 					'end'     => [
-						'title' => esc_html__('Right', 'lottovite-core'),
+						'title' => esc_html__('Right', 'lottovibe-core'),
 						'icon'     => 'eicon-text-align-right',
 					],
 
@@ -156,7 +156,7 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 
 
 		$this->add_control(
-			'lottovitebutton_content_button_text',
+			'lottovibebutton_content_button_text',
 			[
 				'label' => esc_html__('Button Text', 'avalle-core'),
 				'type' => Controls_Manager::TEXT,
@@ -166,7 +166,7 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 			]
 		);
 		$this->add_control(
-			'lottovitebutton_content_button_url',
+			'lottovibebutton_content_button_url',
 			[
 				'label' => esc_html__('Button URL', 'avalle-core'),
 				'type' => \Elementor\Controls_Manager::URL,
@@ -290,10 +290,10 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 
 
 		<?php if ($settings['style_selection'] == 'style_one') : ?>
-			<?php if (!empty($settings['lottovitebutton_content_button_text'])) :   ?>
-				<a href="<?php echo esc_url($settings['lottovitebutton_content_button_url']['url']) ?>" class="kewta-btn kewta-alt d-inline-flex align-items-center">
+			<?php if (!empty($settings['lottovibebutton_content_button_text'])) :   ?>
+				<a href="<?php echo esc_url($settings['lottovibebutton_content_button_url']['url']) ?>" class="kewta-btn kewta-alt d-inline-flex align-items-center">
 					<span class="kew-text s1-bg n0-clr" data-aos="zoom-in-left" data-aos-duration="900">
-						<?php echo esc_html($settings['lottovitebutton_content_button_text']) ?>
+						<?php echo esc_html($settings['lottovibebutton_content_button_text']) ?>
 					</span>
 					<div class="kew-arrow s1-bg" data-aos="zoom-in-left" data-aos-duration="1600">
 						<div class="kt-one">
@@ -310,15 +310,15 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 
 
 		<?php if ($settings['style_selection'] == 'style_two') : ?>
-			<?php if (!empty($settings['lottovitebutton_content_button_text'])) :   ?>
+			<?php if (!empty($settings['lottovibebutton_content_button_text'])) :   ?>
 				<div class="browse-more d-flex" data-aos="zoom-in" data-aos-duration="2000">
-					<a href="<?php echo esc_url($settings['lottovitebutton_content_button_url']['url']) ?>" class="cmn__collection radius-circle s1-bg d-center position-relative ">
+					<a href="<?php echo esc_url($settings['lottovibebutton_content_button_url']['url']) ?>" class="cmn__collection radius-circle s1-bg d-center position-relative ">
 						<span class="cmn-cont-box text-center position-relative">
 							<span class="icon mb-1">
 								<i class="ph-bold ph-arrow-up-right n0-clr fs-three"></i>
 							</span>
 							<span class="d-block n0-clr fw_700">
-								<?php echo esc_html($settings['lottovitebutton_content_button_text']) ?>
+								<?php echo esc_html($settings['lottovibebutton_content_button_text']) ?>
 							</span>
 						</span>
 					</a>
@@ -328,10 +328,10 @@ class SVTheme_Button_Widget extends \Elementor\Widget_Base
 
 
 		<?php if ($settings['style_selection'] == 'style_three') : ?>
-			<?php if (!empty($settings['lottovitebutton_content_button_text'])) :   ?>
-				<a href="<?php echo esc_url($settings['lottovitebutton_content_button_url']['url']) ?>" class="kewta-btn d-inline-flex align-items-center">
+			<?php if (!empty($settings['lottovibebutton_content_button_text'])) :   ?>
+				<a href="<?php echo esc_url($settings['lottovibebutton_content_button_url']['url']) ?>" class="kewta-btn d-inline-flex align-items-center">
 					<span class="kew-text p1-border n0-clr">
-						<?php echo esc_html($settings['lottovitebutton_content_button_text']) ?>
+						<?php echo esc_html($settings['lottovibebutton_content_button_text']) ?>
 					</span>
 					<div class="kew-arrow p1-bg">
 						<div class="kt-one">

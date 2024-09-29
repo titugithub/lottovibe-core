@@ -499,7 +499,7 @@ class SVTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titleone_typ',
+                'name'     => 'titlgeone_typ',
                 'selector' => '{{WRAPPER}} .titleone',
 
             ]
@@ -531,7 +531,7 @@ class SVTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titletwo_typ',
+                'name'     => 'titlegtwo_typ',
                 'selector' => '{{WRAPPER}} .titletwo',
 
             ]
@@ -708,7 +708,7 @@ class SVTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'usernumberr_typ',
+                'name'     => 'usernudmberr_typ',
                 'selector' => '{{WRAPPER}} span.display-five.n0-clr',
 
             ]
@@ -750,7 +750,7 @@ class SVTheme_Elementor_Bannerbike_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'usertitle_typ',
+                'name'     => 'usertidtle_typ',
                 'selector' => '{{WRAPPER}} span.nw1-clr.fs18.fw_600.mt-1',
 
             ]

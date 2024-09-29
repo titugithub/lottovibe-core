@@ -586,7 +586,7 @@ class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'subtitlestyle_typ',
+                'name'     => 'subtihtlestyle_typ',
                 'selector' => '{{WRAPPER}} .fs-four.p1-clr',
 
             ]
@@ -628,7 +628,7 @@ class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'spinnessr_typ',
+                'name'     => 'spihnnessr_typ',
                 'selector' => '{{WRAPPER}} .custom-display.n0-clr.mb-6.aos-init.aos-animate',
 
             ]
@@ -658,7 +658,7 @@ class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'spinnfdfer_typ',
+                'name'     => 'spihnnfdfer_typ',
                 'selector' => '{{WRAPPER}} .wins.nw1-clr.d-flex.align-items-center.gap-6.aos-init.aos-animate',
 
             ]
@@ -688,7 +688,7 @@ class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'spinfdner_typ',
+                'name'     => 'spindfdner_typ',
                 'selector' => '{{WRAPPER}} .wins.p1-clr',
 
             ]
@@ -723,7 +723,7 @@ class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'description_typ',
+                'name'     => 'descriptggion_typ',
                 'selector' => '{{WRAPPER}} .description',
 
             ]
@@ -869,7 +869,7 @@ class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'sfdsfgpinner_typ',
+                'name'     => 'sfdsfgpignner_typ',
                 'selector' => '{{WRAPPER}} .display-four.nw1-clr.fw_800.odometer.odometer-auto-theme,.plus__icon.display-four.nw1-clr.fw_800',
 
             ]
@@ -900,7 +900,7 @@ class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'spisfggggnner_typ',
+                'name'     => 'spisfgdgggnner_typ',
                 'selector' => '{{WRAPPER}} .odometer__items p',
 
             ]
@@ -1008,7 +1008,7 @@ class SVTheme_Elementor_Banner_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'spfdsfaginner_typ',
+                'name'     => 'spfdsgfaginner_typ',
                 'selector' => '{{WRAPPER}} .nw2-clr.fs-eight.fw_700.d-block.text-uppercase.mt-xxl-4.mt-3',
 
             ]

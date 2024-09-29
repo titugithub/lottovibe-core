@@ -81,6 +81,7 @@ final class RTelements_Elementor_Extension
 	{
 		add_action('init', [$this, 'i18n']);
 		add_action('plugins_loaded', [$this, 'init']);
+		add_filter('upload_mimes', [$this, 'lottovibe_mime_types']);
 	}
 
 	/**
@@ -98,6 +99,12 @@ final class RTelements_Elementor_Extension
 	{
 		load_plugin_textdomain('rtelements');
 	}
+
+	public function lottovibe_mime_types($mimes) {
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
+	  }
+	  
 
 	/**
 	 * Initialize the plugin

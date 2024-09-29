@@ -289,7 +289,7 @@ class SVTheme_Elementor_Bannercycle_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titleone_typ',
+                'name'     => 'titlefone_typ',
                 'selector' => '{{WRAPPER}} span.fw_900.text-capitalize.d-block',
         
             ]
@@ -319,7 +319,7 @@ class SVTheme_Elementor_Bannercycle_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titletwo_typ',
+                'name'     => 'titletwdo_typ',
                 'selector' => '{{WRAPPER}} span.fw_900.act3-clr.d-block.act3-underline',
         
             ]
@@ -350,7 +350,7 @@ class SVTheme_Elementor_Bannercycle_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'titlethree_typ',
+                'name'     => 'titlefthree_typ',
                 'selector' => '{{WRAPPER}} span.d-flex.fw_900.nw1-clr.text-capitalize.align-items-center.gap-3',
         
             ]
@@ -384,7 +384,7 @@ class SVTheme_Elementor_Bannercycle_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'description_typ',
+                'name'     => 'descriptfion_typ',
                 'selector' => '{{WRAPPER}} .description',
         
             ]

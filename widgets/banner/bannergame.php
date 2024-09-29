@@ -657,7 +657,7 @@ class SVTheme_Elementor_Bannergame_Widget extends \Elementor\Widget_Base
 
 
         $this->add_control(
-            'more_optiofdfns',
+            'more_optifdsffofdfns',
             [
                 'label' => esc_html__('Number', 'plugin-name'),
                 'type' => \Elementor\Controls_Manager::HEADING,

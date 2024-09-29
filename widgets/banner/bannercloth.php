@@ -337,7 +337,7 @@ class SVTheme_Elementor_Bannercloth_Widget extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'label'    => esc_html__('Typography', 'plugin-name'),
-                'name'     => 'subtitlestyle_typ',
+                'name'     => 'subtitflestyle_typ',
                 'selector' => '{{WRAPPER}} a.fs-four.act4-clr',
 
             ]
